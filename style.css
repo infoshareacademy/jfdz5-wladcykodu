@@ -160,8 +160,11 @@ ul.nav a:hover {
 
 .product1{
     width: 50%;
-    padding: 10px;
+    border: 15px solid black;
+    padding: 25px;
+    margin: 25px;
 }
+
 
 .enrollment-container {
     background-color: #808080;
