@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Części samochodowe</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="enrollment.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <header class="site-header">
@@ -68,7 +69,24 @@
 
         </div>
         <div id="enrollment" class="main-container-item enrollment-container">
+            <div id="mesgbox" class="message-box">
+                <span  class="close-batton" onclick="this.parentElement.style.display='none';">&times;</span>
+                Gratulacje! Zostałeś zapisany na premierę.
+            </div>
             <h2>Zapisz się na premierę</h2>
+            <div class="enrollment-left">
+
+                <form method="get">
+                    <label>Imię i nazwisko *</label>
+                    <input type="text" placeholder="Type your name" required="">
+                    <!--<input type="submit" value="Submit Form" id="button" onclick="document.getElementById('mesgbox').style.display='block'" >-->
+                    <input type="submit" value="Submit Form" id="button" onclick="alert('Gratulacje! Zostałeś zapisany na premierę.')">
+                </form>
+
+            </div>
+            <div class="enrollment-right">
+
+            </div>
         </div>
         <div id="team-info" class="main-container-item team-info-container">Informacje o zespole
         </div>
