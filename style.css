@@ -163,9 +163,25 @@ ul.nav a:hover {
     padding: 10px;
 }
 
+/* enrollment form */
 .enrollment-container {
     background-color: #808080;
+    padding: 10% 20%;
 }
+
+form {
+    margin: 20px 0;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.h2-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+/* end of enrollment form */
 
 .team-info-container {
     flex-direction: row;

@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Części samochodowe</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <link href="enrollment.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <header class="site-header">
@@ -60,34 +61,40 @@
         </div>
         <div id="product-info" class="main-container-item product-info-container">
             <div class="product1">
-            <h1>Precyzjne wyszukanie części samochodowych</h1>
+                <h1>Precyzjne wyszukanie części samochodowych</h1>
             </div>
             <div class="product1">
-            <h1>Pokażemy ci jak dojechać do warsztatu</h1>
-             </div>
+                <h1>Pokażemy ci jak dojechać do warsztatu</h1>
+            </div>
 
 
         </div>
-        <div id="enrollment" class="main-container-item enrollment-container">
-            <div id="mesgbox" class="message-box">
-                <span  class="close-batton" onclick="this.parentElement.style.display='none';">&times;</span>
-                Gratulacje! Zostałeś zapisany na premierę.
-            </div>
-            <h2>Zapisz się na premierę</h2>
-            <div class="enrollment-left">
-
-                <form method="get">
-                    <label>Imię i nazwisko *</label>
-                    <input type="text" placeholder="Type your name" required="">
-                    <!--<input type="submit" value="Submit Form" id="button" onclick="document.getElementById('mesgbox').style.display='block'" >-->
-                    <input type="submit" value="Submit Form" id="button" onclick="alert('Gratulacje! Zostałeś zapisany na premierę.')">
-                </form>
-
-            </div>
-            <div class="enrollment-right">
-
-            </div>
-        </div>
+        <section id="enrollment" class="main-container-item enrollment-container">
+            <h2 class="h2-center">Zapisz się na premierę!</h2>
+            <p>Jeśli wypełnisz poniższy formularz, wyślemy do Ciebie wiadomość z informacją o dniu premiery naszego sklepu.</p>
+            <form onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę.')">
+                <div class="form-group">
+                    <label for="inputName" >Imię i Nazwisko *</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email *</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                </div>
+                <div class="form-group">
+                    <label for="inputPhoneNumber">Numer telefonu</label>
+                    <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Wiadomość</label>
+                    <textarea class="form-control" id="inputMessage" rows="11" placeholder="Wprowadź wiadomość..."></textarea>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
+                </div>
+                <input type="submit" value="Wyślij" class="btn btn-primary"/>
+            </form>
+        </section>
         <div id="team-info" class="main-container-item team-info-container">Informacje o zespole
         </div>
     </main>
