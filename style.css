@@ -3,83 +3,153 @@ body {
     padding: 0;
 }
 
+/******************** Navigation ********************/
 
-
-/*NAV zmodyfikować */
-
-.site-header {
-    width: 100%;
-    /*height: 80px;*/
+.nav {
     display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    list-style-type: none;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    background-color: black;
-    flex-wrap: wrap;
+    align-items: stretch;
+    /*  min-height: 3.25rem;*/
+    height: 7em;
     position: fixed;
     top: 0;
+    width: 100%;
+    background-color: black;
     box-shadow: 0 4px 20px grey;
+    box-sizing: border-box;
 }
 
-
-
-/*zmienić stylowanie na podstawie klas*/
-/*nav*/
-.logo {
-    color: aliceblue;
-    display: flex;
-    flex-grow: 1;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-
-    flex-grow: 4;
-}
-
-ul.nav {
-    display: flex;
-}
-
-ul.nav li {
+.nav-item {
+    align-items: center;
     display: flex;
     background-color: black;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     border-radius: 3px;
-    width: auto;
     margin: 0;
-    /*line-height: 80px;*/
     list-style-type: none;
     transition: background 1s, color 1s;
     cursor: pointer;
     color: white;
 }
 
-ul.nav a {
+.nav-left, .nav-right {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-menu.nav-right ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+ul a {
     text-decoration: none;
     color: white;
     transition: background 1s, color 1s;
 }
 
-ul.nav li:hover {
+ul li:hover {
     cursor: pointer;
     box-sizing: border-box;
     background: lightslategrey;
-    border-bottom: 5px solid darkslategrey;
     color: black;
 }
 
-ul.nav a:hover {
-    color: white;
+ul a:hover {
+    color: black;
 }
 
-/*end of nav*/
+.nav img {
+    height: 7em;
+    margin: 0;
+}
+
+
+/* if user touch nav-toggle, show nav-menu*/
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.nav-toggle {
+    font-size: 3.25rem;
+    align-items: center;
+    display: flex;
+    padding-right: 0.75rem;
+    background: #d9d9d9;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu.nav-right {
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 20px grey;
+    }
+
+    .nav-menu.nav-right .nav-item {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu.nav-right ul {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-menu.nav-right ul li {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        list-style-type: none;
+        transition: background 1s, color 1s;
+        cursor: pointer;
+        color: black;
+    }
+
+    .nav-menu.nav-right ul a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-menu.nav-right ul li:hover {
+        cursor: pointer;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+}
+
+/******************** End of Nabigation ********************/
 
 
 .site-container {
