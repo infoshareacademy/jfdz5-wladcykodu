@@ -182,60 +182,188 @@ ul a:hover {
 
 }
 
+
+/* START INTRODUCTION */
+
 .introduction-container {
-    background: url("introductionBackground.png");
+    width: 100%;
+    background: url("dark.png");
     background-size: cover;
     font-family: Helvetica, Arial, sans-serif;
     color: white;
-    height: calc(100vh - 25px);
+    display: flex;
+    flex-direction: column;
 }
 
-.introductionMainText {
-    margin-top: 5%;
-    margin-left: 10%;
-
+.inIntroduction {
+    height: 55vh;
+    width: 50%;
+    background-color: rgba(74, 74, 74, 0.3);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.introductionElement {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.introductionRegularText {
+.introduction-logo-container {
+    height: 35%;
+}
+.introduction-logo-container h1 {
+    font-size: 1.5em;
+}
 
+.introduction-main-text-container {
+    height: 15%;
+}
+
+h2.introduction-main-text-container {
+    padding-top: 30px;
+    font-size: 1.25em;
+    font-weight: inherit;
+}
+
+.introduction-regular-text-container {
+    height: 20%;
+}
+
+p.introduction-regular-text-container, p.introduction-button-container {
+    font-size: 0.75em;
+}
+
+.introduction-button-container {
+    height: 25%;
+}
+
+.introductionLogo {
+    width: 7em;
+    height: 5.5em;
+    border: 5px solid white;
+    margin: 30px auto;
 }
 
 .introductionButton {
-    width: 30vh;
-    background-color: rgba(96, 96, 96, 0.7);
+    padding: 0 15px;
     text-align: center;
     vertical-align: middle;
-    border: 2px solid black;
-    bottom: 0;
-    right: 0;
-}
-
-.introductionText a {
+    border: 3px solid #3f3f3f;
+    border-radius: 50px;
+    margin: auto;
+    background-color: #282828;
     text-decoration: none;
-    color: black;
+    color: white;
+    text-underline: none;
 }
 
+.introduction-button-container a {
+    text-decoration: none;
+}
+/* END INTRODUCTION */
+
+
+/* START FUNCTIONS */
 .functions-container {
-    background-color: #606060;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: inherit;
     align-items: center;
     font-family: Helvetica, Arial, sans-serif;
-
+    background-color: black;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
 }
 
-.funcion {
-    width: 25vh;
+.function {
+    width: 14.28571428571429%;
+    height: 20%;
+    background-color: #111111;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.funcion p {
-    text-align: center;
+
+.functionIcon {
+    height: 45px;
+    width: 45px;
+    filter: invert(1);
 }
+
+.icon1-container {
+    background-color: #111111;
+}
+.icon2-container {
+    background-color: #141414;
+}
+.icon3-container, .icon17-container {
+    background-color: #171717;
+}
+.icon4-container, .icon18-container {
+    background-color: #151515;
+}
+.icon5-container, .icon19-container {
+    background-color: #121212;
+}
+.icon6-container, .icon20-container {
+    background-color: #161616;
+}
+.icon7-container, .icon21-container {
+    background-color: #131313;
+}
+.icon8-container, .icon22-container {
+    background-color: #191919;
+}
+.icon9-container, .icon23-container {
+    background-color: #111111;
+}
+.icon10-container, .icon24-container {
+    background-color: #141414;
+}
+.icon11-container, .icon25-container {
+    background-color: #171717;
+}
+.icon12-container, .icon26-container {
+    background-color: #151515;
+}
+.icon13-container, .icon27-container {
+    background-color: #121212;
+}
+.icon14-container, .icon28-container {
+    background-color: #161616;
+}
+.icon15-container, .icon29-container {
+    background-color: #131313;
+}
+.icon16-container, .icon30-container {
+    background-color: #191919;
+}
+
+.functionText {
+    text-align: center;
+    font-size: 1.4em;
+    color: black;
+    background-color: lightgrey;
+    box-sizing: border-box;
+    box-shadow: white;
+}
+
+/* END FUNCTIONS */
+
 
 .product-info-container {
     background-color: #707070;
@@ -245,7 +373,7 @@ ul a:hover {
 
 }
 
-.product1 {
+.product1{
     width: 50%;
     padding: 10px;
 }
