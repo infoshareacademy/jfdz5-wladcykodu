@@ -254,81 +254,13 @@ ul a:hover {
     background-color: #808080;
 }
 
-/**************************************************/
-/******************** About Us ********************/
-/**************************************************/
-
-.team-info {
-    background-color: black;
-    display: flex;
+.team-info-container {
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Helvetica, Arial, sans-serif;
-    padding: 35px 0;
+    background-color: #909090;
 }
-
-.person {
-    width: 25vh;
-    display: flex;
+.team-member-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-
-.team-member-img img {
-    /* make it responsive */
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-    /* make it a circle */
-    border-radius:50%;
-    margin: 0 auto;
-}
-
-.team-info .person-name {
-    text-align: center;
-    font-size: 1.8em;
-    line-height: 1.5em;
-    margin-top: 14px;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.person-bio {
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.4em;
-    color: white;
-}
-
-.person-icon a {
-    padding: 0 5px;
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 22px;
-    color: white;
-    transition: color 2s;
-}
-
-.person-icon a:hover {
-    color: cadetblue;
-}
-
-@media screen and (max-width: 768px)
-{
-    .team-info
-    {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-}
-
-/*********************************************************/
-/******************** End of About Us ********************/
-/*********************************************************/
 
 /************************************************/
 /******************** Footer ********************/
