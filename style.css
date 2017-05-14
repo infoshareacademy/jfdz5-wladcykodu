@@ -66,6 +66,7 @@ ul.nav a:hover {
 /*end of nav*/
 
 
+
 .site-container {
     display: flex;
     flex-direction: column;
@@ -90,12 +91,14 @@ ul.nav a:hover {
     min-height: 100vh;
     padding: 35px 0;
     background-color:dimgray;
-
 }
+
+
+/* START INTRODUCTION */
 
 .introduction-container {
     width: 100%;
-    background: url("introductionBackground.png");
+    background: url("dark.png");
     background-size: cover;
     font-family: Helvetica, Arial, sans-serif;
     color: white;
@@ -103,46 +106,82 @@ ul.nav a:hover {
     flex-direction: column;
 }
 
-.introductionElement {
-    flex: 1;
-}
-
-
-.introductionButton {
-    width: 30vh;
-    background-color: rgba(96, 96, 96, 0.7);
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid black;
-    margin-left: auto;
-}
-
-.introductionText a{
-    text-decoration: none;
-    color: black;
-}
-
-.functions-container {
-    background-color: #606060;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Helvetica, Arial, sans-serif;
-
-}
-
-.funcion {
-    width: 25vh;
+.inIntroduction {
+    height: 55vh;
+    width: 50%;
+    background-color: rgba(74, 74, 74, 0.3);
+    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+}
+.introductionElement {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.funcion p {
-    text-align: center;
+.introduction-logo-container {
+    height: 35%;
 }
+.introduction-logo-container h1 {
+    font-size: 1.5em;
+}
+
+.introduction-main-text-container {
+    height: 15%;
+}
+
+h2.introduction-main-text-container {
+    padding-top: 30px;
+    font-size: 1.25em;
+    font-weight: inherit;
+}
+
+.introduction-regular-text-container {
+    height: 20%;
+}
+
+p.introduction-regular-text-container, p.introduction-button-container {
+    font-size: 0.75em;
+}
+
+.introduction-button-container {
+    height: 25%;
+}
+
+.introductionLogo {
+    width: 7em;
+    height: 5.5em;
+    border: 5px solid white;
+    margin: 30px auto;
+}
+
+.introductionButton {
+    padding: 0 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid #3f3f3f;
+    border-radius: 50px;
+    margin: auto;
+    background-color: #282828;
+    text-decoration: none;
+    color: white;
+    text-underline: none;
+}
+
+.introduction-button-container a {
+    text-decoration: none;
+}
+/* END INTRODUCTION */
+
+
 
 .product-info-container {
     background-color: #707070;
