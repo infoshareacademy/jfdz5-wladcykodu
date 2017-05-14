@@ -365,21 +365,17 @@ p.introduction-regular-text-container, p.introduction-button-container {
 /* END FUNCTIONS */
 
 
-.product-info-container {
-    background-color: #707070;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.col-xs-6,col-md-4{
+    width: 200px;
+    height: 250px;
+    border-style: solid;
+    width: 100%;
 
 }
-
-.product1{
-    width: 50%;
-    border: 15px solid black;
-    padding: 25px;
-    margin: 25px;
+.container{
+    width: 100%;
+    display: block;
 }
-
 
 /* enrollment form */
 .enrollment-container {
