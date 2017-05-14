@@ -18,6 +18,7 @@ body {
     background-color: black;
     box-shadow: 0 4px 20px grey;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .nav-item {
@@ -71,6 +72,7 @@ ul li:hover {
 
 ul a:hover {
     color: black;
+    text-decoration: none;
 }
 
 .nav img {
@@ -95,7 +97,7 @@ ul a:hover {
     display: flex;
     padding-right: 5px;
     padding-left: 5px;
-    background: #d9d9d9;
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -158,7 +160,7 @@ ul a:hover {
 .site-container {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color: black;
     align-items: center;
     width: 100%;
 }
@@ -547,7 +549,7 @@ footer {
 
 .site-footer .footer-right p a {
     color: #256ae6;
-    text-decoration: none;;
+    text-decoration: none;
 }
 
 .site-footer .footer-icon {
@@ -581,7 +583,6 @@ footer {
         padding-left: 20px;
     }
 }
-
 /*******************************************************/
 /******************** End of Footer ********************/
 /*******************************************************/
