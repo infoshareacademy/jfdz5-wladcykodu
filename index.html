@@ -205,40 +205,47 @@
 
 
         <section id="enrollment" class="main-container-item enrollment-container">
-            <h2 class="h2-center">Zapisz się na premierę!</h2>
+            <h2 class="header-center">Zapisz się na premierę!</h2>
             <p>Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery naszego sklepu. Wiadmość
                 zostanie wysłana tylko raz.</p>
-            <form method="post"
+
+            <form method="post" class="enrollment-form"
                   onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
-                <div class="form-group">
-                    <label for="inputName">Imię i Nazwisko *</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
+                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+                    <div class="form-group">
+                        <label for="inputName">Imię i Nazwisko *</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber">Numer telefonu</label>
+                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Wiadomość</label>
+                        <textarea class="form-control" id="inputMessage" rows="3"
+                                  placeholder="Wprowadź wiadomość..."></textarea>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputEmail">Email *</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                <div class="form-checkbox">
+                    <label><input type="checkbox"><span class="form-text">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</span></label>
                 </div>
-                <div class="form-group">
-                    <label for="inputPhoneNumber">Numer telefonu</label>
-                    <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
-                </div>
-                <div class="form-group">
-                    <label for="inputMessage">Wiadomość</label>
-                    <textarea class="form-control" id="inputMessage" rows="11"
-                              placeholder="Wprowadź wiadomość..."></textarea>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
+                <div class="form-checkbox">
+                    <label><input type="checkbox" required><span class="form-text">Wyrażam zgodę na przetwarzanie moich danych osobowych w
+                        celu
                         rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
-                        prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne, lecz
-                        niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do celów
-                        innych niż wyżej wymienione</label>
+                        prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
+                        lecz
+                        niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
+                        celów
+                        innych niż wyżej wymienione</span></label>
                 </div>
                 <input type="submit" value="Wyślij" class="btn btn-primary"/>
             </form>
+
         </section>
 
         <!--Team info-->
