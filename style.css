@@ -364,17 +364,22 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 /* END FUNCTIONS */
 
-
-.col-xs-6,col-md-4{
-    width: 200px;
-    height: 250px;
-    border-style: solid;
-    width: 100%;
+.row {
+    background-color: black
+}
+.thumbnail{
+    background-color: black;
 
 }
-.container{
-    width: 100%;
-    display: block;
+.h3, h3 {
+
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 6px grey;
+
+}
+.zmiana:hover {
+    font-size: 200%;
 }
 
 /* enrollment form */
