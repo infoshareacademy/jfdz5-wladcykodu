@@ -71,8 +71,8 @@
         </div>
         <section id="enrollment" class="main-container-item enrollment-container">
             <h2 class="h2-center">Zapisz się na premierę!</h2>
-            <p>Jeśli wypełnisz poniższy formularz, wyślemy do Ciebie wiadomość z informacją o dniu premiery naszego sklepu.</p>
-            <form onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę.')">
+            <p>Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery naszego sklepu. Wiadmość zostanie wysłana tylko raz.</p>
+            <form method="post" onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
                 <div class="form-group">
                     <label for="inputName" >Imię i Nazwisko *</label>
                     <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
@@ -91,6 +91,9 @@
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne, lecz niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do celów innych niż wyżej wymienione</label>
                 </div>
                 <input type="submit" value="Wyślij" class="btn btn-primary"/>
             </form>
