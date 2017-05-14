@@ -82,8 +82,15 @@ ul a:hover {
 
 /* if user touch nav-toggle, show nav-menu*/
 @media screen and (max-width: 768px) {
-    #menu-toggle:checked + .nav-menu {
+    #menu-toggle:checked ~ .nav-menu {
         display: block;
+
+    }
+    #menu-toggle:checked + .nav-toggle {
+
+       /* transform: rotate(90deg)*/
+        transform: rotate(45deg) translate(-2px, -1px);
+
     }
 }
 
@@ -92,13 +99,42 @@ ul a:hover {
 }
 
 .nav-toggle {
-    font-size: 40px;
-    align-items: center;
-    display: flex;
-    padding-right: 5px;
-    padding-left: 5px;
+
+/*    align-items: center;*/
+/*    display: flex;*/
+    padding-right: 10px;
+
     color: white;
+    width: 50px;
+    margin-top: 15px;
+
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+
+/*
+ hamburger-spans /add animations !!!
+ */
+.nav-toggle span
+{
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 2px;
+    background: white;
+    border-radius: 3px;
+
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
 
 @media (min-width: 768px) {
     .nav-toggle {
