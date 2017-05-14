@@ -7,19 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Części samochodowe</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 </head>
 <body>
-<header class="site-header">
-    <nav>
-        <ul class="nav">
-            <li><a href="#">Lorem ipsum...</a></li>
-            <li><a href="#">Lorem ipsum...</a></li>
-            <li><a href="#">Lorem ipsum...</a></li>
-            <li><a href="#">Lorem ipsum...</a></li>
-            <li><a href="#">Lorem ipsum...</a></li>
-        </ul>
+
+<header>
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="#"><img src="general.png"></a>
+        </div>
+
+        <label for="menu-toggle" class="nav-toggle">&equiv;</label>
+        <input type="checkbox" id="menu-toggle" class="is-hidden"/>
+
+        <div class="nav-right nav-menu">
+            <ul>
+                <li class="nav-item"><a href="#functions">Funkcje</a></li><!--Functions-->
+                <li class="nav-item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
+                <li class="nav-item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
+                <li class="nav-item"><a href="#team-info">O nas</a></li><!--About Us-->
+            </ul>
+        </div>
     </nav>
 </header>
+
 <div class="site-container">
     <main class="main-container">
         <div id="introduction" class="main-container-item introduction-container">
@@ -55,26 +69,141 @@
                 <img class="functionIcon" src="car_icon.svg">
                 Z nami zaoczczędzisz czas i pieniądze.
             </div>
-
         </div>
         <div id="product-info" class="main-container-item product-info-container">
             <div class="product1">
-            <h1>Precyzjne wyszukanie części samochodowych</h1>
+                <h1>Precyzjne wyszukanie części samochodowych</h1>
             </div>
             <div class="product1">
-            <h1>Pokażemy ci jak dojechać do warsztatu</h1>
-             </div>
-
-
+                <h1>Pokażemy ci jak dojechać do warsztatu</h1>
+            </div>
         </div>
         <div id="enrollment" class="main-container-item enrollment-container">Zapis na premierę
         </div>
-        <div id="team-info" class="main-container-item team-info-container">Informacje o zespole
+
+        <!--Team info-->
+
+        <div id="team-info" class="team-info">
+            <div class="person">
+                <div class="team-member-img">
+                    <img src="photo2.jpeg">
+                    <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
+                </div>
+                <div class="person-icon">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person-name">
+                        Aleksandra Jemielity
+                    </h3>
+                </div>
+                <p class="person-bio">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+
+            </div>
+
+
+            <div class="person">
+                <div class="team-member-img">
+                    <img src="photo2.jpeg">
+                </div>
+                <div class="person-icon">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person-name">
+                        Lucyna Powałowska
+                    </h3>
+                </div>
+                <p class="person-bio">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+
+            </div>
+
+            <div class="person">
+                <div class="team-member-img">
+                    <img src="photo1.jpg">
+                </div>
+                <div class="person-icon text-center">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person-name">
+                        Rafał Sobiepan
+                    </h3>
+                </div>
+                <p class="person-bio">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+
+            </div>
+
+            <div class="person">
+                <div class="team-member-img">
+                    <img src="photo1.jpg">
+                </div>
+                <div class="person-icon">
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person-name">
+                        Łukasz Radwan
+                    </h3>
+                </div>
+                <p class="person-bio">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </p>
+            </div>
         </div>
+
     </main>
+
     <footer class="site-footer">
-        <p>Copyright &copy; Władcy Kodu 2017</p>
+
+        <div class="footer-left">
+            <p>Władcy Kodu &copy; 2017</p>
+
+            <div class="footer-icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Grunwaldzka Street</span> Gdansk, Poland</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+48 777 77 77</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@wladcykodu.com">support@wladcykodu.com</a></p>
+            </div>
+        </div>
     </footer>
+
 </div>
 </body>
 </html>

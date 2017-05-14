@@ -3,68 +3,157 @@ body {
     padding: 0;
 }
 
+/****************************************************/
+/******************** Navigation ********************/
+/****************************************************/
 
-.site-header {
-    width: 100%;
-    height: 25px;
-    background-color:fuchsia;
-}
-
-
-/*nav*/
-
-ul.nav {
+.nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style-type: none;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    background-color: #b8e9ff;
-    flex-wrap: wrap;
+    align-items: stretch;
+    /*  min-height: 3.25rem;*/
+    height: 7em;
     position: fixed;
-    width: 100%;
     top: 0;
-    box-shadow: 0 4px 20px #256ae6;
-
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 4px 20px grey;
+    box-sizing: border-box;
 }
 
-ul.nav li {
+.nav-item {
+    align-items: center;
     display: flex;
-    background-color: #b8e9ff;
-    padding: 10px 35px;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 15px;
     text-align: center;
     border-radius: 3px;
-    width: auto;
     margin: 0;
-    line-height: 80px;
     list-style-type: none;
     transition: background 1s, color 1s;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
-ul.nav a {
+.nav-left, .nav-right {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-menu.nav-right ul {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+ul a {
     text-decoration: none;
-    color: black;
+    color: white;
     transition: background 1s, color 1s;
 }
 
-ul.nav li:hover {
+ul li:hover {
     cursor: pointer;
     box-sizing: border-box;
-    background: cadetblue;
-    border-bottom: 10px solid #1c00e6;
-    color: white;
+    background: lightslategrey;
+    color: black;
 }
 
-ul.nav a:hover {
-    color: white;
+ul a:hover {
+    color: black;
 }
 
-/*end of nav*/
+.nav img {
+    height: 7em;
+    margin: 0;
+}
 
+/* if user touch nav-toggle, show nav-menu*/
+@media screen and (max-width: 768px) {
+    #menu-toggle:checked + .nav-menu {
+        display: block;
+    }
+}
+
+.is-hidden {
+    display: none;
+}
+
+.nav-toggle {
+    font-size: 40px;
+    align-items: center;
+    display: flex;
+    padding-right: 5px;
+    padding-left: 5px;
+    background: #d9d9d9;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu.nav-right {
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 20px grey;
+    }
+
+    .nav-menu.nav-right .nav-item {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-menu.nav-right ul {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-menu.nav-right ul li {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        list-style-type: none;
+        transition: background 1s, color 1s;
+        cursor: pointer;
+        color: black;
+    }
+
+    .nav-menu.nav-right ul a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-menu.nav-right ul li:hover {
+        cursor: pointer;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+}
+
+/***********************************************************/
+/******************** End of Navigation ********************/
+/***********************************************************/
 
 .site-container {
     display: flex;
@@ -89,7 +178,7 @@ ul.nav a:hover {
     flex-direction: column;
     min-height: 100vh;
     padding: 35px 0;
-    background-color:dimgray;
+    background-color: dimgray;
 
 }
 
@@ -109,7 +198,6 @@ ul.nav a:hover {
 
 .introductionRegularText {
 
-
 }
 
 .introductionButton {
@@ -122,7 +210,7 @@ ul.nav a:hover {
     right: 0;
 }
 
-.introductionText a{
+.introductionText a {
     text-decoration: none;
     color: black;
 }
@@ -155,10 +243,9 @@ ul.nav a:hover {
     flex-direction: row;
     justify-content: space-between;
 
-
 }
 
-.product1{
+.product1 {
     width: 50%;
     padding: 10px;
 }
@@ -167,32 +254,186 @@ ul.nav a:hover {
     background-color: #808080;
 }
 
-.team-info-container {
+/**************************************************/
+/******************** About Us ********************/
+/**************************************************/
+
+.team-info {
+    background-color: black;
+    display: flex;
     flex-direction: row;
-    background-color: #909090;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 35px 0;
 }
-.team-member-container {
+
+.person {
+    width: 25vh;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/*.site-footer {
-    width: 100%;
-    background-color:coral;
-} */
+.team-member-img img {
+    /* make it responsive */
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    /* make it a circle */
+    border-radius:50%;
+    margin: 0 auto;
+}
 
-/*footer*/
+.team-info .person-name {
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.person-bio {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4em;
+    color: white;
+}
+
+.person-icon a {
+    padding: 0 5px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    transition: color 2s;
+}
+
+.person-icon a:hover {
+    color: cadetblue;
+}
+
+@media screen and (max-width: 768px)
+{
+    .team-info
+    {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/*********************************************************/
+/******************** End of About Us ********************/
+/*********************************************************/
+
+/************************************************/
+/******************** Footer ********************/
+/************************************************/
+
 footer {
     margin-top: auto;
     bottom: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 70px;
-    background-color: dodgerblue;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
     color: white;
-    text-align: center;
     width: 100%;
     font-weight: bold;
     font-size: 20px;
+    align-items: stretch;
 }
-/*end of footer*/
+
+.site-footer {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 15px sans-serif;
+}
+
+.site-footer .footer-left {
+    width: 45%;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.site-footer .footer-right {
+    width: 45%;
+}
+
+.site-footer .footer-right i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.site-footer .footer-right .fa-envelope {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.site-footer .footer-right p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.site-footer .footer-right p span {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.site-footer .footer-right p a {
+    color: #256ae6;
+    text-decoration: none;;
+}
+
+.site-footer .footer-icon {
+    margin-top: 25px;
+}
+
+.site-footer .footer-icon a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .site-footer .footer-left,
+    .site-footer .footer-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+/*******************************************************/
+/******************** End of Footer ********************/
+/*******************************************************/
