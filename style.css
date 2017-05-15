@@ -382,6 +382,14 @@ p.introduction-regular-text-container, p.introduction-button-container {
 }
 .change:hover {
     font-size: 200%;
+    
+}
+.thumbnail .caption{
+    width: 315px;
+
+
+
+
 }
 
 /* enrollment form */
