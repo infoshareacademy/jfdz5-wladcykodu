@@ -18,6 +18,8 @@ body {
     box-shadow: 0 4px 20px grey;
     box-sizing: border-box;
     z-index: 1;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .nav-item {
@@ -60,6 +62,7 @@ ul a {
     text-decoration: none;
     color: white;
     transition: background 1s, color 1s;
+    padding: 70px 0;
 }
 
 ul li:hover {
@@ -99,6 +102,49 @@ ul a:hover {
         opacity: 1;
         transform: rotate(-45deg);
     }
+
+    .nav-menu.nav-right {
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 20px grey;
+    }
+
+    .nav-menu.nav-right .nav-item {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        font-weight: normal;
+    }
+
+    .nav-menu.nav-right ul {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav-menu.nav-right ul li {
+        background-color: rgba(255, 255, 255, 0.4);
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        list-style-type: none;
+        transition: background 1s, color 1s;
+        cursor: pointer;
+        color: black;
+    }
+
+    .nav-menu.nav-right ul a {
+        text-decoration: none;
+        color: black;
+        padding: 0;
+    }
+
+    .nav-menu.nav-right ul li:hover {
+        cursor: pointer;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
 }
 
 .is-hidden {
@@ -135,49 +181,6 @@ ul a:hover {
 
 .nav-toggle:hover {
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-menu.nav-right {
-        display: none;
-        left: 0;
-        right: 0;
-        top: 100%;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: 0 4px 20px grey;
-    }
-
-    .nav-menu.nav-right .nav-item {
-        border-top: 1px solid rgba(0, 0, 0, 0.5);
-    }
-
-    .nav-menu.nav-right ul {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .nav-menu.nav-right ul li {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-sizing: border-box;
-        padding: 15px;
-        text-align: center;
-        list-style-type: none;
-        transition: background 1s, color 1s;
-        cursor: pointer;
-        color: black;
-    }
-
-    .nav-menu.nav-right ul a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .nav-menu.nav-right ul li:hover {
-        cursor: pointer;
-        box-sizing: border-box;
-        font-weight: bold;
-    }
 }
 
 /***********************************************************/
