@@ -10,7 +10,6 @@ body {
 .nav {
     display: flex;
     align-items: stretch;
-    /*  min-height: 3.25rem;*/
     height: 7em;
     position: fixed;
     top: 0;
@@ -84,13 +83,21 @@ ul a:hover {
 @media screen and (max-width: 768px) {
     #menu-toggle:checked ~ .nav-menu {
         display: block;
-
     }
-    #menu-toggle:checked + .nav-toggle {
 
-        /* transform: rotate(90deg)*/
-        transform: rotate(45deg) translate(-2px, -1px);
+    #menu-toggle:checked ~ .nav-toggle span {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
 
+    #menu-toggle:checked ~ .nav-toggle span:nth-last-child(2) {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu-toggle:checked ~ .nav-toggle span:nth-last-child(1) {
+        opacity: 1;
+        transform: rotate(-45deg);
     }
 }
 
@@ -99,42 +106,26 @@ ul a:hover {
 }
 
 .nav-toggle {
-
-    /*    align-items: center;*/
-    /*    display: flex;*/
-    padding-right: 10px;
-
+    padding-right: 80px;
     color: white;
     width: 50px;
     margin-top: 15px;
-
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-/*    -khtml-user-select:none;*/
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-/*
- hamburger-spans /add animations !!!
- */
-.nav-toggle span
-{
+.nav-toggle span {
     display: inline-block;
-    width: 100%;
+    width: 65px;
     height: 4px;
     margin-bottom: 2px;
     background: white;
     border-radius: 3px;
-
-    transform-origin: 4px 0;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    opacity 0.55s ease;
+    transform-origin: 4px 0; /*****/
+    transition: .5s ease-in-out;
 }
-
 
 @media (min-width: 768px) {
     .nav-toggle {
@@ -193,7 +184,6 @@ ul a:hover {
 /******************** End of Navigation ********************/
 /***********************************************************/
 
-
 .site-container {
     display: flex;
     flex-direction: column;
@@ -221,7 +211,6 @@ ul a:hover {
 
 }
 
-
 /* START INTRODUCTION */
 
 .introduction-container {
@@ -244,6 +233,7 @@ ul a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .introductionElement {
     width: 70%;
     margin: auto;
@@ -258,6 +248,7 @@ ul a:hover {
 .introduction-logo-container {
     height: 35%;
 }
+
 .introduction-logo-container h1 {
     font-size: 1.5em;
 }
@@ -307,8 +298,8 @@ p.introduction-regular-text-container, p.introduction-button-container {
 .introduction-button-container a {
     text-decoration: none;
 }
-/* END INTRODUCTION */
 
+/* END INTRODUCTION */
 
 /* START FUNCTIONS */
 .functions-container {
@@ -336,7 +327,6 @@ p.introduction-regular-text-container, p.introduction-button-container {
     box-sizing: border-box;
 }
 
-
 .functionIcon {
     height: 45px;
     width: 45px;
@@ -346,48 +336,63 @@ p.introduction-regular-text-container, p.introduction-button-container {
 .icon1-container {
     background-color: #111111;
 }
+
 .icon2-container {
     background-color: #141414;
 }
+
 .icon3-container, .icon17-container {
     background-color: #171717;
 }
+
 .icon4-container, .icon18-container {
     background-color: #151515;
 }
+
 .icon5-container, .icon19-container {
     background-color: #121212;
 }
+
 .icon6-container, .icon20-container {
     background-color: #161616;
 }
+
 .icon7-container, .icon21-container {
     background-color: #131313;
 }
+
 .icon8-container, .icon22-container {
     background-color: #191919;
 }
+
 .icon9-container, .icon23-container {
     background-color: #111111;
 }
+
 .icon10-container, .icon24-container {
     background-color: #141414;
 }
+
 .icon11-container, .icon25-container {
     background-color: #171717;
 }
+
 .icon12-container, .icon26-container {
     background-color: #151515;
 }
+
 .icon13-container, .icon27-container {
     background-color: #121212;
 }
+
 .icon14-container, .icon28-container {
     background-color: #161616;
 }
+
 .icon15-container, .icon29-container {
     background-color: #131313;
 }
+
 .icon16-container, .icon30-container {
     background-color: #191919;
 }
@@ -403,7 +408,6 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 /* END FUNCTIONS */
 
-
 .product-info-container {
     background-color: #707070;
     display: flex;
@@ -412,13 +416,12 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 }
 
-.product1{
+.product1 {
     width: 50%;
     border: 15px solid black;
     padding: 25px;
     margin: 25px;
 }
-
 
 /* enrollment form */
 .enrollment-container {
@@ -438,6 +441,7 @@ form {
     text-align: center;
     margin-bottom: 40px;
 }
+
 /* end of enrollment form */
 
 /**************************************************/
@@ -452,6 +456,7 @@ form {
     align-items: center;
     font-family: Helvetica, Arial, sans-serif;
     padding: 35px 0;
+    min-height: 100vh;
 }
 
 .person {
@@ -468,7 +473,7 @@ form {
     width: 200px;
     height: 200px;
     /* make it a circle */
-    border-radius:50%;
+    border-radius: 50%;
     margin: 0 auto;
 }
 
@@ -501,10 +506,8 @@ form {
     color: cadetblue;
 }
 
-@media screen and (max-width: 768px)
-{
-    .team-info
-    {
+@media screen and (max-width: 768px) {
+    .team-info {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-direction: column;
@@ -619,6 +622,7 @@ footer {
         padding-left: 20px;
     }
 }
+
 /*******************************************************/
 /******************** End of Footer ********************/
 /*******************************************************/
