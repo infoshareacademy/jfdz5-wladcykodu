@@ -10,7 +10,7 @@ body {
 .nav {
     display: flex;
     align-items: stretch;
-    height: 7em;
+    height: 7.3em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -46,6 +46,8 @@ body {
 
 .nav-left {
     justify-content: flex-start;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 .nav-right {
@@ -68,7 +70,7 @@ ul a {
 ul li:hover {
     cursor: pointer;
     box-sizing: border-box;
-    background: lightslategrey;
+    background: white;
     color: black;
 }
 
