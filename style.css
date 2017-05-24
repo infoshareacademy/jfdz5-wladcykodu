@@ -111,7 +111,6 @@ ul a:hover {
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -203,8 +202,8 @@ ul a:hover {
 .main-container {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    width: 80%;
+    max-width: 1440px;
+    width: 100%;
     flex: 1;
     background-color: cornflowerblue;
     margin: 0 auto;
@@ -464,8 +463,9 @@ form {
     /* align-items: center;*/
     flex-wrap: wrap;
     font-family: Helvetica, Arial, sans-serif;
-    padding: 35px 0;
+    padding: 35px 20px;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .person {
@@ -518,7 +518,7 @@ form {
     color: cadetblue;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .person {
         min-width: 80%;
     }
