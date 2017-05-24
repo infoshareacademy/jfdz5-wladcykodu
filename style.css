@@ -190,6 +190,13 @@ ul a:hover {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* rules on tablets only */
+    ul a {
+        padding: 40px 10px;
+    }
+}
+
 .nav-toggle:hover {
     cursor: pointer;
 }
@@ -209,8 +216,8 @@ ul a:hover {
 .main-container {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    width: 80%;
+    max-width: 1440px;
+    width: 100%;
     flex: 1;
     background-color: cornflowerblue;
     margin: 0 auto;
