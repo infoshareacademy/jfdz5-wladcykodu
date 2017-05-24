@@ -184,7 +184,6 @@ ul a:hover {
 
 }
 
-
 /* START INTRODUCTION */
 
 .introduction-container {
@@ -207,6 +206,7 @@ ul a:hover {
     align-items: center;
     justify-content: center;
 }
+
 .introductionElement {
     width: 70%;
     margin: auto;
@@ -221,6 +221,7 @@ ul a:hover {
 .introduction-logo-container {
     height: 35%;
 }
+
 .introduction-logo-container h1 {
     font-size: 1.5em;
 }
@@ -270,8 +271,8 @@ p.introduction-regular-text-container, p.introduction-button-container {
 .introduction-button-container a {
     text-decoration: none;
 }
-/* END INTRODUCTION */
 
+/* END INTRODUCTION */
 
 /* START FUNCTIONS */
 .functions-container {
@@ -299,7 +300,6 @@ p.introduction-regular-text-container, p.introduction-button-container {
     box-sizing: border-box;
 }
 
-
 .functionIcon {
     height: 45px;
     width: 45px;
@@ -309,48 +309,63 @@ p.introduction-regular-text-container, p.introduction-button-container {
 .icon1-container {
     background-color: #111111;
 }
+
 .icon2-container {
     background-color: #141414;
 }
+
 .icon3-container, .icon17-container {
     background-color: #171717;
 }
+
 .icon4-container, .icon18-container {
     background-color: #151515;
 }
+
 .icon5-container, .icon19-container {
     background-color: #121212;
 }
+
 .icon6-container, .icon20-container {
     background-color: #161616;
 }
+
 .icon7-container, .icon21-container {
     background-color: #131313;
 }
+
 .icon8-container, .icon22-container {
     background-color: #191919;
 }
+
 .icon9-container, .icon23-container {
     background-color: #111111;
 }
+
 .icon10-container, .icon24-container {
     background-color: #141414;
 }
+
 .icon11-container, .icon25-container {
     background-color: #171717;
 }
+
 .icon12-container, .icon26-container {
     background-color: #151515;
 }
+
 .icon13-container, .icon27-container {
     background-color: #121212;
 }
+
 .icon14-container, .icon28-container {
     background-color: #161616;
 }
+
 .icon15-container, .icon29-container {
     background-color: #131313;
 }
+
 .icon16-container, .icon30-container {
     background-color: #191919;
 }
@@ -364,33 +379,66 @@ p.introduction-regular-text-container, p.introduction-button-container {
     box-shadow: white;
 }
 
-/* END FUNCTIONS */
+/**************************************************/
+/******************** Product Info ****************/
+/**************************************************/
 
-.row {
-    background-color: black
+.product-info {
+    padding-top: 100px;
+    padding-bottom: 70px;
 }
-.thumbnail{
-    background-color: black;
 
-}
-.h3, h3 {
-
-    font-size: 24px;
+.product-info-box {
+    text-align: center;
     color: white;
-    text-shadow: 0 0 6px grey;
-
+    margin-bottom: 50px;
 }
-.change:hover {
-    font-size: 200%;
-    
+
+.product-info-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-.thumbnail .caption{
-    width: 315px;
 
-
-
-
+.product-info-box span {
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    color: white;
+    transition: background 1s, color 1s;
 }
+
+.product-info-box i {
+    position: relative;
+    color: white;
+    font-size: 47px;
+    line-height: 100px;
+    transition: color 1s;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.product-info-box span:hover {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 100px;
+    color: black;
+    cursor: pointer;
+}
+
+.product-info-box i:hover {
+    color: black;
+}
+
+/**************************************************/
+/******************** End of Product Info *********/
+/**************************************************/
 
 /* enrollment form */
 .enrollment-container {
@@ -410,6 +458,7 @@ form {
     text-align: center;
     margin-bottom: 40px;
 }
+
 /* end of enrollment form */
 
 /**************************************************/
@@ -440,7 +489,7 @@ form {
     width: 200px;
     height: 200px;
     /* make it a circle */
-    border-radius:50%;
+    border-radius: 50%;
     margin: 0 auto;
 }
 
@@ -473,10 +522,8 @@ form {
     color: cadetblue;
 }
 
-@media screen and (max-width: 768px)
-{
-    .team-info
-    {
+@media screen and (max-width: 768px) {
+    .team-info {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-direction: column;
@@ -591,6 +638,7 @@ footer {
         padding-left: 20px;
     }
 }
+
 /*******************************************************/
 /******************** End of Footer ********************/
 /*******************************************************/
