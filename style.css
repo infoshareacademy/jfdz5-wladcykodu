@@ -434,6 +434,7 @@ p.introduction-regular-text-container, p.introduction-button-container {
 .product-info {
     padding-top: 100px;
     padding-bottom: 70px;
+    background-color: black;
 }
 
 .product-info-box {
