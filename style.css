@@ -164,6 +164,7 @@ ul a:hover {
 
 .nav-toggle {
     padding-right: 80px;
+    box-sizing: border-box;
     color: white;
     width: 50px;
     margin-top: 15px;
@@ -451,6 +452,7 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 .product-info-box span {
     border: 2px solid white;
+    box-sizing: border-box;
     display: inline-block;
     border-radius: 50%;
     text-align: center;
