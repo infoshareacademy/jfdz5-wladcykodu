@@ -38,7 +38,7 @@
     </nav>
 </header>
 <div class="site-container">
-    <main class="main-container">
+    <main class="main-contaliner">
 
 
         <!-- START INTRODUCTION -->
@@ -172,169 +172,208 @@
         </div>
 
         <!-- END FUNCTIONS -->
-
-
-        <div id="product-info" class="main-container-item product-info-container">
-            <div class="product1">
-                <h3>Precyzjne wyszukanie części samochodowych</h3>
-                <ul>Pierwszym krokiem znalezienia części samochodowej jest podanie trzech danych:
-                    <li>marki samochodu</li>
-                    <li>modelu marki samochodu</li>
-                    <li>części szukanej samochodu</li>
-                </ul>
-                <h3>Wybór części z dokładnie sprecyzowanych kategori (według przeznaczenia)</h3>
-
-                <h3>Formularz zawierający stały kontakt z ekspertem:</h3>
-                <ul>Składowe formularzu
-                    <li>Nr telefonu</li>
-                    <li>dni oraz godziny kontaktu</li>
-                    <li>kontakt email</li>
-                </ul>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-2 ">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Wyszukanie</h3>
+                        <span class="change">Z dokładnie sprecyzownych kategorii marki,
+                            modelu pojazdu wybierzesz najlepsze części.</span>
+                    </div>
+                </div>
             </div>
-            <div class="product1">
-                <h3>Google Maps</h3>
-                <p>Mapa będzie służyć do znalezienia najszybszej i najdokładniejszej drogi do warsztatu
-                    samochodowego w celu wymiany częśći.</p>
-                <h3>Koszyk produktów</h3>
-                <p>Bardzo ważna fukncja która umożliwia w łatwy sposób uporządkowanie zakupów. Dzięki ten funkcji
-                    konsument będzie miał podgląd na swoje zakupy. W każdej chwili w każdym czasie będzie mógł dokonać
-                    korekty oraz wymiany towaru.</p>
-
+            <div class="col-sm-6 col-md-6 col-lg-2 ">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Wyszukanie precyzjne</h3>
+                        <span class="change">Nie musisz znać nazwy szukanej części.
+                        Zdefiniujemy odpowiednie kategorie dla Ciebie np. żarówki, akcesoria silnika,
+                        </span>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-2 ">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>Ekspert 24h</h3>
+                            <span class="change">Dajemy ci możliwość stałej konsultacji eksperckiej
+                            zarówno telefonicznie jak i email.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2 ">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>Mapa Dojazdu</h3>
+                            <span class="change">Zawsze możesz sprawdzić gdzie jesteś, i ile masz przed sobą
+                            drogi do najbliższego warsztatu
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>Koszyk produktów</h3>
+                            <span class="change">
+                                Twoje zakupy w jednym miejscu pod stałą kontrolą
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-2">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>Wyprzedaże</h3>
+                            <span class="change">Będziesz napewno o tym poinformowany.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-        </div>
-
-
-        <section id="enrollment" class="main-container-item enrollment-container">
-            <h2 class="h2-center">Zapisz się na premierę!</h2>
-            <p>Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery naszego sklepu. Wiadmość
-                zostanie wysłana tylko raz.</p>
-            <form method="post"
-                  onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
-                <div class="form-group">
-                    <label for="inputName">Imię i Nazwisko *</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail">Email *</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
-                </div>
-                <div class="form-group">
-                    <label for="inputPhoneNumber">Numer telefonu</label>
-                    <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
-                </div>
-                <div class="form-group">
-                    <label for="inputMessage">Wiadomość</label>
-                    <textarea class="form-control" id="inputMessage" rows="11"
-                              placeholder="Wprowadź wiadomość..."></textarea>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-                        rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
-                        prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne, lecz
-                        niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do celów
-                        innych niż wyżej wymienione</label>
-                </div>
-                <input type="submit" value="Wyślij" class="btn btn-primary"/>
-            </form>
-        </section>
-
-        <!--Team info-->
-
-        <div id="team-info" class="team-info">
-            <div class="person">
-                <div class="team-member-img">
-                    <img src="photo2.jpeg">
-                    <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
-                </div>
-                <div class="person-icon">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
                 </div>
 
-                <div class="team-member-about">
-                    <h3 class="person-name">
-                        Aleksandra Jemielity
-                    </h3>
-                </div>
-                <p class="person-bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
 
+            <section id="enrollment" class="main-container-item enrollment-container">
+                <h2 class="h2-center">Zapisz się na premierę!</h2>
+                <p>Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery naszego sklepu. Wiadmość
+                    zostanie wysłana tylko raz.</p>
+                <form method="post"
+                      onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
+                    <div class="form-group">
+                        <label for="inputName">Imię i Nazwisko *</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber">Numer telefonu</label>
+                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputMessage">Wiadomość</label>
+                        <textarea class="form-control" id="inputMessage" rows="11"
+                                  placeholder="Wprowadź wiadomość..."></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w
+                            celu
+                            rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
+                            prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
+                            lecz
+                            niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
+                            celów
+                            innych niż wyżej wymienione</label>
+                    </div>
+                    <input type="submit" value="Wyślij" class="btn btn-primary"/>
+                </form>
+            </section>
+
+            <!--Team info-->
+
+            <div id="team-info" class="team-info">
+                <div class="person">
+                    <div class="team-member-img">
+                        <img src="photo2.jpeg">
+                        <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
+                    </div>
+                    <div class="person-icon">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+
+                    <div class="team-member-about">
+                        <h3 class="person-name">
+                            Aleksandra Jemielity
+                        </h3>
+                    </div>
+                    <p class="person-bio">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+
+
+                <div class="person">
+                    <div class="team-member-img">
+                        <img src="photo2.jpeg">
+                    </div>
+                    <div class="person-icon">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+
+                    <div class="team-member-about">
+                        <h3 class="person-name">
+                            Lucyna Powałowska
+                        </h3>
+                    </div>
+                    <p class="person-bio">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+
+                <div class="person">
+                    <div class="team-member-img">
+                        <img src="photo1.jpg">
+                    </div>
+                    <div class="person-icon text-center">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+
+                    <div class="team-member-about">
+                        <h3 class="person-name">
+                            Rafał Sobiepan
+                        </h3>
+                    </div>
+                    <p class="person-bio">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+
+                <div class="person">
+                    <div class="team-member-img">
+                        <img src="photo1.jpg">
+                    </div>
+                    <div class="person-icon">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                    </div>
+
+                    <div class="team-member-about">
+                        <h3 class="person-name">
+                            Łukasz Radwan
+                        </h3>
+                    </div>
+                    <p class="person-bio">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
-
-
-            <div class="person">
-                <div class="team-member-img">
-                    <img src="photo2.jpeg">
-                </div>
-                <div class="person-icon">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-
-                <div class="team-member-about">
-                    <h3 class="person-name">
-                        Lucyna Powałowska
-                    </h3>
-                </div>
-                <p class="person-bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-
-            </div>
-
-            <div class="person">
-                <div class="team-member-img">
-                    <img src="photo1.jpg">
-                </div>
-                <div class="person-icon text-center">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-
-                <div class="team-member-about">
-                    <h3 class="person-name">
-                        Rafał Sobiepan
-                    </h3>
-                </div>
-                <p class="person-bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-
-            </div>
-
-            <div class="person">
-                <div class="team-member-img">
-                    <img src="photo1.jpg">
-                </div>
-                <div class="person-icon">
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
-                </div>
-
-                <div class="team-member-about">
-                    <h3 class="person-name">
-                        Łukasz Radwan
-                    </h3>
-                </div>
-                <p class="person-bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-            </div>
-        </div>
 
     </main>
 
