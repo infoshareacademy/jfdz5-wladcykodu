@@ -427,32 +427,66 @@ p.introduction-regular-text-container, p.introduction-button-container {
     box-shadow: white;
 }
 
-/* END FUNCTIONS */
+/**************************************************/
+/******************** Product Info ****************/
+/**************************************************/
 
-.row {
-    background-color: black
+.product-info {
+    padding-top: 100px;
+    padding-bottom: 70px;
 }
-.thumbnail{
-    background-color: black;
 
-}
-.h3, h3 {
-
-    font-size: 24px;
+.product-info-box {
+    text-align: center;
     color: white;
-    text-shadow: 0 0 6px grey;
-
+    margin-bottom: 50px;
 }
 
-
+.product-info-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-.thumbnail .caption{
-    width: 315px;
 
-
-
-
+.product-info-box span {
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+    color: white;
+    transition: background 1s, color 1s;
 }
+
+.product-info-box i {
+    position: relative;
+    color: white;
+    font-size: 47px;
+    line-height: 100px;
+    transition: color 1s;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.product-info-box span:hover {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 100px;
+    color: black;
+    cursor: pointer;
+}
+
+.product-info-box i:hover {
+    color: black;
+}
+
+/**************************************************/
+/******************** End of Product Info *********/
+/**************************************************/
 
 /* enrollment form */
 .enrollment-container {
