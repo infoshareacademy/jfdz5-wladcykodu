@@ -226,9 +226,10 @@ ul a:hover {
 .main-container-item {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     min-height: 100vh;
     padding: 35px 0;
-    background-color: dimgray;
+    background-color: black;
 
 }
 
@@ -489,14 +490,20 @@ p.introduction-regular-text-container, p.introduction-button-container {
 /******************** End of Product Info *********/
 /**************************************************/
 
-/* enrollment form */
+/**************************************************/
+/**************** Enrollment form *****************/
+/**************************************************/
+
 .enrollment-container {
-    background-color: #808080;
-    padding: 10% 20%;
+    padding: 15% 20%;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
 }
 
-form {
+.enrollment-form {
     margin: 20px 0;
+    box-sizing: border-box;
 }
 
 .checkbox {
@@ -508,7 +515,22 @@ form {
     margin-bottom: 40px;
 }
 
-/* end of enrollment form */
+.form-inputs-container {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*   hiding spin buttons in phone number filed    */
+#inputPhoneNumber::-webkit-outer-spin-button,
+#inputPhoneNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/**************************************************/
+/************ End of enrollment form **************/
+/**************************************************/
 
 /**************************************************/
 /******************** About Us ********************/
