@@ -484,10 +484,12 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center;*/
+    flex-wrap: wrap;
     font-family: Helvetica, Arial, sans-serif;
-    padding: 35px 0;
+    padding: 35px 20px;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .person {
@@ -496,6 +498,8 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    min-width: 20%;
 }
 
 .team-member-img img {
@@ -522,6 +526,7 @@ form {
     font-size: 14px;
     line-height: 1.4em;
     color: white;
+    padding: 10px;
 }
 
 .person-icon a {
@@ -537,12 +542,16 @@ form {
     color: cadetblue;
 }
 
-@media screen and (max-width: 768px) {
-    .team-info {
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
+@media screen and (max-width: 767px) {
+    .person {
+        min-width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* rules on tablets only */
+    .person {
+        min-width: 40%;
     }
 }
 
