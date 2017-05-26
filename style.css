@@ -375,7 +375,7 @@ p {
 .function {
     width: 16.66666666666667%;
     height: 25%;
-    min-height:21.25vh;
+    min-height: 21.25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -457,16 +457,13 @@ p {
 /******************** Product Info ****************/
 /**************************************************/
 .product-info {
-    max-height: 85vh;
-    min-height: 85vh;
-    padding: 20px;
     font-size: 14px;
     background-color: #0a0a0a;
     box-sizing: border-box;
     text-align: center;
+    padding: 115px 20px 20px;
+    max-height: 85%;
 }
-
-
 
 .product-text {
     margin: auto;
@@ -588,12 +585,12 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* align-items: center;*/
     flex-wrap: wrap;
     font-family: Helvetica, Arial, sans-serif;
-    padding: 35px 20px;
     min-height: 100vh;
     box-sizing: border-box;
+    padding: 110px 20px 20px;
+    max-height: 85%;
 }
 
 .person {
