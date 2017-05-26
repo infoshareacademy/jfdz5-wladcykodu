@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /****************************************************/
@@ -222,7 +223,7 @@ ul a:hover {
 .site-container {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #0c0c0c;;
     align-items: center;
 }
 
@@ -231,7 +232,7 @@ ul a:hover {
     flex-direction: column;
     max-width: 1440px;
     flex: 1;
-    background-color: cornflowerblue;
+    background-color: black;
     padding-top: 15vh;
 }
 
@@ -239,7 +240,6 @@ ul a:hover {
     display: flex;
     flex-direction: column;
     height: 85%;
-    background-color: dimgray;
 }
 
 /* START INTRODUCTION */
@@ -248,10 +248,8 @@ ul a:hover {
     min-height: 85vh;
     box-sizing: border-box;
     width: 100%;
-    background: url("dark.png");
-    background-attachment: fixed;
+    background: url("dark.png") fixed;
     background-size: cover;
-    font-family: Helvetica, Arial, sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -321,17 +319,8 @@ p {
     margin: 0;
 }
 
-.introductionButton {
-    padding: 5px 10px;
-    text-align: center;
-    vertical-align: middle;
-    border: 3px solid #3f3f3f;
-    border-radius: 50px;
-    background-color: #282828;
-    text-decoration: none;
-    color: white;
-    text-underline: none;
-    margin: 0;
+.btn p {
+ font-weight: bold;
 }
 
 .introduction-button-container a {
@@ -365,8 +354,6 @@ p {
     flex-direction: row;
     justify-content: inherit;
     align-items: center;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #0a0a0a;
     flex-wrap: wrap;
     padding-top: 110px;
     min-height: 85vh;
@@ -384,7 +371,6 @@ p {
     margin: 0;
     padding: 5px;
     box-sizing: border-box;
-    background-color: #070707;
 
 }
 
@@ -398,7 +384,6 @@ p {
     text-align: center;
     font-size: 1.4em;
     color: white;
-    background-color: #070707;
     box-sizing: border-box;
     box-shadow: white;
 }
@@ -464,6 +449,10 @@ p {
     text-align: center;
     padding: 115px 20px 20px;
     max-height: 85%;
+}
+
+.row div {
+    box-sizing: border-box;
 }
 
 .product-text {
@@ -536,13 +525,11 @@ p {
 /**************************************************/
 
 .enrollment-container {
-    padding: 110px 20% 0 20%;
-    height: 110vh;
+    padding: 110px 20% 20px 20%;
+    min-height: 110vh;
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
     color: white;
-    background: url("dark.png");
-    background-attachment: fixed;
+    background: url("dark.png") fixed;
     background-size: cover;
 }
 
@@ -568,6 +555,25 @@ p {
     margin-right: auto;
 }
 
+textarea#inputMessage.form-control {
+    height: 35px;
+}
+
+.btn-primary {
+    background: dimgrey;
+    border-color: dimgrey;
+}
+
+.btn-primary:hover {
+    background: black;
+    border-color: black;
+}
+
+.btn-primary:active {
+    background: black;
+    border-color: black;
+}
+
 /*   hiding spin buttons in phone number filed    */
 #inputPhoneNumber::-webkit-outer-spin-button,
 #inputPhoneNumber::-webkit-inner-spin-button {
@@ -589,7 +595,6 @@ p {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    font-family: Helvetica, Arial, sans-serif;
     min-height: 100vh;
     box-sizing: border-box;
     padding: 110px 20px 20px;
