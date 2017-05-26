@@ -221,34 +221,32 @@ ul a:hover {
     flex-direction: column;
     background-color: black;
     align-items: center;
-    width: 100%;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     max-width: 1440px;
-    width: 100%;
     flex: 1;
     background-color: cornflowerblue;
-    margin: 0 auto;
+    padding-top: 15vh;
 }
 
 .main-container-item {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    min-height: 100vh;
-    padding: 35px 0;
-    background-color: black;
-
+    height: 85%;
+    background-color: dimgray;
 }
 
 /* START INTRODUCTION */
 
 .introduction-container {
+    height: 85vh;
+    box-sizing: border-box;
     width: 100%;
     background: url("dark.png");
+    background-attachment: fixed;
     background-size: cover;
     font-family: Helvetica, Arial, sans-serif;
     color: white;
@@ -257,18 +255,16 @@ ul a:hover {
 }
 
 .inIntroduction {
-    height: 55vh;
-    width: 50%;
+    padding: 20px;
     background-color: rgba(74, 74, 74, 0.3);
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 50%;
 }
-
 .introductionElement {
-    width: 70%;
     margin: auto;
     text-align: center;
     vertical-align: middle;
@@ -276,6 +272,7 @@ ul a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .introduction-logo-container {
@@ -284,6 +281,8 @@ ul a:hover {
 
 .introduction-logo-container h1 {
     font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
 }
 
 .introduction-main-text-container {
@@ -291,8 +290,8 @@ ul a:hover {
 }
 
 h2.introduction-main-text-container {
-    padding-top: 30px;
     font-size: 1.25em;
+    line-height: 1.25em;
     font-weight: inherit;
 }
 
@@ -301,7 +300,7 @@ h2.introduction-main-text-container {
 }
 
 p.introduction-regular-text-container, p.introduction-button-container {
-    font-size: 0.75em;
+    font-size: 1em;
 }
 
 .introduction-button-container {
@@ -309,30 +308,55 @@ p.introduction-regular-text-container, p.introduction-button-container {
 }
 
 .introductionLogo {
-    width: 7em;
-    height: 5.5em;
     border: 5px solid white;
-    margin: 30px auto;
+    padding: 5px 5px 5px 5px;
+
+}
+
+p {
+    margin: 0;
 }
 
 .introductionButton {
-    padding: 0 15px;
+    padding: 5px 10px;
     text-align: center;
     vertical-align: middle;
     border: 3px solid #3f3f3f;
     border-radius: 50px;
-    margin: auto;
     background-color: #282828;
     text-decoration: none;
     color: white;
     text-underline: none;
+    margin: 0;
 }
 
 .introduction-button-container a {
     text-decoration: none;
 }
 
+@media all and (min-width: 426px) and (max-width: 768px) {
+    .inIntroduction {
+        height: 100%;
+        min-width: 60%;
+    }
+}
+
+@media all and (max-width: 425px) {
+
+    .inIntroduction {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .introductionElement {
+        height: 33.3333%;
+    }
+}
+
+
+
 /* END INTRODUCTION */
+
 
 /* START FUNCTIONS */
 .functions-container {
@@ -341,108 +365,98 @@ p.introduction-regular-text-container, p.introduction-button-container {
     justify-content: inherit;
     align-items: center;
     font-family: Helvetica, Arial, sans-serif;
-    background-color: black;
+    background-color: #0a0a0a;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
 }
 
 .function {
-    width: 14.28571428571429%;
-    height: 20%;
-    background-color: #111111;
+    width: 16.66666666666667%;
+    height: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     box-sizing: border-box;
+    background-color: #070707;
+
 }
 
 .functionIcon {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     filter: invert(1);
-}
-
-.icon1-container {
-    background-color: #111111;
-}
-
-.icon2-container {
-    background-color: #141414;
-}
-
-.icon3-container, .icon17-container {
-    background-color: #171717;
-}
-
-.icon4-container, .icon18-container {
-    background-color: #151515;
-}
-
-.icon5-container, .icon19-container {
-    background-color: #121212;
-}
-
-.icon6-container, .icon20-container {
-    background-color: #161616;
-}
-
-.icon7-container, .icon21-container {
-    background-color: #131313;
-}
-
-.icon8-container, .icon22-container {
-    background-color: #191919;
-}
-
-.icon9-container, .icon23-container {
-    background-color: #111111;
-}
-
-.icon10-container, .icon24-container {
-    background-color: #141414;
-}
-
-.icon11-container, .icon25-container {
-    background-color: #171717;
-}
-
-.icon12-container, .icon26-container {
-    background-color: #151515;
-}
-
-.icon13-container, .icon27-container {
-    background-color: #121212;
-}
-
-.icon14-container, .icon28-container {
-    background-color: #161616;
-}
-
-.icon15-container, .icon29-container {
-    background-color: #131313;
-}
-
-.icon16-container, .icon30-container {
-    background-color: #191919;
 }
 
 .functionText {
     text-align: center;
     font-size: 1.4em;
-    color: black;
-    background-color: lightgrey;
+    color: white;
+    background-color: #060606;
     box-sizing: border-box;
     box-shadow: white;
 }
 
+.functionText1, .functionText2 {
+    border-bottom: 1px solid #919191;
+}
+
+.functionText1, .functionText3 {
+    border-right: 1px solid #919191;
+}
+
+
+@media all and (min-width: 426px) and (max-width: 768px) {
+    .icon1-container, .icon6-container, .icon7-container,.icon10-container, .icon11-container, .icon14-container, .icon15-container,.icon20-container {
+        display: none;
+    }
+
+    .function {
+        width: 25%
+    }
+
+    p.function {
+        font-size: 1.15em;
+    }
+}
+
+
+@media all and (max-width: 425px) {
+    .icon1-container, .icon2-container, .icon6-container, .icon7-container, .icon8-container, .icon9-container, .icon10-container, .icon11-container, .icon12-container, .icon15-container, .icon16-container, .icon17-container, .icon18-container, .icon19-container {
+        display: none;
+    }
+
+    .function {
+        width: 33.33333%;
+        height: 16.66666666666667%;
+    }
+    p.function {
+        width: 100%;
+    }
+    .functionText1, .functionText2, .functionText3, .functionText4 {
+        border-bottom: 1px solid #919191;
+    }
+
+    .functionText1 {
+        border-top: 1px solid #919191;
+    }
+
+    .functionText1, .functionText3 {
+        border-right: none;
+    }
+}
+
+
+
+/* END FUNCTIONS */
+
+
 /**************************************************/
 /******************** Product Info ****************/
 /**************************************************/
-
 .product-info {
     padding-top: 100px;
     padding-bottom: 70px;
