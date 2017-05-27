@@ -574,6 +574,8 @@ p {
     color: white;
     background: url("dark.png") fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .enrollment-form {
