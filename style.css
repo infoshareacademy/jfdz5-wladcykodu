@@ -311,12 +311,20 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 .introductionLogo {
     border: 5px solid white;
-    padding: 5px 5px 5px 5px;
-
+    padding: 5px;
 }
 
 p {
     margin: 0;
+}
+
+.btn {
+    transition:  background-color 2s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .btn p {
@@ -386,6 +394,12 @@ p {
     color: white;
     box-sizing: border-box;
     box-shadow: white;
+    transition: background-color 1s;
+}
+
+.functionText:hover {
+    background-color: white;
+    color: black;
 }
 
 .functionText1, .functionText2 {
@@ -445,7 +459,7 @@ p {
 
 .product-info {
     font-size: 14px;
-    background-color: #0a0a0a;
+    background-color: black;
     box-sizing: border-box;
     text-align: center;
     padding: 115px 20px 20px;
