@@ -90,9 +90,6 @@ ul a:hover {
 }
 
 .nav img {
-    /*   height: 7em;*/
-    /*   height: 100%;*/
-    height: 15vh;
     max-height: 7em;
     margin: 0;
     box-sizing: border-box;
@@ -193,7 +190,6 @@ ul a:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    max-height: 15vh;
 }
 
 .nav-toggle span {
@@ -470,8 +466,7 @@ p {
     font-size: 14px;
     background-color: black;
     box-sizing: border-box;
-    text-align: center;
-    padding: 140px 20px 20px;
+    padding: 107px 20px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -485,7 +480,7 @@ p {
 }
 
 .product-info-box h4 {
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
 }
@@ -530,6 +525,12 @@ p {
     padding-right: 35px;
     padding-left: 35px;
     color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: 1px;
 }
 
 .product-info-title h4 {
@@ -538,8 +539,9 @@ p {
     text-transform: uppercase;
     color: white;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .product-info-box p {
@@ -547,6 +549,9 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
+    line-height: 1.4em;
+    font-weight: 100;
+    /*    letter-spacing: 0.5px;*/
 }
 
 @media (min-width: 768px) {
@@ -635,7 +640,7 @@ textarea#inputMessage.form-control {
     justify-content: space-around;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding: 110px 20px 20px;
+    padding: 110px 20px 50px;
     min-height: calc(100vh - 101px);
 }
 
@@ -671,13 +676,16 @@ textarea#inputMessage.form-control {
 .person-bio {
     text-align: center;
     font-size: 14px;
-    line-height: 1.4em;
+    line-height: 1.5em;
     color: white;
     padding: 10px;
+    letter-spacing: 2px;
 }
 
 .person-icon a {
-    padding: 0 5px;
+    display: inline-block;
+    padding: 25px 5px 0;
+    box-sizing: border-box;
     list-style-type: none;
     font-weight: bold;
     font-size: 22px;
