@@ -473,20 +473,16 @@ p {
     text-align: center;
     padding: 140px 20px 20px;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .product-info-box {
     text-align: center;
     color: white;
     margin-bottom: 10px;
-    /*   padding: 15px 0;*/
     box-sizing: border-box;
 }
-
-/*.col-xs-12, .col-sm-6, .col-md-4 {
-    padding-left: 0;
-    padding-right: 0;
-}*/
 
 .product-info-box h4 {
     font-weight: 600;
