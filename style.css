@@ -472,7 +472,7 @@ p {
     box-sizing: border-box;
     text-align: center;
     padding: 140px 20px 20px;
-    min-height: calc(100vh - 101px);
+    min-height: 100vh;
 }
 
 .product-info-box {
@@ -569,7 +569,7 @@ p {
 
 .enrollment-container {
     padding: 110px 20% 20px 20%;
-    min-height: calc(100vh - 101px);
+    min-height: 100vh;
     box-sizing: border-box;
     color: white;
     background: url("dark.png") fixed;
