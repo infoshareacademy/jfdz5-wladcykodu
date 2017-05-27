@@ -7,6 +7,10 @@ body {
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
+header {
+    margin: auto;
+    max-width: 1440px;
+}
 
 .nav {
     display: flex;
@@ -16,6 +20,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 1440px;
     background-color: black;
     box-shadow: 0 4px 20px grey;
     box-sizing: border-box;
@@ -237,6 +242,7 @@ ul a:hover {
     flex: 1;
     background-color: black;
     padding-top: 15vh;
+    box-shadow: 0 4px 20px grey;
 }
 
 .main-container-item {
@@ -712,16 +718,18 @@ textarea#inputMessage.form-control {
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
+    /* margin-top: auto;*/
     bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
     background-color: black;
     color: white;
     width: 100%;
+    max-width: 1440px;
     align-items: stretch;
     font: bold 15px sans-serif;
     box-shadow: 0 4px 20px grey;
+    margin: auto;
 }
 
 .site-footer {
