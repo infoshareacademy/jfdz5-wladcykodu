@@ -514,7 +514,6 @@ p {
     background-color: white;
     border-radius: 50%;
     color: black;
-    cursor: pointer;
     line-height: 55px;
 }
 
@@ -794,6 +793,10 @@ textarea#inputMessage.form-control {
     line-height: 35px;
     margin-right: 3px;
     margin-bottom: 5px;
+}
+
+.footer-icon a:hover {
+    filter: invert(1);
 }
 
 @media (max-width: 768px) {
