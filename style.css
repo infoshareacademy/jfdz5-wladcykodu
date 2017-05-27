@@ -15,7 +15,7 @@ header {
 .nav {
     display: flex;
     align-items: stretch;
-    height: 15vh;
+    /*height: 15vh;*/
     max-height: 7.3em;
     position: fixed;
     top: 0;
@@ -241,7 +241,7 @@ ul a:hover {
     max-width: 1440px;
     flex: 1;
     background-color: black;
-    padding-top: 15vh;
+    padding-top: 101px;
     box-shadow: 0 4px 20px grey;
 }
 
@@ -254,7 +254,7 @@ ul a:hover {
 /* START INTRODUCTION */
 
 .introduction-container {
-    min-height: 85vh;
+    min-height: calc(100vh - 101px);
     box-sizing: border-box;
     width: 100%;
     background: url("dark.png") fixed;
@@ -373,7 +373,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     padding-top: 110px;
-    min-height: 85vh;
+    min-height: calc(100vh - 101px);
     width: 100%;
 }
 
@@ -471,8 +471,8 @@ p {
     background-color: black;
     box-sizing: border-box;
     text-align: center;
-    padding: 115px 20px 20px;
-    max-height: 85%;
+    padding: 140px 20px 20px;
+    min-height: calc(100vh - 101px);
 }
 
 .product-info-box {
@@ -569,7 +569,7 @@ p {
 
 .enrollment-container {
     padding: 110px 20% 20px 20%;
-    min-height: 110vh;
+    min-height: calc(100vh - 101px);
     box-sizing: border-box;
     color: white;
     background: url("dark.png") fixed;
@@ -638,10 +638,9 @@ textarea#inputMessage.form-control {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    min-height: 100vh;
     box-sizing: border-box;
     padding: 110px 20px 20px;
-    max-height: 85%;
+    min-height: calc(100vh - 101px);
 }
 
 .person {
