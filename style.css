@@ -576,6 +576,11 @@ p {
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.enrollment-content-wrapper {
+    max-width: 630px;
 }
 
 .enrollment-form {
@@ -583,15 +588,19 @@ p {
     box-sizing: border-box;
 }
 
-.checkbox {
-    margin: 10px 0;
-    font-size: 10px;
-    top: -5px;
-}
-
 .h2-center {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.enrollment-text {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.checkbox-text {
+    font-size: 0.9em;
+    text-align: justify;
 }
 
 .form-inputs-container {

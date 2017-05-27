@@ -211,47 +211,48 @@
             </div>
         </section>
 
-        <!--#product-info-->
+        <!--#enrollment-->
 
         <section id="enrollment" class="main-container-item enrollment-container">
-            <div>
-            <h2 class="h2-center">Zapisz się na premierę!</h2>
-            <p>Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery naszej wyszukiwarki.
-                Wiadmość
-                zostanie wysłana tylko raz.</p>
-            <form method="post" class="enrollment-form"
-                  onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
-                <div class="form-inputs-container">
-                    <div class="form-group">
-                        <label for="inputName">Imię i Nazwisko *</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko"
-                               required/>
+            <div class="enrollment-content-wrapper">
+                <h2 class="h2-center">Zapisz się na premierę!</h2>
+                <p class="enrollment-text">Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery
+                    naszej wyszukiwarki.
+                    Wiadmość
+                    zostanie wysłana tylko raz.</p>
+                <form method="post" class="enrollment-form"
+                      onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
+                    <div class="form-inputs-container">
+                        <div class="form-group">
+                            <label for="inputName">Imię i Nazwisko *</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko"
+                                   required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email *</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhoneNumber">Numer telefonu</label>
+                            <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputEmail">Email *</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                    <div class="checkbox">
+                        <label class="checkbox-text"><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
                     </div>
-                    <div class="form-group">
-                        <label for="inputPhoneNumber">Numer telefonu</label>
-                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                    <div class="checkbox">
+                        <label class="checkbox-text"><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w
+                            celu
+                            rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
+                            prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
+                            lecz
+                            niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
+                            celów
+                            innych niż wyżej wymienione</label>
                     </div>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem rejestracji</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" required>Wyrażam zgodę na przetwarzanie moich danych osobowych w
-                        celu
-                        rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
-                        prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
-                        lecz
-                        niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
-                        celów
-                        innych niż wyżej wymienione</label>
-                </div>
-                <input type="submit" value="Wyślij" class="btn btn-default"/>
-            </form>
-                </div>
+                    <input type="submit" value="Wyślij" class="btn btn-default"/>
+                </form>
+            </div>
         </section>
 
         <!--Team info-->
