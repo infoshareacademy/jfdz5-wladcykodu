@@ -320,7 +320,7 @@ p {
 }
 
 .btn p {
- font-weight: bold;
+    font-weight: bold;
 }
 
 .introduction-button-container a {
@@ -442,6 +442,7 @@ p {
 /**************************************************/
 /******************** Product Info ****************/
 /**************************************************/
+
 .product-info {
     font-size: 14px;
     background-color: #0a0a0a;
@@ -451,32 +452,23 @@ p {
     max-height: 85%;
 }
 
-.row div {
-    box-sizing: border-box;
-}
-
-.product-text {
-    margin: auto;
-    color: white;
-}
-
-.product-info h4 {
-    font-size: 22px;
-    color: white;
-    padding-top: 20px;
-}
-
 .product-info-box {
     text-align: center;
     color: white;
     margin-bottom: 10px;
-    padding: 15px 0;
+    /*   padding: 15px 0;*/
+    box-sizing: border-box;
 }
 
+/*.col-xs-12, .col-sm-6, .col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+}*/
+
 .product-info-box h4 {
-    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 .product-info-box span {
@@ -485,35 +477,64 @@ p {
     display: inline-block;
     border-radius: 50%;
     text-align: center;
+    color: white;
+    transition: background 1s, color 1s;
     width: 55px;
     height: 55px;
     margin-bottom: 10px;
-    color: white;
-    transition: background 1s, color 1s;
 }
 
 .product-info-box i {
     position: relative;
     color: white;
-    font-size: 25px;
-    line-height: 55px;
     transition: color 1s;
     width: inherit;
     height: inherit;
     border-radius: 50%;
+    font-size: 25px;
+    line-height: 55px;
 }
 
 .product-info-box span:hover {
     display: inline-block;
     background-color: white;
     border-radius: 50%;
-    line-height: 55px;
     color: black;
     cursor: pointer;
+    line-height: 55px;
 }
 
 .product-info-box i:hover {
     color: black;
+}
+
+.product-text {
+    padding-right: 35px;
+    padding-left: 35px;
+    color: white;
+}
+
+.product-info-title h4 {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.product-info-box p {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .product-info-box {
+        height: 200px;
+    }
 }
 
 /**************************************************/
