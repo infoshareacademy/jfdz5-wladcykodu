@@ -795,6 +795,10 @@ textarea#inputMessage.form-control {
     margin-bottom: 5px;
 }
 
+.footer-icon a {
+    transition: filter 2s;
+}
+
 .footer-icon a:hover {
     filter: invert(1);
 }
