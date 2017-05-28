@@ -247,6 +247,13 @@ ul a:hover {
     height: 85%;
 }
 
+@media all and (max-width: 768px) {
+    .introduction-container {
+        min-height: calc(100vh - 73px);
+    }
+}
+
+
 /* START INTRODUCTION */
 
 .introduction-container {
@@ -356,6 +363,12 @@ p {
 
     .introductionElement {
         height: 33.3333%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .main-container {
+        padding-top: 73px;
     }
 }
 
