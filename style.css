@@ -184,7 +184,7 @@ ul a:hover {
     box-sizing: border-box;
     color: white;
     width: 50px;
-    margin-top: 5px;
+    margin-top: 6px;
     margin-bottom: 5px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -212,7 +212,7 @@ ul a:hover {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* rules on tablets only */
     ul a {
-        padding: 40px 7px;
+        padding: 50px 7px;
     }
 }
 
@@ -252,7 +252,6 @@ ul a:hover {
         min-height: calc(100vh - 73px);
     }
 }
-
 
 /* START INTRODUCTION */
 
