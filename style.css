@@ -469,7 +469,9 @@ p {
     padding: 107px 20px 20px;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    height: 85%;
 }
 
 .product-info-box {
@@ -653,6 +655,7 @@ textarea#inputMessage.form-control {
     box-sizing: border-box;
     padding: 110px 20px 50px;
     min-height: 100vh;
+    height: 85%;
 }
 
 .person {
@@ -661,7 +664,8 @@ textarea#inputMessage.form-control {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /*flex: 1;*/
+    box-sizing: border-box;
     min-width: 20%;
 }
 
@@ -673,6 +677,7 @@ textarea#inputMessage.form-control {
     /* make it a circle */
     border-radius: 50%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .team-info .person-name {
@@ -682,6 +687,7 @@ textarea#inputMessage.form-control {
     margin-top: 14px;
     margin-bottom: 10px;
     color: white;
+    box-sizing: border-box;
 }
 
 .person-bio {
@@ -691,6 +697,7 @@ textarea#inputMessage.form-control {
     color: white;
     padding: 10px;
     letter-spacing: 2px;
+    box-sizing: border-box;
 }
 
 .person-icon a {
