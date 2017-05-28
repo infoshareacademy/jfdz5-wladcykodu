@@ -7,15 +7,20 @@ body {
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
+header {
+    margin: auto;
+    max-width: 1440px;
+}
 
 .nav {
     display: flex;
     align-items: stretch;
-    height: 15vh;
+    /*height: 15vh;*/
     max-height: 7.3em;
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 1440px;
     background-color: black;
     box-shadow: 0 4px 20px grey;
     box-sizing: border-box;
@@ -85,9 +90,6 @@ ul a:hover {
 }
 
 .nav img {
-    /*   height: 7em;*/
-    /*   height: 100%;*/
-    height: 15vh;
     max-height: 7em;
     margin: 0;
     box-sizing: border-box;
@@ -127,8 +129,11 @@ ul a:hover {
     }
 
     .nav-menu.nav-right .nav-item {
-        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        /*   border-top: 1px solid rgba(0, 0, 0, 0.5);*/
         font-weight: normal;
+        border-bottom: 1px solid black;
+        border-top: 1px solid #3c3c3c;
+        border-radius: 0;
     }
 
     .nav-menu.nav-right ul {
@@ -179,13 +184,12 @@ ul a:hover {
     box-sizing: border-box;
     color: white;
     width: 50px;
-    margin-top: 5px;
+    margin-top: 6px;
     margin-bottom: 5px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    max-height: 15vh;
 }
 
 .nav-toggle span {
@@ -208,7 +212,7 @@ ul a:hover {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* rules on tablets only */
     ul a {
-        padding: 40px 7px;
+        padding: 50px 7px;
     }
 }
 
@@ -233,7 +237,8 @@ ul a:hover {
     max-width: 1440px;
     flex: 1;
     background-color: black;
-    padding-top: 15vh;
+    padding-top: 101px;
+    box-shadow: 0 4px 20px grey;
 }
 
 .main-container-item {
@@ -242,10 +247,16 @@ ul a:hover {
     height: 85%;
 }
 
+@media all and (max-width: 768px) {
+    .introduction-container {
+        min-height: calc(100vh - 73px);
+    }
+}
+
 /* START INTRODUCTION */
 
 .introduction-container {
-    min-height: 85vh;
+    min-height: calc(100vh - 101px);
     box-sizing: border-box;
     width: 100%;
     background: url("dark.png") fixed;
@@ -354,6 +365,12 @@ p {
     }
 }
 
+@media all and (max-width: 768px) {
+    .main-container {
+        padding-top: 73px;
+    }
+}
+
 /* END INTRODUCTION */
 
 /* START FUNCTIONS */
@@ -364,7 +381,7 @@ p {
     align-items: center;
     flex-wrap: wrap;
     padding-top: 110px;
-    min-height: 85vh;
+    min-height: calc(100vh - 101px);
     width: 100%;
 }
 
@@ -461,26 +478,23 @@ p {
     font-size: 14px;
     background-color: black;
     box-sizing: border-box;
-    text-align: center;
-    padding: 115px 20px 20px;
-    max-height: 85%;
+    padding: 107px 20px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85%;
 }
 
 .product-info-box {
     text-align: center;
     color: white;
     margin-bottom: 10px;
-    /*   padding: 15px 0;*/
     box-sizing: border-box;
 }
 
-/*.col-xs-12, .col-sm-6, .col-md-4 {
-    padding-left: 0;
-    padding-right: 0;
-}*/
-
 .product-info-box h4 {
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
 }
@@ -525,6 +539,12 @@ p {
     padding-right: 35px;
     padding-left: 35px;
     color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: 1px;
 }
 
 .product-info-title h4 {
@@ -533,8 +553,9 @@ p {
     text-transform: uppercase;
     color: white;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .product-info-box p {
@@ -542,6 +563,9 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
+    line-height: 1.4em;
+    font-weight: 100;
+    /*    letter-spacing: 0.5px;*/
 }
 
 @media (min-width: 768px) {
@@ -560,11 +584,18 @@ p {
 
 .enrollment-container {
     padding: 110px 20% 20px 20%;
-    min-height: 110vh;
+    min-height: 100vh;
     box-sizing: border-box;
     color: white;
     background: url("dark.png") fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enrollment-content-wrapper {
+    max-width: 630px;
 }
 
 .enrollment-form {
@@ -572,15 +603,19 @@ p {
     box-sizing: border-box;
 }
 
-.checkbox {
-    margin: 10px 0;
-    font-size: 10px;
-    top: -5px;
-}
-
 .h2-center {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.enrollment-text {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.checkbox-text {
+    font-size: 0.9em;
+    text-align: justify;
 }
 
 .form-inputs-container {
@@ -612,7 +647,13 @@ textarea#inputMessage.form-control {
 #inputPhoneNumber::-webkit-outer-spin-button,
 #inputPhoneNumber::-webkit-inner-spin-button {
     -webkit-appearance: none;
+
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/*   hiding spin buttons in phone number filed in Mozilla   */
+#inputPhoneNumber {
+-moz-appearance:textfield;
 }
 
 /**************************************************/
@@ -629,10 +670,10 @@ textarea#inputMessage.form-control {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    min-height: 100vh;
     box-sizing: border-box;
-    padding: 110px 20px 20px;
-    max-height: 85%;
+    padding: 110px 20px 50px;
+    min-height: 100vh;
+    height: 85%;
 }
 
 .person {
@@ -641,7 +682,8 @@ textarea#inputMessage.form-control {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    /*flex: 1;*/
+    box-sizing: border-box;
     min-width: 20%;
 }
 
@@ -653,6 +695,7 @@ textarea#inputMessage.form-control {
     /* make it a circle */
     border-radius: 50%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .team-info .person-name {
@@ -662,18 +705,23 @@ textarea#inputMessage.form-control {
     margin-top: 14px;
     margin-bottom: 10px;
     color: white;
+    box-sizing: border-box;
 }
 
 .person-bio {
     text-align: center;
     font-size: 14px;
-    line-height: 1.4em;
+    line-height: 1.5em;
     color: white;
     padding: 10px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
 }
 
 .person-icon a {
-    padding: 0 5px;
+    display: inline-block;
+    padding: 25px 5px 0;
+    box-sizing: border-box;
     list-style-type: none;
     font-weight: bold;
     font-size: 22px;
@@ -709,16 +757,18 @@ textarea#inputMessage.form-control {
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
+    /* margin-top: auto;*/
     bottom: 0;
     flex-direction: row;
     justify-content: flex-start;
     background-color: black;
     color: white;
     width: 100%;
+    max-width: 1440px;
     align-items: stretch;
     font: bold 15px sans-serif;
     box-shadow: 0 4px 20px grey;
+    margin: auto;
 }
 
 .site-footer {
