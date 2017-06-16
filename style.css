@@ -72,7 +72,7 @@ body {
     text-decoration: none;
     color: white;
     transition: background 2s, color 2s;
-    height: 7.3em;
+    height: 15vh;
     box-sizing: border-box;
     padding: 40px 20px;
 }
@@ -129,7 +129,6 @@ body {
     }
 
     .nav__item {
-        /*   border-top: 1px solid rgba(0, 0, 0, 0.5);*/
         font-weight: normal;
         border-bottom: 1px solid black;
         border-top: 1px solid #3c3c3c;
@@ -208,8 +207,8 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* rules on tablets only */
-    ul a {
-        padding: 50px 7px;
+    .nav__item a {
+        padding: 40px 7px;
     }
 }
 
@@ -275,14 +274,14 @@ body {
 }
 
 .introductionElement {
-    margin: auto;
+    /*    margin: auto;*/
     text-align: center;
     vertical-align: middle;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    /*    padding: 20px;*/
 }
 
 .introduction-logo-container {
@@ -475,12 +474,13 @@ p {
     font-size: 14px;
     background-color: black;
     box-sizing: border-box;
-    padding: 107px 20px 20px;
+    /*   padding: 107px 20px 20px;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 85%;
+    padding-top: 107px;
 }
 
 .product-info__about {
@@ -562,7 +562,6 @@ p {
     box-sizing: border-box;
     line-height: 1.4em;
     font-weight: 100;
-    /*    letter-spacing: 0.5px;*/
 }
 
 @media (min-width: 768px) {
@@ -580,7 +579,7 @@ p {
 /**************************************************/
 
 .enrollment-container {
-    padding: 110px 20% 20px 20%;
+    padding: 110px 20px 20px 20px;
     min-height: 100vh;
     box-sizing: border-box;
     color: white;
