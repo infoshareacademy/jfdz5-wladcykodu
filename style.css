@@ -315,6 +315,7 @@ p.introduction-regular-text-container, p.introduction-button-container {
 
 .introduction-button-container {
     height: 25%;
+    margin-top: 10px;
 }
 
 .introductionLogo {
