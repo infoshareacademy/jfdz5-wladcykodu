@@ -21,7 +21,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -31,13 +31,13 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-navbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav__item"><a href="#functions">Funkcje</a></li><!--Functions-->
-                    <li class="nav__item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
-                    <li class="nav__item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
-                    <li class="nav__item"><a href="#team-info">O nas</a></li><!--About Us-->
-                    <li class="nav__item"><a href="#contact-us">Kontakt</a></li><!--Contact-->
+                    <li class="nav__item"><a data-toggle="collapse" data-target="#bs-navbar.in" href="#functions">Funkcje</a></li><!--Functions-->
+                    <li class="nav__item"><a data-toggle="collapse" data-target="#bs-navbar.in" href="#product-info">Informacje o produkcie</a></li><!--Product info-->
+                    <li class="nav__item"><a data-toggle="collapse" data-target="#bs-navbar.in" href="#enrollment">Zapisz się</a></li><!--Enroll-->
+                    <li class="nav__item"><a data-toggle="collapse" data-target="#bs-navbar.in" href="#team-info">O nas</a></li><!--About Us-->
+                    <li class="nav__item"><a data-toggle="collapse" data-target="#bs-navbar.in" href="#contact-us">Kontakt</a></li><!--Contact-->
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -437,6 +437,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-
 </body>
 </html>
