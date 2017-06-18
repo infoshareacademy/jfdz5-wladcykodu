@@ -14,39 +14,39 @@
     <link href="icon.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
-<div class="container-fluid">
-<header class="container-fluid">
+
+<header class="header">
     <nav class="nav">
-        <div class="nav-left">
+
+        <div class="nav__left">
             <a href="#"><img src="logo4.png" alt="auto-parts logo"></a>
         </div>
 
-
         <input type="checkbox" id="menu-toggle" class="is-hidden"/>
-        <label for="menu-toggle" class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+        <label for="menu-toggle" class="nav__toggle">
+            <span class="nav__toggle--item"></span>
+            <span class="nav__toggle--item"></span>
+            <span class="nav__toggle--item"></span>
         </label>
 
-        <div class="nav-right nav-menu">
-            <ul>
-                <li class="nav-item"><a href="#functions">Funkcje</a></li><!--Functions-->
-                <li class="nav-item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
-                <li class="nav-item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
-                <li class="nav-item"><a href="#team-info">O nas</a></li><!--About Us-->
-                <li class="nav-item"><a href="#contact-us">Kontakt</a></li><!--Contact-->
+        <div class="nav__right nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#functions">Funkcje</a></li><!--Functions-->
+                <li class="nav__item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
+                <li class="nav__item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
+                <li class="nav__item"><a href="#team-info">O nas</a></li><!--About Us-->
+                <li class="nav__item"><a href="#contact-us">Kontakt</a></li><!--Contact-->
             </ul>
         </div>
     </nav>
 </header>
-<!--<div class="site-container">-->
-    <main class="container-fluid main-container">
+<div class="site-container">
+    <main class="main-container">
 
 
         <!-- START INTRODUCTION -->
 
-        <div id="introduction" class="container-fluid main-container-item introduction-container">
+        <div id="introduction" class="main-container-item introduction-container">
             <div class="inIntroduction">
                 <div class="introductionElement introduction-logo-container">
                     <div class="introductionLogo">
@@ -69,7 +69,7 @@
         <!-- END INTRODUCTION  -->
 
         <!-- START FUNCTIONS -->
-        <div id="functions" class="container-fluid main-container-item functions-container">
+        <div id="functions" class="main-container-item functions-container">
             <div class="function icon1-container">
                 <img class="functionIcon" src="function-icons/icon1.png" alt="">
             </div>
@@ -146,9 +146,9 @@
         </div>
 
         <!--#product-info-->
-        <section id="product-info" class="container-fluid main-container-item">
+        <section id="product-info" class="main-container-item">
             <div class="product-info">
-                <div class="product-text">
+                <div class="product-info__text">
                     <p>Witamy! Jesteśmy Władcy Kodu - twórcy wyszukiwarki części samochodowych AUTO PARTS i jedyny
                         podmiot
                         posiadający prawa do jej dystrybucji i reklamy. Planowana data premiery naszej aplikacji to
@@ -157,54 +157,54 @@
                         e-mail
                         oraz numer telefonu). Chcesz poznać nas bliżej? W stopce strony znajdziesz odnośniki prowadzące
                         do naszych stron w mediach społecznościowych.</p></div>
-                <div class="product-info-title"><h4>CO Z NAMI ZYSKASZ?</h4></div>
+                <div><h4 class="product-info__title">CO Z NAMI ZYSKASZ?</h4></div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-search"></i></span>
-                                <h4>Precyzyjne wyszukiwanie</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-search"></i></span>
+                                <h4 class="product-info__about--title">Precyzyjne wyszukiwanie</h4>
                                 <p>Dzięki wielu kryteriom filtrowania możesz zawęzić wyniki wyszukiwania jedynie do
                                     interesujących Cię części.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-map-marker"></i></span>
-                                <h4>Mapa dojazdu</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-map-marker"></i></span>
+                                <h4 class="product-info__about--title">Mapa dojazdu</h4>
                                 <p>Zawsze możesz sprawdzić, gdzie znajdują się najbliższe warsztaty i jak do nich
                                     dojechać.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-comments"></i></span>
-                                <h4>Ekspert 24h</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-comments"></i></span>
+                                <h4 class="product-info__about--title">Ekspert 24h</h4>
                                 <p>Dajemy ci możliwość stałej konsultacji eksperckiej - zarówno telefonicznie jak i
                                     e-mail.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-shopping-cart"></i></span>
-                                <h4>Koszyk produktów</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-shopping-cart"></i></span>
+                                <h4 class="product-info__about--title">Koszyk produktów</h4>
                                 <p>Twoje zakupy w jednym miejscu, pod stałą kontrolą.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-wrench"></i></span>
-                                <h4>Wysoka jakość</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-wrench"></i></span>
+                                <h4 class="product-info__about--title">Wysoka jakość</h4>
                                 <p>Oferujemy jedynie części od sprawdzonych producentów. Nasi dostawcy spełniają
                                     wszystkie
                                     normy jakości. </p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-cogs"></i></span>
-                                <h4>Największy wybór</h4>
+                            <div class="product-info__about">
+                                <span class="product-info__about--icon"><i class="fa fa-cogs"></i></span>
+                                <h4 class="product-info__about--title">Największy wybór</h4>
                                 <p>U nas znajdziesz części wszystkich marek: nowe i używane, oryginane i wysokiej klasy
                                     zamienniki. </p>
                             </div>
@@ -216,7 +216,7 @@
 
         <!--#enrollment-->
 
-        <section id="enrollment" class="container main-container-item enrollment-container">
+        <section id="enrollment" class="main-container-item enrollment-container">
             <div class="enrollment-content-wrapper">
                 <h2 class="h2-center">Zapisz się na premierę!</h2>
                 <p class="enrollment-text">Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery
@@ -262,24 +262,26 @@
 
         <!--Team info-->
 
-        <section id="team-info" class="container-fluid main-container-item">
+        <section id="team-info" class="main-container-item">
             <div class="team-info">
                 <div class="person">
-                    <div class="team-member-img">
+                    <div class="person__img">
                         <img src="photo2.jpeg">
                         <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
                     </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/ajemielity" target="_blank"><i class="fa fa-github"></i></a>
+                    <div>
+                        <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="person__icon" href="https://github.com/ajemielity" target="_blank"><i
+                                class="fa fa-github"></i></a>
                     </div>
 
                     <div class="team-member-about">
-                        <h3 class="person-name">
+                        <h3 class="person__name">
                             Aleksandra Jemielity
                         </h3>
                     </div>
-                    <p class="person-bio">
+                    <p class="person__bio">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -291,20 +293,22 @@
 
 
                 <div class="person">
-                    <div class="team-member-img">
+                    <div class="person__img">
                         <img src="photo2.jpeg">
                     </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/lucypow" target="_blank"><i class="fa fa-github"></i></a>
+                    <div>
+                        <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="person__icon" href="https://github.com/lucypow" target="_blank"><i
+                                class="fa fa-github"></i></a>
                     </div>
 
                     <div class="team-member-about">
-                        <h3 class="person-name">
+                        <h3 class="person__name">
                             Lucyna Powałowska
                         </h3>
                     </div>
-                    <p class="person-bio">
+                    <p class="person__bio">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -315,20 +319,22 @@
                 </div>
 
                 <div class="person">
-                    <div class="team-member-img">
+                    <div class="person__img">
                         <img src="photo1.jpg">
                     </div>
-                    <div class="person-icon text-center">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/rafals7" target="_blank"><i class="fa fa-github"></i></a>
+                    <div>
+                        <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="person__icon" href="https://github.com/rafals7" target="_blank"><i
+                                class="fa fa-github"></i></a>
                     </div>
 
                     <div class="team-member-about">
-                        <h3 class="person-name">
+                        <h3 class="person__name">
                             Rafał Sobiepan
                         </h3>
                     </div>
-                    <p class="person-bio">
+                    <p class="person__bio">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -339,20 +345,22 @@
                 </div>
 
                 <div class="person">
-                    <div class="team-member-img">
+                    <div class="person__img">
                         <img src="photo1.jpg">
                     </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/rabik1985" target="_blank"><i class="fa fa-github"></i></a>
+                    <div>
+                        <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="person__icon" href="https://github.com/rabik1985" target="_blank"><i
+                                class="fa fa-github"></i></a>
                     </div>
 
                     <div class="team-member-about">
-                        <h3 class="person-name">
+                        <h3 class="person__name">
                             Łukasz Radwan
                         </h3>
                     </div>
-                    <p class="person-bio">
+                    <p class="person__bio">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -365,31 +373,33 @@
 
     </main>
 
-    <footer id="contact-us" class="container-fluid site-footer">
-        <div class="footer-container">
-            <div class="footer-left">
+    <footer id="contact-us" class="footer-container main-container-item">
+        <div class="site-footer">
+            <div class="footer__left">
                 <p>Władcy Kodu &copy; 2017</p>
 
-                <div class="footer-icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/infoshareacademy/jfdz5-wladcykodu" target="_blank"><i
+                <div class="footer__icons">
+                    <a class="footer__icons--link" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="footer__icons--link" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="footer__icons--link" href="https://github.com/infoshareacademy/jfdz5-wladcykodu"
+                       target="_blank"><i
                             class="fa fa-github"></i></a>
                 </div>
             </div>
 
-            <div class="footer-right">
+            <div class="footer__right">
                 <div>
                     <i class="fa fa-map-marker"></i>
-                    <p><span>Grunwaldzka Street</span> Gdansk, Poland</p>
+                    <p class="footer__right--item"><span>Grunwaldzka Street</span> Gdansk, Poland</p>
                 </div>
                 <div>
                     <i class="fa fa-phone"></i>
-                    <p>+48 777 77 77</p>
+                    <p class="footer__right--item">+48 777 77 77</p>
                 </div>
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@wladcykodu.com">support@wladcykodu.com</a></p>
+                    <p class="footer__right--item"><a href="mailto:support@wladcykodu.com">support@wladcykodu.com</a>
+                    </p>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ body {
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
-header {
+.header {
     margin: auto;
     max-width: 1440px;
 }
@@ -30,7 +30,7 @@ header {
     font-weight: bold;
 }
 
-.nav-item {
+.nav__item {
     align-items: center;
     display: flex;
     background-color: black;
@@ -46,46 +46,46 @@ header {
     max-height: 101px;
 }
 
-.nav-left, .nav-right {
+.nav__left, .nav__right {
     align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
 }
 
-.nav-left {
+.nav__left {
     justify-content: flex-start;
     padding-left: 20px;
     box-sizing: border-box;
 }
 
-.nav-right {
+.nav__right {
     justify-content: flex-end;
 }
 
-.nav-menu.nav-right ul {
+.nav__list {
     display: flex;
     margin: 0;
     padding-left: 0;
 }
 
-ul a {
+.nav__item a {
     text-decoration: none;
     color: white;
     transition: background 2s, color 2s;
-    height: 7.3em;
+    height: 15vh;
     box-sizing: border-box;
     padding: 40px 20px;
 }
 
-li.nav-item:hover {
+.nav__item:hover {
     cursor: pointer;
     box-sizing: border-box;
     background: white;
     color: black;
 }
 
-ul a:hover {
+.nav__item a:hover {
     color: black;
     text-decoration: none;
 }
@@ -100,26 +100,26 @@ ul a:hover {
 
 /* if user touch nav-toggle, show nav-menu*/
 @media screen and (max-width: 767px) {
-    #menu-toggle:checked ~ .nav-menu {
+    #menu-toggle:checked ~ .nav__menu {
         display: block;
     }
 
-    #menu-toggle:checked ~ .nav-toggle span {
+    #menu-toggle:checked ~ .nav__toggle span {
         opacity: 1;
         transform: rotate(45deg);
     }
 
-    #menu-toggle:checked ~ .nav-toggle span:nth-last-child(2) {
+    #menu-toggle:checked ~ .nav__toggle span:nth-last-child(2) {
         opacity: 0;
         transform: rotate(0deg);
     }
 
-    #menu-toggle:checked ~ .nav-toggle span:nth-last-child(1) {
+    #menu-toggle:checked ~ .nav__toggle span:nth-last-child(1) {
         opacity: 1;
         transform: rotate(-45deg);
     }
 
-    .nav-menu.nav-right {
+    .nav__menu.nav__right {
         display: none;
         left: 0;
         right: 0;
@@ -129,20 +129,11 @@ ul a:hover {
         box-shadow: 0 4px 20px grey;
     }
 
-    .nav-menu.nav-right .nav-item {
-        /*   border-top: 1px solid rgba(0, 0, 0, 0.5);*/
+    .nav__item {
         font-weight: normal;
         border-bottom: 1px solid black;
         border-top: 1px solid #3c3c3c;
         border-radius: 0;
-    }
-
-    .nav-menu.nav-right ul {
-        display: flex;
-        flex-flow: column;
-    }
-
-    .nav-menu.nav-right ul li {
         background-color: rgba(255, 255, 255, 0.7);
         box-sizing: border-box;
         padding: 15px;
@@ -155,14 +146,19 @@ ul a:hover {
         text-transform: uppercase;
     }
 
-    .nav-menu.nav-right ul a {
+    .nav__list {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .nav__item a {
         text-decoration: none;
         color: black;
         height: 4em;
         padding: 20px;
     }
 
-    .nav-menu.nav-right ul li:hover {
+    .nav__item:hover {
         cursor: pointer;
         box-sizing: border-box;
         font-weight: bold;
@@ -180,7 +176,7 @@ ul a:hover {
     display: none;
 }
 
-.nav-toggle {
+.nav__toggle {
     padding-right: 80px;
     box-sizing: border-box;
     color: white;
@@ -193,7 +189,7 @@ ul a:hover {
     user-select: none;
 }
 
-.nav-toggle span {
+.nav__toggle--item {
     display: inline-block;
     width: 65px;
     height: 4px;
@@ -205,19 +201,19 @@ ul a:hover {
 }
 
 @media (min-width: 768px) {
-    .nav-toggle {
+    .nav__toggle {
         display: none;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* rules on tablets only */
-    ul a {
-        padding: 50px 7px;
+    .nav__item a {
+        padding: 40px 7px;
     }
 }
 
-.nav-toggle:hover {
+.nav__toggle:hover {
     cursor: pointer;
 }
 
@@ -279,14 +275,14 @@ ul a:hover {
 }
 
 .introductionElement {
-    margin: auto;
+    /*    margin: auto;*/
     text-align: center;
     vertical-align: middle;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    /*    padding: 20px;*/
 }
 
 .introduction-logo-container {
@@ -479,28 +475,29 @@ p {
     font-size: 14px;
     background-color: black;
     box-sizing: border-box;
-    padding: 107px 20px 20px;
+    /*   padding: 107px 20px 20px;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 85%;
+    padding-top: 107px;
 }
 
-.product-info-box {
+.product-info__about {
     text-align: center;
     color: white;
     margin-bottom: 10px;
     box-sizing: border-box;
 }
 
-.product-info-box h4 {
+.product-info__about--title {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-.product-info-box span {
+.product-info__about--icon {
     border: 2px solid white;
     box-sizing: border-box;
     display: inline-block;
@@ -513,7 +510,7 @@ p {
     margin-bottom: 10px;
 }
 
-.product-info-box i {
+.product-info__about i {
     position: relative;
     color: white;
     transition: color 1s;
@@ -524,7 +521,7 @@ p {
     line-height: 55px;
 }
 
-.product-info-box span:hover {
+.product-info__about--icon:hover {
     display: inline-block;
     background-color: white;
     border-radius: 50%;
@@ -532,11 +529,11 @@ p {
     line-height: 55px;
 }
 
-.product-info-box i:hover {
+.product-info__about i:hover {
     color: black;
 }
 
-.product-text {
+.product-info__text {
     padding-right: 35px;
     padding-left: 35px;
     color: white;
@@ -548,7 +545,7 @@ p {
     letter-spacing: 1px;
 }
 
-.product-info-title h4 {
+.product-info__title {
     font-size: 25px;
     font-weight: 600;
     text-transform: uppercase;
@@ -559,18 +556,17 @@ p {
     text-align: center;
 }
 
-.product-info-box p {
+.product-info__about p {
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
     line-height: 1.4em;
     font-weight: 100;
-    /*    letter-spacing: 0.5px;*/
 }
 
 @media (min-width: 768px) {
-    .product-info-box {
+    .product-info__about {
         height: 200px;
     }
 }
@@ -584,7 +580,7 @@ p {
 /**************************************************/
 
 .enrollment-container {
-    padding: 110px 20% 20px 20%;
+    padding: 110px 20px 20px 20px;
     min-height: 100vh;
     box-sizing: border-box;
     color: white;
@@ -654,7 +650,7 @@ textarea#inputMessage.form-control {
 
 /*   hiding spin buttons in phone number filed in Mozilla   */
 #inputPhoneNumber {
--moz-appearance:textfield;
+    -moz-appearance: textfield;
 }
 
 /**************************************************/
@@ -688,7 +684,7 @@ textarea#inputMessage.form-control {
     min-width: 20%;
 }
 
-.team-member-img img {
+.person__img img {
     /* make it responsive */
     max-width: 100%;
     width: 200px;
@@ -699,7 +695,7 @@ textarea#inputMessage.form-control {
     box-sizing: border-box;
 }
 
-.team-info .person-name {
+.person__name {
     text-align: center;
     font-size: 1.8em;
     line-height: 1.5em;
@@ -709,7 +705,7 @@ textarea#inputMessage.form-control {
     box-sizing: border-box;
 }
 
-.person-bio {
+.person__bio {
     text-align: center;
     font-size: 14px;
     line-height: 1.5em;
@@ -719,7 +715,7 @@ textarea#inputMessage.form-control {
     box-sizing: border-box;
 }
 
-.person-icon a {
+.person__icon {
     display: inline-block;
     padding: 25px 5px 0;
     box-sizing: border-box;
@@ -730,7 +726,7 @@ textarea#inputMessage.form-control {
     transition: color 2s;
 }
 
-.person-icon a:hover {
+.person__icon:hover {
     color: cadetblue;
 }
 
@@ -755,7 +751,7 @@ textarea#inputMessage.form-control {
 /******************** Footer ********************/
 /************************************************/
 
-.footer-container {
+.site-footer {
     display: flex;
     flex-wrap: wrap;
     /* margin-top: auto;*/
@@ -772,25 +768,25 @@ textarea#inputMessage.form-control {
     margin: auto;
 }
 
-.site-footer {
+.footer-container {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
 }
 
-.site-footer .footer-left {
+.footer__left {
     padding-left: 50px;
     padding-top: 50px;
     flex: 1;
     min-width: 45%;
 }
 
-.site-footer .footer-right {
+.footer__right {
     flex: 1;
     min-width: 45%;
 }
 
-.site-footer .footer-right i {
+.footer__right i {
     background-color: #33383b;
     color: #ffffff;
     font-size: 25px;
@@ -803,35 +799,35 @@ textarea#inputMessage.form-control {
     vertical-align: middle;
 }
 
-.site-footer .footer-right .fa-envelope {
+.footer__right .fa-envelope {
     font-size: 16px;
     line-height: 35px;
 }
 
-.site-footer .footer-right p {
+.footer__right--item {
     display: inline-block;
     color: #ffffff;
     vertical-align: middle;
     margin: 0;
 }
 
-.site-footer .footer-right p span {
+.footer__right--item span {
     display: block;
     font-weight: normal;
     font-size: 15px;
     line-height: 2;
 }
 
-.site-footer .footer-right p a {
+.footer__right--item a {
     color: white;
     text-decoration: none;
 }
 
-.site-footer .footer-icon {
+.footer__icons {
     margin-top: 25px;
 }
 
-.site-footer .footer-icon a {
+.footer__icons--link {
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -844,20 +840,16 @@ textarea#inputMessage.form-control {
     line-height: 35px;
     margin-right: 3px;
     margin-bottom: 5px;
-}
-
-.footer-icon a {
     transition: filter 2s;
 }
 
-.footer-icon a:hover {
+.footer__icons--link:hover {
     filter: invert(1);
 }
 
 @media (max-width: 768px) {
 
-    .site-footer .footer-left,
-    .site-footer .footer-right {
+    .footer__left, .footer__right {
         min-width: 100%;
         padding-bottom: 30px;
     }
@@ -865,8 +857,7 @@ textarea#inputMessage.form-control {
 
 @media (width: 768px) {
 
-    .site-footer .footer-left,
-    .site-footer .footer-right {
+    .footer__left, .footer__right {
         min-width: 50%;
         padding-bottom: 30px;
     }
