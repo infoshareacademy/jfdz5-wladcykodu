@@ -7,15 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Auto-parts search engine</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link href="style2.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="icon.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
 
 <header class="header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav__item"><a href="#functions">Funkcje</a></li><!--Functions-->
+                    <li class="nav__item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
+                    <li class="nav__item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
+                    <li class="nav__item"><a href="#team-info">O nas</a></li><!--About Us-->
+                    <li class="nav__item"><a href="#contact-us">Kontakt</a></li><!--Contact-->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
     <nav class="nav">
 
         <div class="nav__left">
@@ -40,14 +66,12 @@
         </div>
     </nav>
 </header>
-<div class="site-container">
-    <main class="main-container">
-
+<main class="main-container">
 
         <!-- START INTRODUCTION -->
 
-        <div id="introduction" class="main-container-item introduction-container">
-            <div class="inIntroduction">
+        <div id="introduction" class="container container--section main-container-item introduction-container">
+            <div class="row inIntroduction">
                 <div class="introductionElement introduction-logo-container">
                     <div class="introductionLogo">
                         <h1>AUTO</h1>
@@ -65,89 +89,91 @@
                     </a>
                 </div>
             </div>
+
         </div>
         <!-- END INTRODUCTION  -->
 
         <!-- START FUNCTIONS -->
-        <div id="functions" class="main-container-item functions-container">
-            <div class="function icon1-container">
-                <img class="functionIcon" src="function-icons/icon1.png" alt="">
-            </div>
-            <div class="function icon2-container">
-                <img class="functionIcon" src="function-icons/icon2.png" alt="">
-            </div>
-            <div class="function icon3-container">
-                <img class="functionIcon" src="function-icons/icon3.png" alt="">
-            </div>
-            <div class="function icon4-container">
-                <img class="functionIcon" src="function-icons/icon4.png" alt="">
-            </div>
-            <div class="function icon5-container">
-                <img class="functionIcon" src="function-icons/icon5.png" alt="">
-            </div>
-            <div class="function icon6-container">
-                <img class="functionIcon" src="function-icons/icon6.png" alt="">
-            </div>
-            <div class="function icon7-container">
-                <img class="functionIcon" src="function-icons/icon7.png" alt="">
-            </div>
-            <div class="function icon8-container">
-                <img class="functionIcon" src="function-icons/icon8.png" alt="">
-            </div>
-            <p class="function functionText functionText1">Posiadamy części wszytkich marek.</p>
-            <p class="function functionText functionText2">Porównamy dla Ciebie ceny z wielu źródeł.</p>
-            <div class="function icon9-container">
-                <img class="functionIcon" src="function-icons/icon9.ico" alt="">
-            </div>
-            <div class="function icon10-container">
-                <img class="functionIcon" src="function-icons/icon10.png" alt="">
-            </div>
-            <div class="function icon11-container">
-                <img class="functionIcon" src="function-icons/icon11.svg" alt="">
-            </div>
-            <div class="function icon12-container">
-                <img class="functionIcon" src="function-icons/icon12.png" alt="">
-            </div>
+        <div id="functions" class="container container--section main-container-item functions-container">
+            <p>Funkcje tu są - USUŃ ten akapit</p>
+            <!--<div class="function icon1-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon1.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon2-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon2.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon3-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon3.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon4-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon4.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon5-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon5.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon6-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon6.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon7-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon7.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon8-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon8.png" alt="">-->
+            <!--</div>-->
+            <!--<p class="function functionText functionText1">Posiadamy części wszytkich marek.</p>-->
+            <!--<p class="function functionText functionText2">Porównamy dla Ciebie ceny z wielu źródeł.</p>-->
+            <!--<div class="function icon9-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon9.ico" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon10-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon10.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon11-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon11.svg" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon12-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon12.png" alt="">-->
+            <!--</div>-->
 
-            <p class="function functionText functionText3">Posiadamy części nowe i używane.</p>
+            <!--<p class="function functionText functionText3">Posiadamy części nowe i używane.</p>-->
 
-            <p class="function functionText functionText4">Z nami zaoczczędzisz czas i pieniądze.</p>
+            <!--<p class="function functionText functionText4">Z nami zaoczczędzisz czas i pieniądze.</p>-->
 
-            <div class="function icon13-container">
-                <img class="functionIcon" src="function-icons/icon13.png" alt="">
-            </div>
+            <!--<div class="function icon13-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon13.png" alt="">-->
+            <!--</div>-->
 
-            <div class="function icon14-container">
-                <img class="functionIcon" src="function-icons/icon14.png" alt="">
-            </div>
+            <!--<div class="function icon14-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon14.png" alt="">-->
+            <!--</div>-->
 
 
-            <div class="function icon15-container">
-                <img class="functionIcon" src="function-icons/icon15.png" alt="">
-            </div>
+            <!--<div class="function icon15-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon15.png" alt="">-->
+            <!--</div>-->
 
-            <div class="function icon16-container">
-                <img class="functionIcon" src="function-icons/icon16.png" alt="">
-            </div>
+            <!--<div class="function icon16-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon16.png" alt="">-->
+            <!--</div>-->
 
-            <div class="function icon17-container">
-                <img class="functionIcon" src="function-icons/icon4.png" alt="">
-            </div>
-            <div class="function icon18-container">
-                <img class="functionIcon" src="function-icons/icon3.png" alt="">
-            </div>
-            <div class="function icon19-container">
-                <img class="functionIcon" src="function-icons/icon2.png" alt="">
-            </div>
-            <div class="function icon20-container">
-                <img class="functionIcon" src="function-icons/icon1.png" alt="">
-            </div>
+            <!--<div class="function icon17-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon4.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon18-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon3.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon19-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon2.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="function icon20-container">-->
+                <!--<img class="functionIcon" src="function-icons/icon1.png" alt="">-->
+            <!--</div>-->
 
         </div>
 
         <!--#product-info-->
-        <section id="product-info" class="main-container-item">
-            <div class="product-info">
+        <section id="product-info" class="container container--section main-container-item">
+            <div class="container-center product-info">
                 <div class="product-info__text">
                     <p>Witamy! Jesteśmy Władcy Kodu - twórcy wyszukiwarki części samochodowych AUTO PARTS i jedyny
                         podmiot
@@ -216,8 +242,8 @@
 
         <!--#enrollment-->
 
-        <section id="enrollment" class="main-container-item enrollment">
-            <div class="enrollment__content-wrapper">
+        <section id="enrollment" class="container container--section main-container-item enrollment">
+            <div class="container-center enrollment__content-wrapper">
                 <h2 class="enrollment__h2-center">Zapisz się na premierę!</h2>
                 <p class="enrollment__text">Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery
                     naszej wyszukiwarki.
@@ -262,11 +288,12 @@
 
         <!--Team info-->
 
-        <section id="team-info" class="main-container-item">
-            <div class="team-info">
-                <div class="person">
+        <section id="team-info" class="container container--section main-container-item">
+            <div class="container-center">
+            <div class="row team-info">
+                <div class="col-md-6 col-lg-3 person">
                     <div class="person__img">
-                        <img src="photo2.jpeg">
+                        <!--<img src="photo2.jpeg">-->
                         <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
                     </div>
                     <div>
@@ -292,9 +319,9 @@
                 </div>
 
 
-                <div class="person">
+                <div class="col-md-6 col-lg-3 person">
                     <div class="person__img">
-                        <img src="photo2.jpeg">
+                        <!--<img src="photo2.jpeg">-->
                     </div>
                     <div>
                         <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
@@ -318,9 +345,9 @@
 
                 </div>
 
-                <div class="person">
+                <div class="col-md-6 col-lg-3 person">
                     <div class="person__img">
-                        <img src="photo1.jpg">
+                        <!--<img src="photo1.jpg">-->
                     </div>
                     <div>
                         <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
@@ -344,9 +371,9 @@
 
                 </div>
 
-                <div class="person">
+                <div class="col-md-6 col-lg-3 person">
                     <div class="person__img">
-                        <img src="photo1.jpg">
+                        <!--<img src="photo1.jpg">-->
                     </div>
                     <div>
                         <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
@@ -369,13 +396,14 @@
                     </p>
                 </div>
             </div>
+            </div>
         </section>
 
     </main>
 
-    <footer id="contact-us" class="footer-container main-container-item">
-        <div class="site-footer">
-            <div class="footer__left">
+    <footer id="contact-us" class="container footer-container main-container-item">
+        <div class="row site-footer">
+            <div class="col-md-6 footer__left">
                 <p>Władcy Kodu &copy; 2017</p>
 
                 <div class="footer__icons">
@@ -387,7 +415,7 @@
                 </div>
             </div>
 
-            <div class="footer__right">
+            <div class="col-md-6 footer__right">
                 <div>
                     <i class="fa fa-map-marker"></i>
                     <p class="footer__right--item"><span>Grunwaldzka Street</span> Gdansk, Poland</p>
@@ -404,6 +432,11 @@
             </div>
         </div>
     </footer>
-</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
