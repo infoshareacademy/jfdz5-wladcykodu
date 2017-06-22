@@ -5,7 +5,6 @@ body {
     /*background-color: black;*/
 }
 
-
 .container--section {
     box-sizing: border-box;
     min-height: 85vh;
@@ -32,3 +31,255 @@ body {
 .product-info__about {
     min-height: 200px;
 }
+
+/****************************************************/
+/******************** Navigation ********************/
+/****************************************************/
+
+.logo img {
+    display: block;
+    float: none;
+    height: 5em;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar {
+    background-color: #000000;
+    font-size: 1.7rem;
+    color: #ffffff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-color: #000000;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav > li > a {
+
+    margin-right: 5px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    margin-left: 5px;
+    border: 1px solid transparent;
+    line-height: 1rem;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    display: block;
+    color: #000;
+    border-color: #ffffff;
+    line-height: 1rem;
+    border-radius: 4px;
+    transition: all 1s ease;
+    background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    display: block;
+    border-color: #fff;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.navbar-toggle .icon-bar {
+    width: 40px;
+    background: #fff;
+    transition: .5s ease;
+    padding-bottom: 3px;
+    margin-bottom: 7px;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(2) {
+    transform: rotate(0) translateY(0) translateX(0);
+    margin-bottom: 7px;
+    margin-top: 5px;
+
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(3) {
+    opacity: 1;
+    margin-bottom: 7px;
+}
+
+.navbar-toggle.collapsed .icon-bar:nth-child(4) {
+    transform: rotate(0) translateY(0) translateX(0);
+    margin-bottom: 7px;
+}
+
+.navbar-toggle .icon-bar:nth-child(2) {
+    transform: rotate(-45deg) translateY(10px) translateX(-10px);
+
+}
+
+.navbar-toggle .icon-bar:nth-child(3) {
+    opacity: 0
+}
+
+.navbar-toggle .icon-bar:nth-child(4) {
+    transform: rotate(45deg) translateY(-4px) translateX(-3px);
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #000;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #000;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #000;
+}
+
+.navbar-inverse .navbar-toggle {
+
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        padding-top: 1em;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* rules on tablets only */
+    .navbar-inverse .navbar-nav > li > a {
+        padding-right: 4px;
+        padding-left: 4px;
+        margin: 0;
+    }
+
+    .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+        margin-right: 0;
+        margin-left: 0;
+
+    }
+}
+
+/***********************************************************/
+/******************** End of Navigation ********************/
+/***********************************************************/
+
+/************************************************/
+/******************** Footer ********************/
+/************************************************/
+
+.footer-container {
+    bottom: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    max-width: 1440px;
+    font: bold 15px 'Montserrat';
+    margin: auto;
+}
+
+.footer__left {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.footer__right i {
+    background-color: #000;
+    color: #ffffff;
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer__right .fa-envelope {
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.footer__right--item {
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer__right--item span {
+    display: block;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.footer__right--item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer__icons {
+    margin-top: 25px;
+}
+
+.footer__icons--link {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    transition: all 1.2s;
+}
+
+.footer__icons--link:focus, .footer__icons--link:hover {
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+
+    .footer__right--item a {
+
+        float: left;
+        padding-top: 1.1em;
+    }
+
+    .footer__right .fa-envelope {
+        float: left;
+    }
+
+    .footer__left, .footer__right {
+        padding-bottom: 1em;
+    }
+}
+
+/*******************************************************/
+/******************** End of Footer ********************/
+/*******************************************************/
