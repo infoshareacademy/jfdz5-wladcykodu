@@ -182,6 +182,206 @@ body {
 /******************** End of Navigation ********************/
 /***********************************************************/
 
+/**************************************************/
+/******************** Product Info ****************/
+/**************************************************/
+
+.product-info {
+    font-size: 1em;
+    background-color: black;
+    box-sizing: border-box;
+    /*   padding: 107px 20px 20px;*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    padding-top: 107px; /*??*/
+    width: 100%;
+    max-width: 1440px;
+}
+
+.product-info__about {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.product-info__about--title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.product-info__about--icon {
+    border: 2px solid white;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    transition: background 1s, color 1s;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+}
+
+.product-info__about i {
+    position: relative;
+    color: white;
+    transition: color 1s;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    font-size: 2em;
+    line-height: 55px;
+}
+
+.product-info__about--icon:hover {
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    line-height: 55px;
+}
+
+.product-info__about i:hover {
+    color: black;
+}
+
+.product-info__text {
+    padding-right: 35px;
+    padding-left: 35px;
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+}
+
+.product-info__title {
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.product-info__about p {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    line-height: 1.4em;
+    font-weight: 100;
+}
+
+@media (min-width: 768px) {
+    .product-info__about {
+        height: 200px;
+    }
+}
+
+/*Add media Queries for bigger width or set sizing in vh/vw*/
+
+/**************************************************/
+/******************** End of Product Info *********/
+/**************************************************/
+
+/**************************************************/
+/******************** About Us ********************/
+/**************************************************/
+
+.team-info {
+    background-color: black;
+    box-sizing: border-box;
+    padding: 110px 20px 50px;
+    min-height: 100vh;
+    /*  height: 85%;*/
+    width: 100%;
+    max-width: 1440px;
+
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.person__img img {
+    /* make it responsive */
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    /* make it a circle */
+    border-radius: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.person__name {
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.person__bio {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: white;
+    padding: 10px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+.person__icon {
+    display: inline-block;
+    padding: 25px 5px 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    transition: color 2s;
+}
+
+.person__icon:hover {
+    color: cadetblue;
+}
+
+/*@media screen and (max-width: 767px) {
+    .person {
+        min-width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    !* rules on tablets only *!
+    .person {
+        min-width: 40%;
+    }
+}*/
+
+/*********************************************************/
+/******************** End of About Us ********************/
+/*********************************************************/
+
 /************************************************/
 /******************** Footer ********************/
 /************************************************/
@@ -204,7 +404,7 @@ body {
 .footer__right i {
     background-color: #000;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 1.8em;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -215,7 +415,7 @@ body {
 }
 
 .footer__right .fa-envelope {
-    font-size: 16px;
+    font-size: 1.5em;
     line-height: 35px;
 }
 
@@ -229,7 +429,7 @@ body {
 .footer__right--item span {
     display: block;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 1.5em;
     line-height: 2;
 }
 
@@ -249,7 +449,7 @@ body {
     cursor: pointer;
     background-color: #33383b;
     border-radius: 2px;
-    font-size: 20px;
+    font-size: 1.6em;
     color: #ffffff;
     text-align: center;
     line-height: 35px;
