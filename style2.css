@@ -54,17 +54,23 @@ body {
 }
 
 .navbar {
-    background-color: #000000;
+    background-color: #000;
     font-size: 1.7rem;
-    color: #ffffff;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-color: #000000;
+    color: #fff;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-color: #000;
     text-transform: uppercase;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
+    transition: all .5s ease-in-out;
+}
+
+.navbar--height--shrink {
+    padding-top: 2rem;
+    padding-bottom: 2rem
 }
 
 .nav > li > a {
