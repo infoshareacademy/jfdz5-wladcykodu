@@ -10,15 +10,16 @@ $(window).scroll(function() {
 });
 
 
-/*document.getElementById('.navbar')*/
 
-
-/*Smooth scrolling:*/
+/*Smooth scrolling*/
 
 $('.nav a').click(function(){
+ /*   event.preventDefault();
+    event.stopPropagation();*//*false is doing the same as this two lines and when used we must add in function() event word */
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 500);
+    $('.navbar-collapse.in').collapse('hide'); /*hide clicked menu item*/
     return false;
 });
 
