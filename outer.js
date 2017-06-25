@@ -23,4 +23,8 @@ $('.nav a').click(function(){
     return false;
 });
 
+/*Active links in nav when scrolling*/
+
+/*
+....*/
 
