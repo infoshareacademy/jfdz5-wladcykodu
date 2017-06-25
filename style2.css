@@ -325,6 +325,18 @@ body {
     margin: 0 auto 40px;
 }
 
+/*   hiding spin buttons in phone number field    */
+#inputPhoneNumber::-webkit-outer-spin-button,
+#inputPhoneNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/*   hiding spin buttons in phone number field in Mozilla   */
+#inputPhoneNumber {
+    -moz-appearance: textfield;
+}
+
 /**************************************************/
 /************ End of enrollment form **************/
 /**************************************************/
