@@ -302,6 +302,46 @@ body {
 /**************************************************/
 
 /**************************************************/
+/**************** Enrollment form *****************/
+/**************************************************/
+
+.enrollment {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 115px;
+    color: white;
+    background-color: black;
+    background: url("dark.png") fixed;
+    background-size: cover;
+}
+
+.enrollment__content-wrapper {
+    max-width: 630px;
+    justify-content: space-around;
+}
+
+.enrollment__inputs {
+    max-width: 350px;
+    margin: 0 auto 40px;
+}
+
+/*   hiding spin buttons in phone number field    */
+#inputPhoneNumber::-webkit-outer-spin-button,
+#inputPhoneNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/*   hiding spin buttons in phone number field in Mozilla   */
+#inputPhoneNumber {
+    -moz-appearance: textfield;
+}
+
+/**************************************************/
+/************ End of enrollment form **************/
+/**************************************************/
+
+/**************************************************/
 /******************** About Us ********************/
 /**************************************************/
 
