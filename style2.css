@@ -1,3 +1,21 @@
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1440px) {
+    html {
+        font-size: calc(1vw + 8.24px);
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    html {
+        font-size: 22.64px;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,10 +23,21 @@ body {
     /*background-color: black;*/
 }
 
+.normal-text-size {
+    font-size: 1rem;
+}
+
+.header-text-size {
+    font-size: 2rem;
+}
+
 .container--section {
     box-sizing: border-box;
-    min-height: 85vh;
+    /*min-height: 85vh;*/
     display: flex;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
 }
 
 .container-center {
@@ -306,8 +335,8 @@ body {
 /**************************************************/
 
 .enrollment {
-    min-height: 100vh;
-    width: 100%;
+    /*min-height: 100vh;*/
+    /*width: 100%;*/
     padding-top: 115px;
     color: white;
     background-color: black;
