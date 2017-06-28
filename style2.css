@@ -113,6 +113,7 @@ body {
     margin-left: 5px;
     border: 1px solid transparent;
     line-height: 1rem;
+    transition: .5s all ease-out;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
@@ -125,7 +126,7 @@ body {
     background-color: #fff;
 }
 
-.navbar-inverse .navbar-nav > .active > a {
+.navbar-inverse .navbar-nav > li > a.active {
     display: block;
     border-color: #fff;
     background-color: #000;
