@@ -48,16 +48,18 @@ $(window).scroll(function () {
                 $('.nav a.active').removeClass('active');
                 $('.nav a').eq(i).addClass('active');
             }
-            // add active class to contact in normal size window
-            /*else if ( $(window).scrollTop() + $(window).height() === $(document).height()) {
-             {
-
-             }
-             }*/
         });
 
     } else {
         $('.nav a.active').removeClass('active');
+    }
+
+    // add active class to contact in normal size window
+    if ( $(window).scrollTop() + $(window).height() === $(document).height()) {
+        $('.nav a.active').removeClass('active');
+        $('.nav li:last-child a').addClass('active');
+    } else {
+        $('.nav li:last-child a').removeClass('active');
     }
 
 }).scroll();
