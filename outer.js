@@ -1,11 +1,10 @@
-
 /******************************/
 /* Shrinked navbar (FZ5WK-26) */
 /******************************/
 
-$(window).on("scroll", function() {
+$(document).on("scroll", function () {
 
-    if($(window).scrollTop() > 100) {
+    if ($(window).scrollTop() > 100) {
         $(".navbar--height").addClass("navbar--height--shrink");
     } else {
         $(".navbar--height").removeClass("navbar--height--shrink");
@@ -33,7 +32,7 @@ $('.nav a').click(function () {
 /* Highlight the current section in the navigation (FZ5WK-19) */
 /**************************************************************/
 
-$(window).scroll(function () {
+$(document).scroll(function () {
     // distance to which user scroll down the page / number of pixels the window has been scrolled
     var scrollPosition = $(window).scrollTop();
     var menuHeight = 110;
@@ -57,7 +56,7 @@ $(window).scroll(function () {
     }
 
     // add active class to contact in normal size window
-    if ( $(window).scrollTop() + $(window).height() === $(document).height()) {
+    if ($(window).scrollTop() + $(window).height() === $(document).height()) {
         $('.nav a.active').removeClass('active');
         $('.nav li:last-child a').addClass('active');
     } else {
@@ -71,5 +70,38 @@ $(window).scroll(function () {
 /* Animated photos of the team members (FZ5WK-20) */
 /**************************************************/
 
+var $window = $(window);
+var $members = $('.members');
 
-/*...*/
+function slideInView() {
+    var windowHeight = $window.height();
+    //vertical position of the scroll bar
+    var topPosition = $window.scrollTop();
+    var bottomPosition = (topPosition + windowHeight);
+
+    $.each($members, function () {
+        //height of the members with padding and border
+        var membersHeight = $(this).outerHeight();
+        //distance of members relative to the top
+        var memberTopPosition = $(this).offset().top;
+        var memberBottomPosition = (topPosition + membersHeight);
+
+        //checking is team info (members) in view --> is members bottom position greater than top position of window AND is members top top position less than bottom position of window
+        // if yes add class slide-active, if not remove it
+        if ((memberBottomPosition >= topPosition) &&
+            (memberTopPosition <= bottomPosition)) {
+            $(this).addClass('slide-active');
+        } else {
+            $(this).removeClass('slide-active');
+        }
+    });
+}
+//function is called when resize or scroll
+$window.on('scroll resize', slideInView);
+$window.trigger('scroll');
+
+
+
+
+
+
