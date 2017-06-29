@@ -66,6 +66,10 @@ body {
 /******************** Navigation ********************/
 /****************************************************/
 
+.language-toggle {
+    max-width: 25px;
+}
+
 .logo img {
     display: block;
     float: none;
