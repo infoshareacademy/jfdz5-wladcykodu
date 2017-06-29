@@ -5,6 +5,10 @@ body {
     /*background-color: black;*/
 }
 
+.row {
+    margin: 0;
+}
+
 .container--section {
     box-sizing: border-box;
     min-height: 85vh;
@@ -35,6 +39,10 @@ body {
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
+.header {
+    margin: auto;
+    max-width: 1440px;
+}
 
 .logo img {
     display: block;
@@ -66,6 +74,7 @@ body {
     width: 100%;
     z-index: 999;
     transition: all .5s ease-in-out;
+    max-width: 1440px;
 }
 
 .navbar--height--shrink {
@@ -314,6 +323,7 @@ body {
     background-color: black;
     background: url("dark.png") fixed;
     background-size: cover;
+    max-width: 1440px;
 }
 
 .enrollment__content-wrapper {
