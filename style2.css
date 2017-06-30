@@ -104,8 +104,8 @@ body {
     background-color: #000;
     font-size: 1rem;
     color: #fff;
-    padding-top: 1.9rem;
-    padding-bottom: 1.9rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
     border-color: #000;
     text-transform: uppercase;
     position: fixed;
@@ -118,8 +118,8 @@ body {
 }
 
 .navbar--height--shrink {
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem
 }
 
 .nav > li > a {
