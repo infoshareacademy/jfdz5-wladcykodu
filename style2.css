@@ -326,6 +326,162 @@ body {
 /******************** End of Navigation ********************/
 /***********************************************************/
 
+
+/**************************************************/
+/******************** Introduction ****************/
+/**************************************************/
+
+.introduction__container {
+    background: url("dark.png") fixed;
+    background-size: cover;
+    display: flex;
+    padding: 0;
+}
+
+.introduction__content {
+    margin: auto;
+}
+
+.introduction__content--mobile {
+    display: none;
+}
+.carousel {
+    width: auto;
+}
+
+.carousel-img {
+    width: 70%;
+    height: auto;
+    display: none;
+    margin: auto;
+}
+
+.carousel-caption {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.carousel-caption p, .carousel-caption h3 {
+    text-transform: uppercase;
+}
+
+.icon-prev::before, .icon-next::before {
+    font-size: 5rem;
+}
+
+.button-text {
+    vertical-align: middle;
+}
+
+.carousel-control .icon-next:before, .carousel-control .icon-prev:before {
+    line-height: 5rem;
+}
+
+.carousel-caption--light h3, .carousel-caption--light p {
+    color: black;
+}
+
+.carousel-caption .btn {
+    font-size: 1.3rem;
+    transition: filter 1s;
+}
+
+.carousel-caption .btn:hover {
+    filter: invert();
+}
+
+.carousel-caption--light .btn {
+    background-color: #0c0c0c;
+    color: white;
+    transition: filter 1s;
+}
+
+.carousel-caption--light img {
+    height: 10%;
+}
+
+.carousel-caption--light .btn:hover {
+    filter: invert();
+}
+
+.carousel-caption__element {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    box-sizing: border-box;
+}
+
+p.carousel-caption__element, img.carousel-caption__element {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+h3.carousel-caption__element {
+    padding-top: 0;
+}
+
+
+
+@media all and (max-width: 768px) {
+    .introduction__content {
+        display: none;
+    }
+
+    .introduction__content--mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 0;
+        margin: auto;
+    }
+
+    .introduction__content--mobile--element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        text-align: center;
+
+    }
+    .introduction__content--mobile--element>a {
+        align-items: center;
+    }
+
+}
+
+/**************************************************/
+/****************End introduction *****************/
+/**************************************************/
+
+
+
+/**************************************************/
+/******************** Functions ****************/
+/**************************************************/
+
+.function__icon {
+    width: 50%;
+    height: auto;
+}
+
+
+
+/**************************************************/
+/****************End functions *****************/
+/**************************************************/
+
+
+
+
+
+
 /**************************************************/
 /******************** Product Info ****************/
 /**************************************************/

@@ -69,22 +69,91 @@
 
     <!-- START INTRODUCTION -->
 
-    <div id="introduction" class="container container--section main-container-item introduction-container">
-        <div class="row inIntroduction">
-            <div class="introductionElement introduction-logo-container">
-                <div class="introductionLogo">
-                    <h1>AUTO</h1>
-                    <h1>PARTS</h1>
-                </div>
-            </div>
-            <h2 class="introductionElement introduction-main-text-container">NOWOCZESNA WYSZUKIWARKA CZĘŚCI
-                SAMOCHODOWYCH</h2>
-            <p class="introductionElement introduction-regular-text-container">SZYBKO. TANIO. INTUICYJNIE.</p>
-            <div class="introductionElement introduction-button-container">
-                <a href="#enrollment">
-                    <div class="btn btn-default">
-                        <p>ZAPISZ SIĘ NA PREMIERĘ!</p>
+    <div id="introduction" class="container container--section main-container-item introduction__container">
+
+        <div class="introduction__content">
+            <!--start carousel -->
+            <div id="introduction-carousel" class="carousel slide">
+                <!-- start point markers -->
+                <ol class="carousel-indicators">
+                    <li data-target="#introduction-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="1"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="2"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="3"></li>
+                </ol>
+                <!-- end point markers -->
+
+                <!-- start slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="introduction-1.png" class="carousel-img" alt="">
+                        <div class="carousel-caption">
+                            <h3 class="header-text-size carousel-caption__element">auto parts</h3>
+                            <p class="normal-text-size carousel-caption__element">nowoczesna wyszukiwarka części
+                                samochodowych</p>
+                        </div>
                     </div>
+
+                    <div class="item">
+                        <img id="carousel-image" src="introduction-2.png" class="carousel-img" alt="">
+                        <div class="carousel-caption">
+                            <h3 class="header-text-size carousel-caption__element">premiera już w październiku!</h3>
+                            <p class="normal-text-size carousel-caption__element">chcesz być na bieżąco?</p>
+                            <a href="#enrollment" class="carousel-caption__element">
+                                <input type="button" value="Zapisz się!" class="btn btn-default"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="introduction-3.png" class="carousel-img" alt="">
+                        <div class="carousel-caption carousel-caption--light">
+                            <h3 class="header-text-size carousel-caption__element">wyszukiwarka przyszłości</h3>
+                            <p class="normal-text-size carousel-caption__element">szybka</p>
+                            <p class="normal-text-size carousel-caption__element">tania</p>
+                            <p class="normal-text-size carousel-caption__element">intuicyjna</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="introduction-4.png" class="carousel-img carousel-caption__element" alt="">
+                        <div class="carousel-caption carousel-caption--light">
+                            <img src="crown.svg" class="crown-icon" alt="">
+                            <h3 class="header-text-size carousel-caption__element">władcy kodu</h3>
+                            <p class="normal-text-size carousel-caption__element">tworzymy narzędzie z myślą o Twoich
+                                potrzebach</p>
+                            <a href="#team-info" class="carousel-caption__element">
+                                <input type="button" value="Poznaj nas!" class="btn btn-default"/>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end slides -->
+
+                <!-- start arrows -->
+                <a class="left carousel-control" href="#introduction-carousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#introduction-carousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+                <!-- end arrows -->
+            </div>
+            <!--end carousel -->
+        </div>
+
+
+        <!--VIEW INTRODUCTION FOR SCREENS > 768PX -->
+        <div class="introduction__content--mobile">
+
+            <h3 class="header-text-size introduction__content--mobile--element">auto parts</h3>
+            <p class="normal-text-size introduction__content--mobile--element">nowoczesna wyszukiwarka części samochodowych</p>
+            <p class="normal-text-size introduction__content--mobile--element">szybko. tanio. intuicyjnie.</p>
+            <div class="introduction__content--mobile--element">
+                <h3 class="normal-text-size "> premiera już w październiku!</h3>
+                <a href="#enrollment">
+                <input type="button" value="Zapisz się!" class="btn btn-default"/>
                 </a>
             </div>
         </div>
@@ -168,7 +237,83 @@
         <!--<img class="functionIcon" src="function-icons/icon1.png" alt="">-->
         <!--</div>-->
 
+    <div id="functions" class="container container--section main-container-item functions__container">
+        <div class="row functions__row">
+            <div class="functions__element element__1 col-lg-2">
+                <img class="function__icon" src="function-icons/icon1.svg" alt="">
+            </div>
+            <div class="functions__element element__2 col-lg-2">
+                <img class="function__icon" src="function-icons/icon2.svg" alt="">
+            </div>
+            <div class="functions__element element__3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon3.svg" alt="">
+            </div>
+            <div class="functions__element element__4 col-lg-2">
+                <img class="function__icon" src="function-icons/icon4.svg" alt="">
+            </div>
+            <div class="functions__element element__5 col-lg-2">
+                <img class="function__icon" src="function-icons/icon5.svg" alt="">
+            </div>
+            <div class="functions__element element__6 col-lg-2">
+                <img class="function__icon" src="function-icons/icon6.svg" alt="">
+            </div>
+            <div class="functions__element element__7 col-lg-2">
+                <img class="function__icon" src="function-icons/icon7.svg" alt="">
+            </div>
+            <div class="functions__element element__8 col-lg-2">
+                <img class="function__icon" src="function-icons/icon8.svg" alt="">
+            </div>
+            <p class="functions__element element__9 col-lg-2 function__text function--1">Posiadamy części wszytkich marek.</p>
+            <p class="functions__element element__10 col-sm-3 col-lg-2 function__text function--2">Porównamy dla Ciebie ceny z wielu źródeł.</p>
+            <div class="functions__element element__11 hidden-xs hidden-sm col-md-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon9.svg" alt="">
+            </div>
+            <div class="functions__element element__12 hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon10.svg" alt="">
+            </div>
+            <div class="functions__element element__13 hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon11.svg" alt="">
+            </div>
+            <div class="functions__element element__14 hidden-xs hidden-sm col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon12.svg" alt="">
+            </div>
+
+            <p class="functions__element element__15 col-sm-3 col-lg-2 function__text function--3">Posiadamy części nowe i używane.</p>
+
+            <p class="functions__element element__16 col-sm-3 col-lg-2 function__text function--4">Z nami zaoszczędzisz czas i pieniądze.</p>
+
+            <div class="functions__element element__17 hidden-xs hidden-sm col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon13.svg" alt="">
+            </div>
+
+            <div class="functions__element element__18 hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon14.svg" alt="">
+            </div>
+
+
+            <div class="functions__element element__19 hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon15.svg" alt="">
+            </div>
+
+            <div class="functions__element element__20 col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon16.svg" alt="">
+            </div>
+
+            <div class="functions__element element__21 hidden-xs hidden-sm col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon4.svg" alt="">
+            </div>
+            <div class="functions__element element__22 hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon3.svg" alt="">
+            </div>
+            <div class="functions__element element__23 col-lg-2">
+                <img class="function__icon" src="function-icons/icon2.svg" alt="">
+            </div>
+            <div class="functions__element element__24 col-lg-2">
+                <img class="function__icon" src="function-icons/icon1.svg" alt="">
+            </div>
+        </div>
     </div>
+    <!-- END FUNCTIONS  -->
 
     <!--#product-info-->
     <section id="product-info" class="container product-info container--section container-center main-container-item">
