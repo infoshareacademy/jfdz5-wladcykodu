@@ -21,7 +21,7 @@ body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; /* hide the horizontal scroll bar that appears during transition*/
-    /*    background-color: black;*/
+    background-color: black;
     color: white;
 }
 
@@ -114,6 +114,7 @@ body {
     z-index: 999;
     transition: all .5s ease-in-out;
     max-width: 1440px;
+    box-shadow: 0 4px 20px rgba(163, 13, 5, 0.43);
 }
 
 .navbar--height--shrink {
