@@ -20,9 +20,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /*background-color: black;*/
     overflow-x: hidden; /* hide the horizontal scroll bar that appears during transition*/
-    background-color: black;
+    /*    background-color: black;*/
     color: white;
 }
 
@@ -76,15 +75,19 @@ body {
     max-width: 1440px;
 }
 
-.language-toggle {
-    max-width: 25px;
-}
-
 .logo img {
     display: block;
     float: none;
     height: 5em;
     margin: 0 auto;
+}
+
+.logo .language-toggle {
+    max-width: 25px;
+    display: block;
+    float: none;
+    margin: 0;
+    height: 1.5em;
 }
 
 .logo {
@@ -99,10 +102,10 @@ body {
 
 .navbar {
     background-color: #000;
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: #fff;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
     border-color: #000;
     text-transform: uppercase;
     position: fixed;
@@ -114,8 +117,8 @@ body {
 }
 
 .navbar--height--shrink {
-    padding-top: 2rem;
-    padding-bottom: 2rem
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem
 }
 
 .nav > li > a {
@@ -305,7 +308,7 @@ body {
         width: 7em;
         margin: -2em 0 0 0;
         padding: 0.5em 0.5em 0.5em 1em;
-        border-radius: 3em ;
+        border-radius: 3em;
     }
 
     .return-button > li:first-child {
