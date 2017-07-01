@@ -32,14 +32,14 @@ function showCookiesInfo() {
         function timeComparison() {
             if (localStorage.getItem("lastVisitName") - (new Date).getTime() > 2592000000) {
                 localStorage.setItem("lastVisitName", "(new Date).getTime()");
-                document.getElementsByTagName("cookies-button").setAttribute("display", "");
-                document.getElementsByTagName("cookies-button").addEventListener("click", document.getElementById(cookies-info).style.display = "none")
+                document.getElementById("cookies-button").setAttribute("display", "");
+                document.getElementById("cookies-button").addEventListener("click", document.getElementById(cookies-info).style.display = "none")
             } else {}
         }
     } else {
         localStorage.setItem("lastVisitName", "(new Date).getTime()");
-        document.getElementsByTagName("cookies-button").setAttribute("display", "");
-        document.getElementsByTagName("cookies-button").addEventListener("click", document.getElementById(cookies-info).style.display = "none")
+        document.getElementById("cookies-button").setAttribute("display", "");
+        document.getElementById("cookies-button").addEventListener("click", document.getElementById("cookies-info").style.display = "none")
     }
 }
 
