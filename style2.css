@@ -1,14 +1,49 @@
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1440px) {
+    html {
+        font-size: calc(1vw + 8.24px);
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    html {
+        font-size: 22.64px;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /*background-color: black;*/
+    overflow-x: hidden; /* hide the horizontal scroll bar that appears during transition*/
+    /*    background-color: black;*/
+    color: white;
+}
+
+.normal-text-size {
+    font-size: 1rem;
+}
+
+.header-text-size {
+    font-size: 2rem;
+}
+
+.row {
+    margin: 0;
 }
 
 .container--section {
     box-sizing: border-box;
-    min-height: 85vh;
+    /*min-height: 85vh;*/
     display: flex;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
 }
 
 .container-center {
@@ -35,12 +70,24 @@ body {
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
+.header {
+    margin: auto;
+    max-width: 1440px;
+}
 
 .logo img {
     display: block;
     float: none;
     height: 5em;
     margin: 0 auto;
+}
+
+.logo .language-toggle {
+    max-width: 25px;
+    display: block;
+    float: none;
+    margin: 0;
+    height: 1.5em;
 }
 
 .logo {
@@ -55,10 +102,10 @@ body {
 
 .navbar {
     background-color: #000;
-    font-size: 1.7rem;
+    font-size: 1rem;
     color: #fff;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
     border-color: #000;
     text-transform: uppercase;
     position: fixed;
@@ -66,11 +113,12 @@ body {
     width: 100%;
     z-index: 999;
     transition: all .5s ease-in-out;
+    max-width: 1440px;
 }
 
 .navbar--height--shrink {
-    padding-top: 2rem;
-    padding-bottom: 2rem
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem
 }
 
 .nav > li > a {
@@ -83,6 +131,7 @@ body {
     margin-left: 5px;
     border: 1px solid transparent;
     line-height: 1rem;
+    transition: .5s all ease-out;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
@@ -95,7 +144,7 @@ body {
     background-color: #fff;
 }
 
-.navbar-inverse .navbar-nav > .active > a {
+.navbar-inverse .navbar-nav > li > a.active {
     display: block;
     border-color: #fff;
     background-color: #000;
@@ -184,9 +233,253 @@ body {
     }
 }
 
+/* Start "Go to back" button */
+
+.go-back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 5;
+}
+
+.return-link {
+    display: block;
+    color: white;
+    padding: 0;
+    /*height: auto;*/
+}
+
+.return-link:link {
+    text-decoration: none;
+}
+
+.return-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    cursor: pointer;
+    list-style-type: none;
+    border: solid rgba(255, 255, 255, 0.5) 2px;
+}
+
+.return-button li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: background 1s, color 1s;
+}
+
+.return-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.return-button:hover li {
+    color: black;
+}
+
+@media screen and (max-width: 991px) {
+
+    .return-button {
+        width: 3em;
+        height: 3em;
+        margin: 0;
+        padding: 0.5em;
+        border-radius: 50%;
+    }
+
+    .return-button > li:first-child {
+        display: block;
+    }
+
+    .return-button > li:last-child {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .return-button {
+        width: 7em;
+        margin: -2em 0 0 0;
+        padding: 0.5em 0.5em 0.5em 1em;
+        border-radius: 3em;
+    }
+
+    .return-button > li:first-child {
+        display: none;
+    }
+
+    .return-button > li:last-child {
+        display: block;
+    }
+
+}
+
 /***********************************************************/
 /******************** End of Navigation ********************/
 /***********************************************************/
+
+
+/**************************************************/
+/******************** Introduction ****************/
+/**************************************************/
+
+.introduction__container {
+    background: url("dark.png") fixed;
+    background-size: cover;
+    display: flex;
+    padding: 0;
+}
+
+.introduction__content {
+    margin: auto;
+}
+
+.introduction__content--mobile {
+    display: none;
+}
+.carousel {
+    width: auto;
+}
+
+.carousel-img {
+    width: 70%;
+    height: auto;
+    display: none;
+    margin: auto;
+}
+
+.carousel-caption {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.carousel-caption p, .carousel-caption h3 {
+    text-transform: uppercase;
+}
+
+.icon-prev::before, .icon-next::before {
+    font-size: 5rem;
+}
+
+.button-text {
+    vertical-align: middle;
+}
+
+.carousel-control .icon-next:before, .carousel-control .icon-prev:before {
+    line-height: 5rem;
+}
+
+.carousel-caption--light h3, .carousel-caption--light p {
+    color: black;
+}
+
+.carousel-caption .btn {
+    font-size: 1.3rem;
+    transition: filter 1s;
+}
+
+.carousel-caption .btn:hover {
+    filter: invert();
+}
+
+.carousel-caption--light .btn {
+    background-color: #0c0c0c;
+    color: white;
+    transition: filter 1s;
+}
+
+.carousel-caption--light img {
+    height: 10%;
+}
+
+.carousel-caption--light .btn:hover {
+    filter: invert();
+}
+
+.carousel-caption__element {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    box-sizing: border-box;
+}
+
+p.carousel-caption__element, img.carousel-caption__element {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+h3.carousel-caption__element {
+    padding-top: 0;
+}
+
+
+
+@media all and (max-width: 768px) {
+    .introduction__content {
+        display: none;
+    }
+
+    .introduction__content--mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 0;
+        margin: auto;
+    }
+
+    .introduction__content--mobile--element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        text-align: center;
+
+    }
+    .introduction__content--mobile--element>a {
+        align-items: center;
+    }
+
+}
+
+/**************************************************/
+/****************End introduction *****************/
+/**************************************************/
+
+
+
+/**************************************************/
+/******************** Functions ****************/
+/**************************************************/
+
+.function__icon {
+    width: 50%;
+    height: auto;
+}
+
+
+
+/**************************************************/
+/****************End functions *****************/
+/**************************************************/
+
+
+
+
+
 
 /**************************************************/
 /******************** Product Info ****************/
@@ -306,13 +599,14 @@ body {
 /**************************************************/
 
 .enrollment {
-    min-height: 100vh;
-    width: 100%;
+    /*min-height: 100vh;*/
+    /*width: 100%;*/
     padding-top: 115px;
     color: white;
     background-color: black;
     background: url("dark.png") fixed;
     background-size: cover;
+    max-width: 1440px;
 }
 
 .enrollment__content-wrapper {
@@ -353,7 +647,6 @@ body {
     /*  height: 85%;*/
     width: 100%;
     max-width: 1440px;
-
 }
 
 .person {
@@ -366,12 +659,8 @@ body {
 }
 
 .person__img img {
-    /* make it responsive */
-    max-width: 100%;
     width: 200px;
     height: 200px;
-    /* make it a circle */
-    border-radius: 50%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -408,8 +697,113 @@ body {
 }
 
 .person__icon:hover {
-    color: cadetblue;
+    color: #c9302c;
 }
+
+.hover__effect img {
+    position: relative;
+    transform: scaleY(1);
+    transition: all 1s ease-in-out;
+}
+
+.hover__effect .second-side {
+    position: absolute;
+    background-color: rgba(163, 13, 5, 0.3);
+    transition: all 0.5s linear;
+    filter: alpha(opacity=0);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 2em;
+    opacity: 0;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    flex-direction: column;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.hover__effect h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    transition: all 1s ease;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.contact {
+    color: white;
+}
+
+.hover__effect:hover img {
+    transform: scale(3);
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.hover__effect:hover .second-side {
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.hover__effect:hover h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    opacity: 1;
+    color: white;
+}
+
+.contact:hover {
+    transform: scale(1);
+    filter: alpha(opacity=100);
+    opacity: 1;
+    color: #c9302c;
+}
+
+.members {
+    opacity: 0;
+    position: relative;
+}
+
+.members.slide-in-left {
+    opacity: 0;
+    transition: all 1000ms ease-out;
+    transform: translate3d(-200px, 0px, 0px);
+}
+
+.members.slide-in-left.slide-active {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.members.slide-in-right {
+    opacity: 0;
+    transition: all 1000ms ease-out;
+    transform: translate3d(200px, 0px, 0px);
+}
+
+.members.slide-in-right.slide-active {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/*Add @media queries for tablets etc. (size for images) and animation on hover img*/
+
+/*...*/
+/*...*/
+/*...*/
+/*...*/
+/*...*/
+/*...*/
+/*...*/
 
 /*@media screen and (max-width: 767px) {
     .person {
@@ -529,3 +923,4 @@ body {
 /*******************************************************/
 /******************** End of Footer ********************/
 /*******************************************************/
+
