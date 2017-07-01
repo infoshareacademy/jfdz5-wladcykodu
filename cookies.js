@@ -10,17 +10,18 @@ notatki:
 */
 
 
-
+function timeComparison() {
+    console.log('1', localStorage.getItem("lastVisitName") - (new Date).getTime() > 2592000000)
+    if (localStorage.getItem("lastVisitName") - (new Date).getTime() > 2592000000) {
+        localStorage.setItem("lastVisitName", "(new Date).getTime()");
+        document.getElementById("cookies-button").setAttribute("display", "");
+        document.getElementById("cookies-button").addEventListener("click", document.getElementById(cookies-info).style.display = "none")
+    } else {}
+}
 
 function showCookiesInfo() {
     if (localStorage.hasOwnProperty("lastVisitTime")) {
-        function timeComparison() {
-            if (localStorage.getItem("lastVisitName") - (new Date).getTime() > 2592000000) {
-                localStorage.setItem("lastVisitName", "(new Date).getTime()");
-                document.getElementById("cookies-button").setAttribute("display", "");
-                document.getElementById("cookies-button").addEventListener("click", document.getElementById(cookies-info).style.display = "none")
-            } else {}
-        }
+        timeComparison();
     } else {
         localStorage.setItem("lastVisitName", "(new Date).getTime()");
         document.getElementById("cookies-button").setAttribute("display", "");
