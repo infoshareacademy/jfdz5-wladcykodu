@@ -74,7 +74,30 @@ $(document).scroll(function () {
 var $window = $(window);
 var $members = $('.members');
 
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+var counter = 0;
+
 function slideInView() {
+    counter += 1;
+    console.log(counter);
     var windowHeight = $window.height();
     //vertical position of the scroll bar
     var topPosition = $window.scrollTop();
@@ -98,7 +121,7 @@ function slideInView() {
     });
 }
 //function is called when resize or scroll
-$window.on('scroll resize', slideInView);
+$window.on('scroll resize', debounce(slideInView, 50));
 $window.trigger('scroll');
 
 

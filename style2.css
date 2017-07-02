@@ -793,7 +793,7 @@ h3.carousel-caption__element {
 
 .members.slide-in-left {
     opacity: 0;
-    transition: all 1000ms ease-out;
+    transition: all 800ms ease-out;
     transform: translate3d(-200px, 0px, 0px);
 }
 
@@ -804,7 +804,7 @@ h3.carousel-caption__element {
 
 .members.slide-in-right {
     opacity: 0;
-    transition: all 1000ms ease-out;
+    transition: all 800ms ease-out;
     transform: translate3d(200px, 0px, 0px);
 }
 
