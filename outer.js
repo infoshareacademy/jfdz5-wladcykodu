@@ -22,7 +22,7 @@ $('.nav a').click(function () {
 
     $('html, body').animate({
         scrollTop: $($(this).attr('href')).offset().top
-    }, 500);
+    }, 1000);
     $('.navbar-collapse.in').collapse('hide');
     /*hide clicked menu item*/
     return false;
@@ -35,7 +35,7 @@ $('.nav a').click(function () {
 $(document).scroll(function () {
     // distance to which user scroll down the page / number of pixels the window has been scrolled
     var scrollPosition = $(window).scrollTop();
-    var menuHeight = 110;
+    var menuHeight = 100;
     // check the position of each of the sections compared to the windows scroll position
     if (scrollPosition) {
         // .each() iterates over the DOM elements
@@ -56,7 +56,8 @@ $(document).scroll(function () {
     }
 
     // add active class to contact in normal size window
-    if ($(window).scrollTop() + $(window).height() === $(document).height()) {
+    var footerHeight = 150;
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - footerHeight) {
         $('.nav a.active').removeClass('active');
         $('.nav li:last-child a').addClass('active');
     } else {
