@@ -335,7 +335,7 @@ body {
     background: url("dark.png") fixed;
     background-size: cover;
     display: flex;
-    padding: 0;
+    padding: 115px 0 0 0;
 }
 
 .introduction__content {
@@ -350,7 +350,7 @@ body {
 }
 
 .carousel-img {
-    width: 70%;
+    width: 65%;
     height: auto;
     display: none;
     margin: auto;
@@ -467,7 +467,7 @@ h3.carousel-caption__element {
 /**************************************************/
 
 .functions__container {
-
+    padding-top: 115px;
 }
 .functions__row {
     min-height: 100%;
