@@ -236,9 +236,9 @@ body {
     }
 }
 
-/* Start "Go to back" button */
+/* Start "Go to top" button */
 
-.go-back-to-top {
+.go-to-top {
     cursor: pointer;
     position: fixed;
     bottom: 20px;
@@ -304,6 +304,8 @@ body {
     }
 
 }
+
+/* End "Go to top" button */
 
 @media screen and (min-width: 992px) {
 
