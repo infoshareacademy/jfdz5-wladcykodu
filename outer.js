@@ -1,15 +1,57 @@
+$(document).on('scroll', runOnEvent([shrinkNavbar, highlightSection], 0));
+//function is called when resize or scroll
+$(document).on('scroll resize', runIfEventStopped(slideInView, [], 66));
+
+$(document).trigger('scroll'); //fake trigger of the scrolling event - at the moment of loading the page (in my case trigger is already once called, and this result in 2 events on loading)
+
+/***********************************************/
+/* Run group of functions on event with timeout*/
+/***********************************************/
+
+function runOnEvent(functions, timeout) {
+    return function () {
+        for (var i = 0; i < functions.length; i++) {
+            var func = functions[i];
+            func.apply(this, []);
+            setTimeout(func, timeout);
+            //func();
+        }
+    }
+}
+
+/************************************/
+/* Call functions if scroll stopped */
+/************************************/
+
+function runIfEventStopped(func, args, timeout) {
+    var isRunning;
+    return function () {
+        // clear last timeout of func - this aborts last execution if possible
+        clearTimeout(isRunning);
+
+        // bind context and args to func
+        var context = this;
+
+        var later = function () {
+            func.apply(context, args);//assign a function (e.g slideInView) to a variable
+        };
+
+        // run new func at end of timeout (if timeout will not be cleared by next scroll event)
+        isRunning = setTimeout(later, timeout); //timeout - after the scroll event is completed, the function (e.g slideInView) executes after 66 milliseconds
+    };
+}
+
 /******************************/
 /* Shrinked navbar (FZ5WK-26) */
 /******************************/
 
-$(document).on("scroll", function () {
-
+function shrinkNavbar() {
     if ($(window).scrollTop() > 100) {
         $(".navbar--height").addClass("navbar--height--shrink");
     } else {
         $(".navbar--height").removeClass("navbar--height--shrink");
     }
-});
+}
 
 /******************************/
 /*Smooth scrolling (FZ5WK-29) */
@@ -19,12 +61,12 @@ $('.nav a').click(function () {
     /*   event.preventDefault();
      event.stopPropagation();*/
     //false is doing the same as this two lines above and when used we must add in function() event word
-
     $('html, body').animate({
         scrollTop: $($(this).attr('href')).offset().top
     }, 1000);
     $('.navbar-collapse.in').collapse('hide');
-    /*hide clicked menu item*/
+
+    //hide clicked menu item
     return false;
 });
 
@@ -32,7 +74,8 @@ $('.nav a').click(function () {
 /* Highlight the current section in the navigation (FZ5WK-19) */
 /**************************************************************/
 
-$(document).scroll(function () {
+function highlightSection() {
+
     // distance to which user scroll down the page / number of pixels the window has been scrolled
     var scrollPosition = $(window).scrollTop();
     var menuHeight = 100;
@@ -64,43 +107,19 @@ $(document).scroll(function () {
         $('.nav li:last-child a').removeClass('active');
     }
 
-}).scroll();
-
+}
 
 /**************************************************/
 /* Animated photos of the team members (FZ5WK-20) */
 /**************************************************/
 
-var $window = $(window);
-var $members = $('.members');
-
-// Returns a function, that, as long as it continues to be invoked, will not
-// be triggered. The function will be called after it stops being called for
-// N milliseconds. If `immediate` is passed, trigger the function on the
-// leading edge, instead of the trailing.
-function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
-
-var counter = 0;
-
 function slideInView() {
-    counter += 1;
-    console.log(counter);
-    var windowHeight = $window.height();
+    var $members = $('.members');
+    //console.log("slides");
+    var topPosition = $(window).scrollTop();
+
+    var windowHeight = $(window).height();
     //vertical position of the scroll bar
-    var topPosition = $window.scrollTop();
     var bottomPosition = (topPosition + windowHeight);
 
     $.each($members, function () {
@@ -120,12 +139,3 @@ function slideInView() {
         }
     });
 }
-//function is called when resize or scroll
-$window.on('scroll resize', debounce(slideInView, 50));
-$window.trigger('scroll');
-
-
-
-
-
-
