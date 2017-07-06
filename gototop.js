@@ -7,14 +7,14 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
-            $('#go-back-to-top').fadeIn();
+            $('#go-to-top').fadeIn();
         } else {
-            $('#go-back-to-top').fadeOut();
+            $('#go-to-top').fadeOut();
         }
     });
 
     // scroll body to 0px on click
-    $('#go-back-to-top').click(function () {
+    $('#go-to-top').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
