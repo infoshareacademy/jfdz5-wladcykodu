@@ -323,8 +323,8 @@
             <h2 class="text-center header-text-size _enrollment__h2-center" data-lang="Subscribe for premiere!" >Zapisz się na premierę!</h2>
             <p class="text-justify normal-text-size _enrollment__text" data-lang="If you fill out the form below, we will let you know by e-mail about the date of our search engine launch. The message will be sent once only.">Jeśli wypełnisz poniższy formularz, poinformujemy
                 Cię mailem o dniu premiery naszej wyszukiwarki. Wiadmość zostanie wysłana tylko raz.</p>
-            <form method="post" class="enrollment__form"
-                  onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
+            <form id="enrollmentForm" method="post" class="enrollment__form">
+                  <!--onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">-->
                 <div class="enrollment__inputs">
                     <div class="form-group">
                         <label for="inputName" data-lang="Name *">Imię i Nazwisko *</label>
@@ -518,10 +518,10 @@
 </footer>
 
 <!-- COOKIES INFO START -->
-<div id="cookies-info" class="cookies--container">
-    <h3 class="cookies--container--element" data-lang="We use cookies on this website.">Ta strona wykorzystuje pliki
+<div id="cookies-info" class="message-container">
+    <h3 class="message-container__element" data-lang="We use cookies on this website.">Ta strona wykorzystuje pliki
         cookie</h3>
-    <div class="cookies--container--element">
+    <div class="message-container__element">
         <p data-lang="We use cookies to ensure that we give you the best experience on our website.">Używamy informacji
             zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego
             serwisu.</p>
@@ -532,10 +532,25 @@
             wyrażasz zgody, ustawienia dotyczące plików cookies możesz je zmienić w swojej przeglądarce.</p>
     </div>
     <input id="cookieAgreement" type="button" value="OK, zgoda!"
-           class="btn btn-default normal-text-size cookies--container--element" data-lang="I agree!"/>
+           class="btn btn-default normal-text-size message-container__element" data-lang="I agree!"/>
 </div>
 <!-- COOKIES INFO END -->
 
+<!-- Form submit message -->
+<div id="submit-message" class="message-container message-container--top">
+    <h3 class="message-container__element" data-lang="Congratulations! You have been signed for premiere.">Gratulacje! Zostałeś zapisany na premierę.</h3>
+
+    <div class="message-container__element">
+        <p data-lang="The release date message will be sent once only.">Wiadomość o dacie premiery zostanie wysłana tylko raz.</p>
+        <p data-lang="If you want to play our game click &quot;Let's play!&quot; button placed below.">
+            Jeżeli chcesz zagrać w naszą grę, kliknij przycisk "Zagraj!" dostępny poniżej</p>
+    </div>
+    <input id="gameStartBtn" type="button" value="Zagraj!"
+           class="btn btn-default normal-text-size message-container__element" data-lang="Let's play!"/>
+    <input id="submitMessageCloseBtn" type="button" value="Zamknij"
+           class="btn btn-default normal-text-size message-container__element" data-lang="Close"/>
+</div>
+<!-- Form submit message end -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -545,5 +560,6 @@
 <script src="outer.js"></script>
 <script src="gototop.js"></script>
 <script src="translate.js"></script>
+<script src="submit.js"></script>
 </body>
 </html>
