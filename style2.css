@@ -328,7 +328,6 @@ body {
 /******************** End of Navigation ********************/
 /***********************************************************/
 
-
 /**************************************************/
 /******************** Introduction ****************/
 /**************************************************/
@@ -347,6 +346,7 @@ body {
 .introduction__content--mobile {
     display: none;
 }
+
 .carousel {
     width: auto;
 }
@@ -425,8 +425,6 @@ h3.carousel-caption__element {
     padding-top: 0;
 }
 
-
-
 @media all and (max-width: 768px) {
     .introduction__content {
         display: none;
@@ -452,17 +450,22 @@ h3.carousel-caption__element {
         text-align: center;
 
     }
-    .introduction__content--mobile--element>a {
+
+    .introduction__content--mobile--element > a {
         align-items: center;
     }
 
 }
 
+#time-out {
+    font-size: 1.7rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
 /**************************************************/
 /****************End introduction *****************/
 /**************************************************/
-
-
 
 /**************************************************/
 /******************** Functions ****************/
@@ -471,6 +474,7 @@ h3.carousel-caption__element {
 .functions__container {
     padding-top: 115px;
 }
+
 .functions__row {
     min-height: 100%;
     display: flex;
@@ -479,25 +483,20 @@ h3.carousel-caption__element {
     justify-content: center;
     align-items: center;
 }
+
 .functions__element {
     text-align: center;
 }
+
 .function__icon {
     width: 20%;
     height: auto;
     filter: invert();
 }
 
-
-
 /**************************************************/
 /****************End functions *****************/
 /**************************************************/
-
-
-
-
-
 
 /**************************************************/
 /******************** Product Info ****************/
@@ -813,8 +812,6 @@ h3.carousel-caption__element {
     transform: translate3d(0px, 0px, 0px);
 }
 
-
-
 /*@media screen and (max-width: 767px) {
     .person {
         min-width: 80%;
@@ -934,7 +931,6 @@ h3.carousel-caption__element {
 /******************** End of Footer ********************/
 /*******************************************************/
 
-
 /******************************************************/
 /******************** Cookies Info ********************/
 /*****************************************************/
@@ -955,6 +951,7 @@ h3.carousel-caption__element {
 .cookies--container--element {
     padding: 1%;;
 }
+
 .cookies--container--element.btn {
     background-color: #0c0c0c;
     color: white;
@@ -964,8 +961,6 @@ h3.carousel-caption__element {
 .cookies--container--element.btn:hover {
     filter: invert();
 }
-
-
 
 /******************************************************/
 /******************** End cookies Info ***************/
