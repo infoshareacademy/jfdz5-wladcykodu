@@ -224,8 +224,8 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* rules on tablets only */
     .navbar-inverse .navbar-nav > li > a {
-        padding-right: 4px;
-        padding-left: 4px;
+        padding-right: 0.16rem;
+        padding-left: 0.16rem;
         margin: 0;
     }
 
@@ -538,10 +538,14 @@ h3.carousel-caption__element {
     border-radius: 50%;
     text-align: center;
     color: white;
-    transition: background 1s, color 1s;
     width: 55px;
     height: 55px;
     margin-bottom: 10px;
+    transition: transform .8s ease-in-out;
+}
+
+.product-info__about--icon:hover {
+    transform: rotate(360deg);
 }
 
 .product-info__about i {
