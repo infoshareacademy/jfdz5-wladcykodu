@@ -7,14 +7,17 @@ document.getElementById('enrollmentForm').addEventListener('submit', function (e
     event.stopPropagation();
     this.reset();
     document.getElementById('submit-message').style.display = 'block';
+    $('#enrollmentForm input').attr('disabled','disabled');
 });
 
 document.getElementById('gameStartBtn').addEventListener('click', function (event) {
     document.getElementById('submit-message').style.display = 'none';
+    $('#enrollmentForm input').removeAttr('disabled');
     //Here add the code to run the game
     document.getElementById('game-frame').style.display = "block";
 });
 
 document.getElementById('submitMessageCloseBtn').addEventListener('click', function (event) {
     document.getElementById('submit-message').style.display = 'none';
+    $('#enrollmentForm input').removeAttr('disabled');
 });
