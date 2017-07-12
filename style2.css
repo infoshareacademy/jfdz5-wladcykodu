@@ -936,3 +936,110 @@ h3.carousel-caption__element {
 
 /*********************************************************/
 /********* End of the wide message with buttons **********//*********************************************************/
+
+
+
+/*********************************************************/
+/************************* GAME **************************/
+/*********************************************************/
+
+.game-frame {
+/*    display: none;*/
+    position: fixed;
+    height: 95vh;
+    width: 95vw;
+    background: white;
+    z-index: 1000;
+    bottom: 2.5vh;
+    right: 2.5vw;
+    text-align: center;
+}
+
+.escape-game-button {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.escape-game-line {
+    position: absolute;
+    width: 100%;
+
+}
+
+.escape-game-button .line1 {
+    border-top: 4px solid black;
+    transform: rotate(45deg) translateX(-10px) translateY(8px);
+}
+
+.escape-game-button .line2 {
+    border-top: 4px solid black;
+    transform: rotate(-45deg)  translateX(-8px) translateY(-10px);
+}
+
+.game-board {
+    height: 90vh;
+    width: 90vh;
+    background: grey;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.start-game-button, .instruction-button {
+    color: black;
+}
+
+.login-board {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.send-login-button, .user-login {
+    color: black;
+    height: 10%;
+    width: 70%;
+}
+
+
+.game-in-progress {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+.board-field {
+    height: 6.666666666666667%;
+    width: 6.666666666666667%;
+    border: 1px solid black;
+}
+
+.games-auto {
+    height: 12.5%;
+    width: 6.25%;
+    margin:auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*********************************************************/
+/************************* GAME **************************/
+/*********************************************************/

@@ -12,6 +12,7 @@ document.getElementById('enrollmentForm').addEventListener('submit', function (e
 document.getElementById('gameStartBtn').addEventListener('click', function (event) {
     document.getElementById('submit-message').style.display = 'none';
     //Here add the code to run the game
+    document.getElementById('game-frame').style.display = "block";
 });
 
 document.getElementById('submitMessageCloseBtn').addEventListener('click', function (event) {
