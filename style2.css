@@ -114,7 +114,7 @@ body {
     z-index: 999;
     transition: all .5s ease-in-out;
     max-width: 1440px;
-    box-shadow: 0 4px 20px rgba(163, 13, 5, 0.43);
+    box-shadow: 0 -22px 22px -22px rgba(163, 13, 5, 0.43) inset;
 }
 
 .navbar--height--shrink {
@@ -603,6 +603,22 @@ h3.carousel-caption__element {
     font-weight: 100;
 }
 
+.product-desc {
+    position: relative;
+    bottom: 300px;
+    display: block;
+}
+
+.product-desc__btm {
+    bottom: -300px;
+}
+
+.product-slide__btm {
+    position: relative;
+    bottom: 0;
+    transition: all 1s ease;
+}
+
 @media (min-width: 768px) {
     .product-info__about {
         height: 200px;
@@ -845,11 +861,16 @@ h3.carousel-caption__element {
     max-width: 1440px;
     font: bold 15px 'Montserrat';
     margin: auto;
+    box-shadow: 0 22px 22px -22px rgba(163, 13, 5, 0.43) inset;
 }
 
 .footer__left {
-    padding-left: 50px;
-    padding-top: 50px;
+    padding-left: 2em;
+    padding-top: 3em;
+}
+
+.footer__right {
+    padding-top: 1em;
 }
 
 .footer__right i {

@@ -1,6 +1,7 @@
 $(document).on('scroll', runOnEvent([shrinkNavbar, highlightSection], 0));
 //function is called when resize or scroll
 $(document).on('scroll resize', runIfEventStopped(slideInView, [], 66));
+$(document).on('scroll load', runOnEvent([slideFromBtm], 0));
 
 $(document).trigger('scroll'); //fake trigger of the scrolling event - at the moment of loading the page (in my case trigger is already once called, and this result in 2 events on loading)
 
@@ -162,4 +163,30 @@ var x = setInterval(function () {
     }
     // update count down every 1 second
 }, 1000);
+
+/*************************************/
+/* Animation on section Product Info */
+/*************************************/
+
+//slide from bottom of product info description and title only in first scroll and on load
+function slideFromBtm() {
+    var $productInfo = $('.product-desc');
+    var topPosition = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var bottomPosition = (topPosition + windowHeight);
+
+    $.each($productInfo, function () {
+        var productHeight = $(this).outerHeight();
+        var productTopPosition = $(this).offset().top;
+        var productBottomPosition = (topPosition + productHeight);
+
+        if ((productBottomPosition >= topPosition) &&
+            (productTopPosition <= bottomPosition)) {
+            $(this).addClass('product-slide__btm');
+        } else {
+
+        }
+    });
+}
+
 
