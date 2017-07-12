@@ -932,19 +932,16 @@ h3.carousel-caption__element {
     filter: invert(100%);
 }
 
-
-
-/*********************************************************/
-/********* End of the wide message with buttons **********//*********************************************************/
-
-
+/****************************************/
+/* End of the wide message with buttons */
+/****************************************/
 
 /*********************************************************/
 /************************* GAME **************************/
 /*********************************************************/
 
 .game-frame {
-/*    display: none;*/
+    /*    display: none;*/
     position: fixed;
     height: 95vh;
     width: 95vw;
@@ -978,7 +975,7 @@ h3.carousel-caption__element {
 
 .escape-game-button .line2 {
     border-top: 4px solid black;
-    transform: rotate(-45deg)  translateX(-8px) translateY(-10px);
+    transform: rotate(-45deg) translateX(-8px) translateY(-10px);
 }
 
 .game-board {
@@ -987,12 +984,14 @@ h3.carousel-caption__element {
     background: grey;
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 
 }
 
@@ -1016,7 +1015,6 @@ h3.carousel-caption__element {
     width: 70%;
 }
 
-
 .game-in-progress {
     height: 100%;
     width: 100%;
@@ -1034,12 +1032,13 @@ h3.carousel-caption__element {
 .games-auto {
     height: 12.5%;
     width: 6.25%;
-    margin:auto;
+    margin: auto;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
+
 /*********************************************************/
 /************************* GAME **************************/
 /*********************************************************/
