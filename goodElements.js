@@ -1,10 +1,12 @@
+var score = 0;
+
 function makeElem(gameclass) {
     var boaardField = $('.board-field');
     var fieldWidth = boaardField.width();
     var fieldHeight = boaardField.height();
 
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
-    $element = $('<div/>').css({
+    $element = $('<div class="good-elem"/>').css({
         'width': fieldWidth,
         'height': fieldHeight,
         'background-color': color
@@ -20,8 +22,20 @@ function makeElem(gameclass) {
         'left': posx + 'px',
         'top': posy + 'px',
         'display': 'none'
-    }).appendTo(gameclass).fadeIn(100).delay(300).fadeOut(200, function () {
+    }).appendTo(gameclass).fadeIn(100).delay(300).fadeOut(4000, function () {
         $(this).remove();
         makeElem(gameclass);
+    });
+
+    var newDiv = $('.good-elem');
+
+    newDiv.mouseover(function () {
+        $(this).addClass('newdiv-anim');
+    });
+
+    newDiv.on('click', function () {
+        $(this).css('visibility', 'hidden');
+        score++;
+        console.log("New score is: " + score);
     });
 }
