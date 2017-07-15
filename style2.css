@@ -67,6 +67,24 @@ body {
     min-height: 200px;
 }
 
+.product-info__about:hover {
+    animation-name: pulse-anim;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes pulse-anim {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
