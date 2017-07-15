@@ -67,6 +67,24 @@ body {
     min-height: 200px;
 }
 
+.product-info__about:hover {
+    animation-name: pulse-anim;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes pulse-anim {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 /****************************************************/
 /******************** Navigation ********************/
 /****************************************************/
@@ -1038,6 +1056,38 @@ h3.carousel-caption__element {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*****************/
+/* Good elements */
+/*****************/
+
+.newdiv-anim {
+    animation-name: newdiv-anim;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes newdiv-anim {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -14deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 14deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -14deg);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/************************/
+/* End of Good elements */
+/************************/
 
 /*********************************************************/
 /************************* GAME **************************/
