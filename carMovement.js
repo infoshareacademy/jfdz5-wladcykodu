@@ -2,37 +2,18 @@
  * Created by ajemi on 12.07.2017.
  */
 
-$(document).keydown(function(e) {
-    var move = $('.game-table-data').width();
-    var position = $('.games-auto').position();
+$(document).keydown(function (e) {
+    var move = $('.board-field').outerWidth();
+    var left = parseFloat($('.games-auto').css('left'));
+    var limitLeft = 12.5;
+    var limitRight = 762.5;
     if (e.which === 37) {
-        console.log('left');
-        $('.games-auto').css('left', position.left - move/2);
+        if (left !== limitLeft) {
+            $('.games-auto').css('left', left - move);
+        }
     } else if (e.which === 39) {
-        console.log('right');
-        $('.games-auto').css('left', position.right + move);
-    } else {
-        position;
-        console.log('other key');
-        $('.games-auto').css();
+        if (left !== limitRight)
+            $('.games-auto').css('left', left + move);
     }
 });
 
-/*
-
-$(document).keydown(function(e) {
-    switch (e.which) {
-        case 37:
-            $('.games-auto').css('left', position.left + '6.666666666666667%');
-
-            break;
-        case 39:
-            $('.games-auto').css('transform', 'translateX(50%)');
-
-            break;
-        default:
-            break;
-    }
-});
-
-*/
