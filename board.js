@@ -20,7 +20,8 @@ $('.start-game-button').click(function () {
             i++;
         }
         $('.game-in-progress').append($('<img class="games-auto" src="car.svg">'));
-        makeElem($('.game-in-progress'));
+        var bonus = setInterval(function(){ (createBonus($('.game-in-progress'))); }, 4400);
+        console.log(bonus);
     });
 });
 

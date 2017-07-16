@@ -1,12 +1,12 @@
 var score = 0;
 
-function makeElem(gameclass) {
-    var boaardField = $('.board-field');
-    var fieldWidth = boaardField.width();
-    var fieldHeight = boaardField.height();
+function createBonus(gameclass) {
+    var boardField = $('.board-field');
+    var fieldWidth = boardField.width();
+    var fieldHeight = boardField.height();
 
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
-    $element = $('<div class="good-elem"/>').css({
+    var $element = $('<div class="good-elem"/>').css({
         'width': fieldWidth,
         'height': fieldHeight,
         'background-color': color
@@ -24,18 +24,24 @@ function makeElem(gameclass) {
         'display': 'none'
     }).appendTo(gameclass).fadeIn(100).delay(300).fadeOut(4000, function () {
         $(this).remove();
-        makeElem(gameclass);
+        //createBonus(gameclass);
     });
 
-    var newDiv = $('.good-elem');
+    var newBonus = $('.good-elem');
 
-    newDiv.mouseover(function () {
-        $(this).addClass('newdiv-anim');
+    newBonus.mouseover(function () {
+        $(this).addClass('newBonus-anim');
     });
 
-    newDiv.on('click', function () {
+    newBonus.on('click', function () {
         $(this).css('visibility', 'hidden');
         score++;
         console.log("New score is: " + score);
     });
 }
+
+
+
+setTimeout(function () {
+    clearInterval(bonus);
+}, 420000);
