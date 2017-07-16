@@ -26,7 +26,7 @@ function setObstacles() {
         }
 
         counter = counter < 3 ? counter + 1 : 1;
-        console.log(counter);
+        //console.log(counter);
         if ( counter === 1 ) {
             var randomCellIndex = Math.floor(rowSize * Math.random());
             $boardFileds[randomCellIndex].classList.add('board-field--obstacle');
