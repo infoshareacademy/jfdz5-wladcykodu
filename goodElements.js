@@ -39,13 +39,3 @@ function createBonus(gameclass) {
         console.log("New score is: " + score);
     });
 }
-
-
-
-//setTimeout(function () {
-//    clearInterval(bonus);
-//}, 420000);
-
-
-//var bonus = setInterval(function(){ (createBonus($('.game-in-progress'))); }, 4400);
-//console.log(bonus);

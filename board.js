@@ -1,6 +1,8 @@
 /**
  * GAME BOARD
  */
+var bonus;
+
 document.getElementById('game-frame').style.display = "block";
 /*show game*/
 $('.start-game-button').click(function showBoard() {
@@ -25,7 +27,7 @@ $('.start-game-button').click(function showBoard() {
         }
         $('.game-in-progress').append($('<img class="games-auto" src="car.svg">'));
         setObstacles();
-        var bonus = setInterval(function () {
+        bonus = setInterval(function () {
             (createBonus($('.game-in-progress')));
         }, 4400);
     });
