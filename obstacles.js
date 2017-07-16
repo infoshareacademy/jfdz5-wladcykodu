@@ -10,7 +10,7 @@ function times(n, callback) {
 function setObstacles() {
     var $boardFileds = $('.board-field');
     var rowSize = 31;
-    var rowCount = 23;
+    var rowCount = 24;
     var counter = 0;
 
     setInterval(function () {
@@ -26,7 +26,6 @@ function setObstacles() {
         }
 
         counter = counter < 3 ? counter + 1 : 1;
-        console.log(counter);
         if ( counter === 1 ) {
             var randomCellIndex = Math.floor(rowSize * Math.random());
             $boardFileds[randomCellIndex].classList.add('board-field--obstacle');
