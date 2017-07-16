@@ -1,19 +1,19 @@
 var score = 0;
 
-function makeElem(gameclass) {
-    var boaardField = $('.board-field');
-    var fieldWidth = boaardField.width();
-    var fieldHeight = boaardField.height();
+function createBonus(gameclass) {
+    var boardField = $('.board-field');
+    var fieldWidth = boardField.outerWidth();
+    var fieldHeight = boardField.outerHeight();
 
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
-    $element = $('<div class="good-elem"/>').css({
+    var $element = $('<div class="good-elem"/>').css({
         'width': fieldWidth,
         'height': fieldHeight,
         'background-color': color
     });
 
-    var posx = Math.floor((Math.random() * 16)) * (fieldHeight);
-    var posy = Math.floor((Math.random() * 14)) * (fieldWidth);
+    var posy = Math.floor((Math.random() * 20)) * (fieldHeight);
+    var posx = Math.floor((Math.random() * 30)) * (fieldWidth);
     //console.log(posx);
     //console.log(posy);
 
@@ -24,18 +24,28 @@ function makeElem(gameclass) {
         'display': 'none'
     }).appendTo(gameclass).fadeIn(100).delay(300).fadeOut(4000, function () {
         $(this).remove();
-        makeElem(gameclass);
+        //createBonus(gameclass);
     });
 
-    var newDiv = $('.good-elem');
+    var newBonus = $('.good-elem');
 
-    newDiv.mouseover(function () {
-        $(this).addClass('newdiv-anim');
+    newBonus.mouseover(function () {
+        $(this).addClass('newBonus-anim');
     });
 
-    newDiv.on('click', function () {
+    newBonus.on('click', function () {
         $(this).css('visibility', 'hidden');
         score++;
         console.log("New score is: " + score);
     });
 }
+
+
+
+//setTimeout(function () {
+//    clearInterval(bonus);
+//}, 420000);
+
+
+//var bonus = setInterval(function(){ (createBonus($('.game-in-progress'))); }, 4400);
+//console.log(bonus);

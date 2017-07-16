@@ -125,6 +125,7 @@ body {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
     border-color: #000;
+    box-sizing: border-box;
     text-transform: uppercase;
     position: fixed;
     top: 0;
@@ -962,12 +963,14 @@ h3.carousel-caption__element {
     /*    display: none;*/
     position: fixed;
     height: 95vh;
-    width: 95vw;
+    width: 97vw;
     background: white;
     z-index: 1000;
     bottom: 2.5vh;
     right: 2.5vw;
     text-align: center;
+    background: url('game-images/grass-background.png');
+    background-repeat: repeat;
 }
 
 .escape-game-button {
@@ -997,25 +1000,45 @@ h3.carousel-caption__element {
 }
 
 .game-board {
-    height: 90vh;
-    width: 90vh;
-    background: grey;
+    height: 625px;
+    width: 775px;
     margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    top: 0; left: 0; bottom: 0; right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.start-game-boom {
+    position: absolute;
+    height: 99%;
+    width: auto;
+    padding: 10%;
+}
+
+.start-game-title {
+    text-transform: uppercase;
+    padding-bottom: 3%;
+}
+
+.start-game-auto {
+    height: 10%;
+    padding-bottom: 3%;
 }
 
 .start-game-button, .instruction-button {
     color: black;
 }
+.higher-z-index {
+    z-index: 1;
+}
+
+.start-game-button {
+    margin-bottom: 3%;
+}
+
 
 .login-board {
     height: 100%;
@@ -1033,24 +1056,39 @@ h3.carousel-caption__element {
     width: 70%;
 }
 
+.result-container {
+    height: 50px;
+    width: 775px;
+    display: flex;
+    flex-direction: row;
+}
+
+.result-container-element {
+    width: 33.333333%;
+    height: 100px;
+    background: dimgrey;
+}
+
 .game-in-progress {
-    height: 100%;
-    width: 100%;
+    height: 575px;
+    width: 775px;
     display: flex;
     flex-flow: row wrap;
     position: relative;
+    background: grey;
 }
 
 .board-field {
-    height: 6.666666666666667%;
-    width: 6.666666666666667%;
+    height: 25px;
+    width: 25px;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .games-auto {
-    height: 12.5%;
-    width: 6.25%;
-    margin: auto;
+    height: 50px;
+    width: 25px;
+    margin:auto;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -1061,7 +1099,7 @@ h3.carousel-caption__element {
 /* Good elements */
 /*****************/
 
-.newdiv-anim {
+.newBonus-anim {
     animation-name: newdiv-anim;
     animation-duration: 1s;
     animation-fill-mode: both;

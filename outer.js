@@ -1,7 +1,7 @@
-$(document).on('scroll', runOnEvent([shrinkNavbar, highlightSection], 0));
+$(document).on('scroll', runOnEvent([shrinkNavbar, highlightSection], 0))
 //function is called when resize or scroll
-$(document).on('scroll resize', runIfEventStopped(slideInView, [], 66));
-$(document).on('scroll load', runOnEvent([slideFromBtm], 0));
+           .on('scroll resize', runIfEventStopped(slideInView, [], 66))
+           .on('scroll load', runOnEvent([slideFromBtm], 0));
 
 $(document).trigger('scroll'); //fake trigger of the scrolling event - at the moment of loading the page (in my case trigger is already once called, and this result in 2 events on loading)
 
