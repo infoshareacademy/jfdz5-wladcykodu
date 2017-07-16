@@ -2,8 +2,8 @@ var score = 0;
 
 function createBonus(gameclass) {
     var boardField = $('.board-field');
-    var fieldWidth = boardField.width();
-    var fieldHeight = boardField.height();
+    var fieldWidth = boardField.outerWidth();
+    var fieldHeight = boardField.outerHeight();
 
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
     var $element = $('<div class="good-elem"/>').css({
@@ -12,8 +12,8 @@ function createBonus(gameclass) {
         'background-color': color
     });
 
-    var posx = Math.floor((Math.random() * 16)) * (fieldHeight);
-    var posy = Math.floor((Math.random() * 14)) * (fieldWidth);
+    var posy = Math.floor((Math.random() * 20)) * (fieldHeight);
+    var posx = Math.floor((Math.random() * 30)) * (fieldWidth);
     //console.log(posx);
     //console.log(posy);
 
@@ -48,4 +48,4 @@ function createBonus(gameclass) {
 
 
 //var bonus = setInterval(function(){ (createBonus($('.game-in-progress'))); }, 4400);
-console.log(bonus);
+//console.log(bonus);

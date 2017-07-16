@@ -1099,7 +1099,7 @@ h3.carousel-caption__element {
 /* Good elements */
 /*****************/
 
-.newdiv-anim {
+.newBonus-anim {
     animation-name: newdiv-anim;
     animation-duration: 1s;
     animation-fill-mode: both;
