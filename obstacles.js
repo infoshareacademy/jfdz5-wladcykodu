@@ -9,22 +9,19 @@ function times(n, callback) {
 
 function setObstacles() {
     var $boardFileds = $('.board-field');
-    var rowSize = 15;
-    var rowCount = 15;
+    var rowSize = 31;
+    var rowCount = 23;
     var counter = 0;
 
     setInterval(function () {
         for (var i = rowCount - 2; i >=0; i -= 1) {
-            // console.log('to jest i: ', i)
             for (var j = 0; j < rowSize ; j += 1) {
-                // console.log('to jest j: ', j)
                 oldCellIndex = i * rowSize + j;
-                // console.log('to jest o: ', oldCellIndex)
                 newCellIndex = oldCellIndex + rowSize;
-                // console.log('to jest n: ', newCellIndex)
-
-                    $boardFileds[newCellIndex].classList = $boardFileds[oldCellIndex].classList;
+                if ($boardFileds[oldCellIndex].classList.contains('board-field--obstacle')) {
+                    $boardFileds[newCellIndex].classList.add('board-field--obstacle');
                     $boardFileds[oldCellIndex].classList.remove('board-field--obstacle');
+                }
             }
         }
 
