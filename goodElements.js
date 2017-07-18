@@ -12,15 +12,15 @@ function createBonus(gameclass) {
         "parts_game/tank.svg",
         "parts_game/repair.svg"
     ];
-    // random element from bonusItems
+    // random bonusDiv from bonusItems
     var index = Math.floor(Math.random() * (bonusItems.length - 1));
     // add bonusItem to div ('good-elem')
     function buildBonus() {
-        var img = document.createElement('img');
-        img.className = "bonus-img";
+        var bonusItem = document.createElement('img');
+        bonusItem.className = "bonus-img";
         console.log(index);
-        img.src = bonusItems[index];
-        document.getElementById('good-elem').appendChild(img);
+        bonusItem.src = bonusItems[index];
+        document.getElementById('good-elem').appendChild(bonusItem);
     }
 
     var boardField = $('.board-field');
@@ -28,7 +28,7 @@ function createBonus(gameclass) {
     var fieldHeight = boardField.outerHeight();
     // pick random color for div
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
-    var $element = $('<div id="good-elem"/>').css({
+    var $bonusDiv = $('<div id="good-elem"/>').css({
         'width': fieldWidth * 2,
         'height': fieldHeight * 2,
         'background-color': color
@@ -37,7 +37,7 @@ function createBonus(gameclass) {
     var posy = Math.floor((Math.random() * 19)) * (fieldHeight);
     var posx = Math.floor((Math.random() * 20)) * (fieldWidth);
 
-    $element.css({
+    $bonusDiv.css({
         'position': 'absolute',
         'left': posx + 'px',
         'top': posy + 'px',
@@ -48,12 +48,12 @@ function createBonus(gameclass) {
         $(this).remove(); // removing divs
     });
     // mouseover event for added divs
-    $element.mouseover(function () {
+    $bonusDiv.mouseover(function () {
         //console.log("add");
         $(this).addClass('newBonus-anim');
     });
     // click event for divs - make them disapear and add score
-    $element.on('click', function () {
+    $bonusDiv.on('click', function () {
         $(this).css('visibility', 'hidden');
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 10}}));
     });
