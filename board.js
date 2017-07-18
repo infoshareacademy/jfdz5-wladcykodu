@@ -16,7 +16,7 @@ $('.start-game-button').click(function showBoard() {
         localStorage.setItem("login", userLogin);
         $('.game-board').prepend('<div class="result-container"></div>');
         $('.result-container')
-            .append('<div class="result-container-element">score:</div>')
+            .append('<div class="result-container-element">score: <div id="score">0</div></div>')
             .append('<div class="result-container-element">time</div>')
             .append('<div class="result-container-element">lives: <span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></div>');
         $('.login-board').replaceWith('<div class="game-in-progress"></div>');
@@ -27,8 +27,25 @@ $('.start-game-button').click(function showBoard() {
         }
         $('.game-in-progress').append($('<img class="games-auto" src="car.svg">'));
         setObstacles();
+
+        // score - add and substract function
+        document.addEventListener("score", function (e) {
+            var scoreEl = document.getElementById('score');
+            var score = parseInt(scoreEl.innerHTML);
+
+            if (e.detail.action === "add") {
+                scoreEl.innerHTML = score + e.detail.value;
+            } else if (e.detail.action === "substract") {
+                if (score > 0) {
+                    scoreEl.innerHTML = score - e.detail.value;
+                }
+            }
+
+        }, false);
+
+        // adding bonusItems - createBonus function
         bonus = setInterval(function () {
-            (createBonus($('.game-in-progress')));
+            createBonus($('.game-in-progress'));
         }, 4400);
     });
 });
@@ -40,3 +57,5 @@ $('.instruction-button').click(function showInstruction() {
 $('.escape-game-button').click(function hideBoard() {
     $('.game-frame').remove();
 });
+
+
