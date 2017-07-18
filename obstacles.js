@@ -15,9 +15,15 @@ function setObstacles() {
                 if ($boardFileds[currentCellIndex].classList.contains('board-field--obstacle')) {
                     if (i !== rowCount - 1) {
                         $boardFileds[nextCellIndex].classList.add('board-field--obstacle');
+                        var obstaclePosition = new elementPosition($boardFileds[nextCellIndex]);
+                        var carPosition = new elementPosition($('.games-auto')[0]);
+                        if ( obstaclePosition.isContactTo(carPosition) ) {
+                            console.log('JEB!');
+                        }
                     }
                     $boardFileds[currentCellIndex].classList.remove('board-field--obstacle');
                 }
+
             }
         }
 
@@ -28,5 +34,48 @@ function setObstacles() {
         }
 
     }, 1000);
+};
+
+
+function elementPosition(element) {
+    this.x1 = $(element).offset().left;
+    this.y1 = $(element).offset().top;
+    this.x2 = $(element).offset().left + element.offsetWidth;
+    this.y2 = $(element).offset().top + element.offsetHeight;
+    this.serializePosition = serializePosition;
+    this.isContactTo = isContactTo;
+    this.isTopContactTo = isTopContactTo;
+    this.isBottomContactTo = isBottomContactTo;
+    this.isLeftContactTo = isLeftContactTo;
+    this.isRightContactTo = isRightContactTo;
+    function serializePosition() {
+        return JSON.stringify(this);
+    };
+    function isContactTo(anotherElement) {
+        if (anotherElement instanceof elementPosition) {
+            if ((( this.x1 >= anotherElement.x1 && this.x1 <= anotherElement.x2 )  ||
+                 ( this.x2 >= anotherElement.x1 && this.x2 <= anotherElement.x2 )) &&
+                (( this.y1 >= anotherElement.y1 && this.y1 <= anotherElement.y2 )  ||
+                 ( this.y2 >= anotherElement.y1 && this.y2 <= anotherElement.y2 ))) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return 'undefined';
+        };
+    };
+    function isTopContactTo(anotherElement) {
+            return 'undefined';
+    };
+    function isRightContactTo(anotherElement) {
+        return 'undefined';
+    };
+    function isBottomContactTo(anotherElement) {
+        return 'undefined';
+    };
+    function isLeftContactTo(anotherElement) {
+        return 'undefined';
+    };
 }
 

@@ -1135,6 +1135,10 @@ h3.carousel-caption__element {
     background-color: black;
 }
 
+.board-field--colision {
+    background-color: red;
+}
+
 /***********************/
 /* End of Bad elements */
 /***********************/
