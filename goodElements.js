@@ -17,6 +17,7 @@ function createBonus(gameclass) {
     // add bonusItem to div ('good-elem')
     function buildBonus() {
         var img = document.createElement('img');
+        img.className = "bonus-img";
         console.log(index);
         img.src = bonusItems[index];
         document.getElementById('good-elem').appendChild(img);
@@ -28,13 +29,13 @@ function createBonus(gameclass) {
     // pick random color for div
     var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
     var $element = $('<div id="good-elem"/>').css({
-        'width': fieldWidth,
-        'height': fieldHeight,
+        'width': fieldWidth * 2,
+        'height': fieldHeight * 2,
         'background-color': color
     });
     // random position of added divs
-    var posy = Math.floor((Math.random() * 20)) * (fieldHeight);
-    var posx = Math.floor((Math.random() * 30)) * (fieldWidth);
+    var posy = Math.floor((Math.random() * 19)) * (fieldHeight);
+    var posx = Math.floor((Math.random() * 20)) * (fieldWidth);
 
     $element.css({
         'position': 'absolute',
