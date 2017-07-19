@@ -1,26 +1,38 @@
 function createBonus(gameclass) {
 
     // create an array named bonusItems that contains svg files
-    var bonusItems = [
-        "parts_game/part1.svg",
-        "parts_game/part2.svg",
-        "parts_game/part3.svg",
-        "parts_game/part4.svg",
-        "parts_game/part5.svg",
-        "parts_game/part6.svg",
-        "parts_game/oil.svg",
-        "parts_game/tank.svg",
-        "parts_game/repair.svg"
-    ];
+    var bonusItems = [["parts_game/part1.svg", "bonus-img"],
+                     ["parts_game/part2.svg", "bonus-img"],
+                     ["parts_game/part3.svg", "bonus-life"],
+                     ["parts_game/part4.svg", "bonus-img"],
+                     ["parts_game/part5.svg", "bonus-img"],
+                     ["parts_game/part6.svg", "bonus-img"],
+                     ["parts_game/oil.svg", "bonus-img"],
+                     ["parts_game/tank.svg", "bonus-img"],
+                     ["parts_game/repair.svg", "bonus-img"]];
+
     // random bonusDiv from bonusItems
     var index = Math.floor(Math.random() * (bonusItems.length - 1));
+
     // add bonusItem to div ('good-elem')
     function buildBonus() {
+        if (bonusItems[index].length !== 2) {
+            return
+        }
+
         var bonusItem = document.createElement('img');
-        bonusItem.className = "bonus-img";
+
+        bonusItem.src = bonusItems[index][0];
+        bonusItem.className = bonusItems[index][1];
         console.log(index);
-        bonusItem.src = bonusItems[index];
         document.getElementById('good-elem').appendChild(bonusItem);
+        //add event to selected item from array
+        var $quiz = $('.bonus-life');
+        $quiz.on('click', function () {
+            console.log('test');
+            $('.game-in-progress').append('<div class="quiz-board"></div>');
+            clearInterval(bonus);
+        });
     }
 
     var boardField = $('.board-field');
