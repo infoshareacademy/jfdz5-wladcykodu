@@ -6,8 +6,23 @@ function setObstacles() {
     var rowSize = 31;
     var rowCount = 23;
     var counter = 0;
-
+    var freeze = false;
     setInterval(function () {
+        if (freeze) {
+            sleep(1000)
+            $('.board-field--obstacle').each(function() {
+                this.classList.remove('board-field--obstacle', 'board-field--collision')
+            });
+            var $lives = $('.result-container-element span');
+            if ($lives.length > 0 ) {
+                $lives[0].remove();
+                var $lives = $('.result-container-element span');
+            };
+            if ( $lives.length === 0 ) {
+                console.log('GAME OVER');
+            };
+            freeze = false;
+        }
         for (var i = rowCount - 1; i >=0; i -= 1) {
             for (var j = 0; j < rowSize ; j += 1) {
                 currentCellIndex = i * rowSize + j;
@@ -26,6 +41,8 @@ function setObstacles() {
                         }
                         if ( obstaclePosition.isBottomContactTo(carPosition) ) {
                             consoleMessage += 'Bottom ';
+                            $boardFileds[nextCellIndex].classList.add('board-field--collision');
+                            freeze = true;
                         }
                         if ( obstaclePosition.isLeftContactTo(carPosition) ) {
                             consoleMessage += 'Left ';
@@ -46,7 +63,7 @@ function setObstacles() {
             $boardFileds[randomCellIndex].classList.add('board-field--obstacle');
         }
 
-    }, 1000);
+    }, 300);
 };
 
 function elementPosition(element) {
@@ -131,3 +148,9 @@ function elementPosition(element) {
     };
 }
 
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    while ((new Date().getTime() - start) < milliseconds) {
+        ;
+    }
+}
