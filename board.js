@@ -2,6 +2,10 @@
  * GAME BOARD
  */
 var bonus;
+var obstaclesInterval;
+var releaseCounter = 0;
+var release = true;
+var restart = false;
 
 document.getElementById('game-frame').style.display = "block";
 /*show game*/
@@ -26,7 +30,6 @@ $('.start-game-button').click(function showBoard() {
             i++;
         }
         $('.game-in-progress').append($('<img class="games-auto" src="car.svg">'));
-        setObstacles();
 
         // score - add and substract function
         document.addEventListener("score", function (e) {
@@ -42,6 +45,13 @@ $('.start-game-button').click(function showBoard() {
             }
 
         }, false);
+
+        // setting obstacles
+        obstaclesInterval = setInterval(function () {
+            releaseCounter = releaseCounter < 3 ? releaseCounter + 1 : 1;
+            release = releaseCounter === 1 ? true : false;
+            restart = setObstacles(release, restart);
+        }, 300);
 
         // adding bonusItems - createBonus function
         bonus = setInterval(function () {
