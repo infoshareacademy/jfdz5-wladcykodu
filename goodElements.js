@@ -1,26 +1,70 @@
+var imgIdx = [];
+var lastIndex = 0;
+
+//sorting items in array, shuffle an array a of n elements --> swapping the picked element with the current element, and then picking the next random element from the remainder
+function shuffleArr(a) {
+    var j, x, i;
+    // loop runs backwards
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j]; //exchange places
+        a[j] = x;
+    }
+}
+
 function createBonus(gameclass) {
 
     // create an array named bonusItems that contains svg files
-    var bonusItems = [
-        "parts_game/part1.svg",
-        "parts_game/part2.svg",
-        "parts_game/part3.svg",
-        "parts_game/part4.svg",
-        "parts_game/part5.svg",
-        "parts_game/part6.svg",
-        "parts_game/oil.svg",
-        "parts_game/tank.svg",
-        "parts_game/repair.svg"
-    ];
-    // random bonusDiv from bonusItems
-    var index = Math.floor(Math.random() * (bonusItems.length - 1));
+    var bonusItems = [["parts_game/part1.svg", "bonus-img"],
+                     ["parts_game/part2.svg", "bonus-img"],
+                     ["parts_game/part3.svg", "bonus-life"],
+                     ["parts_game/part4.svg", "bonus-img"],
+                     ["parts_game/part5.svg", "bonus-img"],
+                     ["parts_game/part6.svg", "bonus-img"],
+                     ["parts_game/oil.svg", "bonus-img"],
+                     ["parts_game/tank.svg", "bonus-img"],
+                     ["parts_game/repair.svg", "bonus-img"]];
+
+    // random bonusDiv from bonusItems with no repeat
+    var index = 0;
+
+    if (imgIdx.length === 0) {
+        for (i = 0; i < bonusItems.length; i++) {
+            imgIdx.push(i); //adds bonusItems to the end of an array, and returns the new length
+        }
+        shuffleArr(imgIdx); // sort bonusItems in array
+
+        if (lastIndex !== null) {
+            while (lastIndex === imgIdx[imgIdx.length - 1]) {
+                shuffleArr(imgIdx);
+            }
+        }
+    }
+    //remove  last element of an array and set it to index
+    index = imgIdx.pop();
+    lastIndex = index;
+    console.log(imgIdx);
+
     // add bonusItem to div ('good-elem')
     function buildBonus() {
+        if (bonusItems[index].length !== 2) {
+            return
+        }
+
         var bonusItem = document.createElement('img');
-        bonusItem.className = "bonus-img";
+
+        bonusItem.src = bonusItems[index][0];
+        bonusItem.className = bonusItems[index][1];
         console.log(index);
-        bonusItem.src = bonusItems[index];
         document.getElementById('good-elem').appendChild(bonusItem);
+        //add event to selected item from array
+        var $quiz = $('.bonus-life');
+        $quiz.on('click', function () {
+            console.log('clicked');
+            $('.game-in-progress').append('<div class="quiz-board higher-z-index"><div class="quiz"><div><div class="question">Result of <span class="quiz-text" id="multiplicand">1</span> * <span class="quiz-text" id="multiplier">1</span>  is: </div><div class="answers"><div class="option"><div class="answer-box" id="answer1">1</div></div><div class="option"><div class="answer-box" id="answer2">1</div></div><div class="option"><div class="answer-box" id="answer3">1</div></div></div></div>');
+            clearInterval(bonus);
+        });
     }
 
     var boardField = $('.board-field');
@@ -57,4 +101,15 @@ function createBonus(gameclass) {
         $(this).css('visibility', 'hidden');
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 10}}));
     });
+}
+
+function randomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function quizForMoreLifes() {
+    var multiplicand = randomNum(1, 10);
+    var multiplier = randomNum(1, 10);
+    var correctResult = multiplicand * multiplier;
+
 }
