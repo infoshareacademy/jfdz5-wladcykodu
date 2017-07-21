@@ -1,6 +1,7 @@
 $('.start-game-button').on('click', function () {
     setTimeout(function () {
-        clearInterval(bonus); // add other intervals to clear...
-        console.log('clear interval bonus');
+        clearInterval(bonus);
+        clearInterval(obstaclesInterval);
+        console.log('clear interval bonus and obstaclesInterval');
     }, 600000); // 10 minutes
 });
