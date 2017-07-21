@@ -1,3 +1,18 @@
+var imgIdx = [];
+var lastIndex = 0;
+
+//sorting items in array, shuffle an array a of n elements --> swapping the picked element with the current element, and then picking the next random element from the remainder
+function shuffleArr(a) {
+    var j, x, i;
+    // loop runs backwards
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j]; //exchange places
+        a[j] = x;
+    }
+}
+
 function createBonus(gameclass) {
 
     // create an array named bonusItems that contains svg files
@@ -11,8 +26,25 @@ function createBonus(gameclass) {
                      ["parts_game/tank.svg", "bonus-img"],
                      ["parts_game/repair.svg", "bonus-img"]];
 
-    // random bonusDiv from bonusItems
-    var index = Math.floor(Math.random() * (bonusItems.length - 1));
+    // random bonusDiv from bonusItems with no repeat
+    var index = 0;
+
+    if (imgIdx.length === 0) {
+        for (i = 0; i < bonusItems.length; i++) {
+            imgIdx.push(i); //adds bonusItems to the end of an array, and returns the new length
+        }
+        shuffleArr(imgIdx); // sort bonusItems in array
+
+        if (lastIndex !== null) {
+            while (lastIndex === imgIdx[imgIdx.length - 1]) {
+                shuffleArr(imgIdx);
+            }
+        }
+    }
+    //remove  last element of an array and set it to index
+    index = imgIdx.pop();
+    lastIndex = index;
+    console.log(imgIdx);
 
     // add bonusItem to div ('good-elem')
     function buildBonus() {
@@ -29,8 +61,8 @@ function createBonus(gameclass) {
         //add event to selected item from array
         var $quiz = $('.bonus-life');
         $quiz.on('click', function () {
-            console.log('test');
-            $('.game-in-progress').append('<div class="quiz-board"></div>');
+            console.log('clicked');
+            $('.game-in-progress').append('<div class="quiz-board higher-z-index"></div>');
             clearInterval(bonus);
         });
     }
