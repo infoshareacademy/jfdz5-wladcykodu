@@ -1,5 +1,5 @@
-var imgIdx = [];
-var lastIndex = 0;
+var tmpBonusItemsClass = [];
+var lastBonusItem = 0;
 
 //sorting items in array, shuffle an array a of n elements --> swapping the picked element with the current element, and then picking the next random element from the remainder
 function shuffleArr(a) {
@@ -15,48 +15,47 @@ function shuffleArr(a) {
 
 function createBonus(gameclass) {
 
-    // create an array named bonusItems that contains svg files
-    var bonusItems = [["parts_game/part1.svg", "bonus-img"],
-                     ["parts_game/part2.svg", "bonus-img"],
-                     ["parts_game/part3.svg", "bonus-life"],
-                     ["parts_game/part4.svg", "bonus-img"],
-                     ["parts_game/part5.svg", "bonus-img"],
-                     ["parts_game/part6.svg", "bonus-img"],
-                     ["parts_game/oil.svg", "bonus-img"],
-                     ["parts_game/tank.svg", "bonus-img"],
-                     ["parts_game/repair.svg", "bonus-img"]];
+    // create an array named bonusItemsClass that contains svg files
+    var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
+                          ["parts_game/part2.svg", "bonus-img"],
+                          ["parts_game/part3.svg", "bonus-life"],
+                          ["parts_game/part4.svg", "bonus-img"],
+                          ["parts_game/part5.svg", "bonus-img"],
+                          ["parts_game/part6.svg", "bonus-img"],
+                          ["parts_game/oil.svg", "bonus-img"],
+                          ["parts_game/tank.svg", "bonus-img"],
+                          ["parts_game/repair.svg", "bonus-img"]];
 
-    // random bonusDiv from bonusItems with no repeat
-    var index = 0;
+    // random bonusDiv from bonusItemsClass with no repeat
 
-    if (imgIdx.length === 0) {
-        for (i = 0; i < bonusItems.length; i++) {
-            imgIdx.push(i); //adds bonusItems to the end of an array, and returns the new length
-        }
-        shuffleArr(imgIdx); // sort bonusItems in array
+    if (tmpBonusItemsClass.length === 0) {
+        tmpBonusItemsClass = JSON.parse(JSON.stringify(bonusItemsClass));// create copy of an array
+        shuffleArr(tmpBonusItemsClass); // sort bonusItemsClass in array
 
-        if (lastIndex !== null) {
-            while (lastIndex === imgIdx[imgIdx.length - 1]) {
-                shuffleArr(imgIdx);
+        if (lastBonusItem !== null) {
+            while (lastBonusItem === tmpBonusItemsClass[tmpBonusItemsClass.length - 1][0]) {
+                console.log("ten sam sortuje dalej");
+                shuffleArr(tmpBonusItemsClass);
             }
         }
     }
     //remove  last element of an array and set it to index
-    index = imgIdx.pop();
-    lastIndex = index;
-    console.log(imgIdx);
+    var bonusItemClass;
+    bonusItemClass = tmpBonusItemsClass.pop();
+    lastBonusItem = bonusItemClass[0];
+    console.log(tmpBonusItemsClass);
 
     // add bonusItem to div ('good-elem')
     function buildBonus() {
-        if (bonusItems[index].length !== 2) {
+        if (bonusItemClass.length !== 2) {
             return
         }
 
         var bonusItem = document.createElement('img');
 
-        bonusItem.src = bonusItems[index][0];
-        bonusItem.className = bonusItems[index][1];
-        console.log(index);
+        bonusItem.src = bonusItemClass[0];
+        bonusItem.className = bonusItemClass[1];
+        console.log(bonusItem);
         document.getElementById('good-elem').appendChild(bonusItem);
         //add event to selected item from array
         var $quiz = $('.bonus-life');
