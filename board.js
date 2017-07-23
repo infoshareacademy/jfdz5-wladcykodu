@@ -64,6 +64,7 @@ $('.start-game-button').click(function showBoard() {
                 display = $('#timer');
             gameTimer(tenMinutes, display);
         });
+        stopGameAfterTime();
     })
 });
 /*show instruction*/

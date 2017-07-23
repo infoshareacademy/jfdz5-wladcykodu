@@ -1,28 +1,28 @@
-var interval;
+var timerInterval;
 
 // create an array named bonusItemsClass that contains svg files
 var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
-    ["parts_game/part2.svg", "bonus-img"],
-    ["parts_game/part3.svg", "bonus-life"],
-    ["parts_game/part4.svg", "bonus-img"],
-    ["parts_game/part5.svg", "bonus-img"],
-    ["parts_game/part6.svg", "bonus-img"],
-    ["parts_game/oil.svg", "bonus-img"],
-    ["parts_game/tank.svg", "bonus-img"],
-    ["parts_game/repair.svg", "bonus-img"]];
+                      ["parts_game/part2.svg", "bonus-img"],
+                      ["parts_game/part3.svg", "bonus-life"],
+                      ["parts_game/part4.svg", "bonus-img"],
+                      ["parts_game/part5.svg", "bonus-img"],
+                      ["parts_game/part6.svg", "bonus-img"],
+                      ["parts_game/oil.svg", "bonus-img"],
+                      ["parts_game/tank.svg", "bonus-img"],
+                      ["parts_game/repair.svg", "bonus-img"]];
 
-var shuffleArray = [];
+var tmpArray = [];
 
 function createBonus(gameclass) {
-    if (shuffleArray.length === 0) {
-        shuffleArray = bonusItemsClass.slice();// create copy of an array
+    if (tmpArray.length === 0) {
+        tmpArray = bonusItemsClass.slice();// create copy of an array
     }
 
     // random bonusDiv from bonusItemsClass with no repeat
-    var index = Math.floor(Math.random() * shuffleArray.length);
-    var bonusItemClass = shuffleArray[index];
-    shuffleArray.splice(index, 1);
-    console.log('ala', index, shuffleArray, bonusItemClass);
+    var index = Math.floor(Math.random() * tmpArray.length);
+    var bonusItemClass = tmpArray[index];
+    tmpArray.splice(index, 1);
+    console.log('ala', index, tmpArray, bonusItemClass);
 
     /*if (tmpBonusItemsClass.length === 0) {
      tmpBonusItemsClass = JSON.parse(JSON.stringify(bonusItemsClass));// create copy of an array
