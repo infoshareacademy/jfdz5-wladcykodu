@@ -21,7 +21,7 @@ $('.start-game-button').click(function showBoard() {
         $('.game-board').prepend('<div class="result-container"></div>');
         $('.result-container')
             .append('<div class="result-container-element">score: <div id="score">0</div></div>')
-            .append('<div class="result-container-element">time</div>')
+            .append('<div class="result-container-element">time<div id="timer">00:00</div></div>')
             .append('<div class="result-container-element">lives: <span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></div>');
         $('.login-board').replaceWith('<div class="game-in-progress"></div>');
         var i = 0;
@@ -57,7 +57,14 @@ $('.start-game-button').click(function showBoard() {
         bonus = setInterval(function () {
             createBonus($('.game-in-progress'));
         }, 4400);
-    });
+
+        // added timer for game
+        $(function ($) {
+            var tenMinutes = 60 * 10,
+                display = $('#timer');
+            gameTimer(tenMinutes, display);
+        });
+    })
 });
 /*show instruction*/
 $('.instruction-button').click(function showInstruction() {
@@ -67,5 +74,4 @@ $('.instruction-button').click(function showInstruction() {
 $('.escape-game-button').click(function hideBoard() {
     $('.game-frame').remove();
 });
-
 
