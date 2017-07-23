@@ -1,51 +1,43 @@
-var tmpBonusItemsClass = [];
-var lastBonusItem = 0;
+var interval;
 
-//sorting items in array, shuffle an array a of n elements --> swapping the picked element with the current element, and then picking the next random element from the remainder
-function shuffleArr(a) {
-    var j, x, i;
-    // loop runs backwards
-    for (i = a.length; i; i--) {
-        j = Math.floor(Math.random() * i);
-        x = a[i - 1];
-        a[i - 1] = a[j]; //exchange places
-        a[j] = x;
-    }
-}
+// create an array named bonusItemsClass that contains svg files
+var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
+    ["parts_game/part2.svg", "bonus-img"],
+    ["parts_game/part3.svg", "bonus-life"],
+    ["parts_game/part4.svg", "bonus-img"],
+    ["parts_game/part5.svg", "bonus-img"],
+    ["parts_game/part6.svg", "bonus-img"],
+    ["parts_game/oil.svg", "bonus-img"],
+    ["parts_game/tank.svg", "bonus-img"],
+    ["parts_game/repair.svg", "bonus-img"]];
+
+var shuffleArray = [];
 
 function createBonus(gameclass) {
-
-    // create an array named bonusItemsClass that contains svg files
-    var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
-                          ["parts_game/part2.svg", "bonus-img"],
-                          ["parts_game/part3.svg", "bonus-life"],
-                          ["parts_game/part4.svg", "bonus-img"],
-                          ["parts_game/part5.svg", "bonus-img"],
-                          ["parts_game/part6.svg", "bonus-img"],
-                          ["parts_game/oil.svg", "bonus-img"],
-                          ["parts_game/tank.svg", "bonus-img"],
-                          ["parts_game/repair.svg", "bonus-img"]];
+    if (shuffleArray.length === 0) {
+        shuffleArray = bonusItemsClass.slice();// create copy of an array
+    }
 
     // random bonusDiv from bonusItemsClass with no repeat
+    var index = Math.floor(Math.random() * shuffleArray.length);
+    var bonusItemClass = shuffleArray[index];
+    shuffleArray.splice(index, 1);
+    console.log('ala', index, shuffleArray, bonusItemClass);
 
-    if (tmpBonusItemsClass.length === 0) {
-        tmpBonusItemsClass = JSON.parse(JSON.stringify(bonusItemsClass));// create copy of an array
-        shuffleArr(tmpBonusItemsClass); // sort bonusItemsClass in array
+    /*if (tmpBonusItemsClass.length === 0) {
+     tmpBonusItemsClass = JSON.parse(JSON.stringify(bonusItemsClass));// create copy of an array
+     //JSON.stringify turns a Javascript object into JSON text and stores that JSON text in a string.
+     //JSON.parse turns a string of JSON text into a Javascript object.
+     shuffleArr(tmpBonusItemsClass); // sort bonusItemsClass in array
 
-        if (lastBonusItem !== null) {
-            while (lastBonusItem === tmpBonusItemsClass[tmpBonusItemsClass.length - 1][0]) {
-                console.log("ten sam sortuje dalej");
-                shuffleArr(tmpBonusItemsClass);
-            }
-        }
-    }
-    //remove  last element of an array and set it to index
-    var bonusItemClass;
-    bonusItemClass = tmpBonusItemsClass.pop();
-    lastBonusItem = bonusItemClass[0];
-    console.log(tmpBonusItemsClass);
+     if (lastBonusItem !== null) {
+     while (lastBonusItem === tmpBonusItemsClass[tmpBonusItemsClass.length - 1][0]) {
+     console.log("ten sam, sortuje dalej");
+     shuffleArr(tmpBonusItemsClass);
+     }
+     }
+     }*/
 
-    // add bonusItem to div ('good-elem')
     function buildBonus() {
         if (bonusItemClass.length !== 2) {
             return
@@ -57,13 +49,7 @@ function createBonus(gameclass) {
         bonusItem.className = bonusItemClass[1];
         console.log(bonusItem);
         document.getElementById('good-elem').appendChild(bonusItem);
-        //add event to selected item from array
-        var $quiz = $('.bonus-life');
-        $quiz.on('click', function () {
-            console.log('clicked');
-            $('.game-in-progress').append('<div class="quiz-board higher-z-index"><div class="quiz"><div><div class="question">Result of <span class="quiz-text" id="multiplicand">1</span> * <span class="quiz-text" id="multiplier">1</span>  is: </div><div class="answers"><div class="option"><div class="answer-box" id="answer1">1</div></div><div class="option"><div class="answer-box" id="answer2">1</div></div><div class="option"><div class="answer-box" id="answer3">1</div></div></div></div>');
-            clearInterval(bonus);
-        });
+        quizLife();
     }
 
     var boardField = $('.board-field');
@@ -102,13 +88,4 @@ function createBonus(gameclass) {
     });
 }
 
-function randomNum(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
 
-function quizForMoreLifes() {
-    var multiplicand = randomNum(1, 10);
-    var multiplier = randomNum(1, 10);
-    var correctResult = multiplicand * multiplier;
-
-}
