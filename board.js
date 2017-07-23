@@ -17,7 +17,10 @@ $('.start-game-button').click(function showBoard() {
         .append($('<input type="button" value="Zapisz!" class="btn btn-danger send-login-button higher-z-index">'));
     $('.send-login-button').click(function sendLoginAndStartGame() {
         var userLogin = $('.user-login').val();
-        localStorage.setItem("login", userLogin);
+        var rankValue = {
+            name: userLogin
+        };
+        localStorage.setItem('gameResult', JSON.stringify(rankValue));
         $('.game-board').prepend('<div class="result-container"></div>');
         $('.result-container')
             .append('<div class="result-container-element">score: <div id="score">0</div></div>')
