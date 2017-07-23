@@ -4,16 +4,43 @@
 
 $(document).keydown(function (e) {
     var move = $('.board-field').outerWidth();
-    var left = parseFloat($('.games-auto').css('left'));
-    var limitLeft = 12.5;
-    var limitRight = 762.5;
+    var left = parseInt($('.games-auto').css('left'));
+    var limitLeft = 25;
+    var limitRight = 775 - 25;
+
+    var newPos = left
+    var lastTwoRows = $('.board-field').slice(-62);
+
     if (e.which === 37) {
-        if (left !== limitLeft) {
-            $('.games-auto').css('left', left - move);
-        }
+        newPos = left - move
     } else if (e.which === 39) {
-        if (left !== limitRight)
-            $('.games-auto').css('left', left + move);
+        newPos = left + move
+    }
+
+    if (newPos < limitRight && newPos > limitLeft) {
+
+        if (isValid(newPos, lastTwoRows)) {
+            $('.games-auto').css('left', newPos);
+        }
     }
 });
+
+function isValid(newPos, lastTwoRows) {
+    var allItems = lastTwoRows.get()
+    var obstacles = allItems.filter(function (item) {
+        return $(item).hasClass('board-field--obstacle')
+    })
+
+    var result = !obstacles.some(function (obj) {
+        var childPos = $(obj).offset();
+        var parentPos = $(obj).parent().offset();
+        var childOffset = {
+            top: childPos.top - parentPos.top,
+            left: childPos.left - parentPos.left
+        }
+        console.log(childOffset.left, newPos)
+        return childOffset.left === newPos - 12
+    })
+    return result
+}
 
