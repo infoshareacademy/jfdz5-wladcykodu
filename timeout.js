@@ -3,6 +3,7 @@ function stopGameAfterTime() {
     setTimeout(function () {
         clearInterval(bonus);
         clearInterval(obstaclesInterval);
+        clearInterval(timerInterval);
         console.log('clear interval bonus and obstaclesInterval');
     }, 600000); // 10 minutes
 }
@@ -23,7 +24,7 @@ function gameTimer(duration, display) {
         if (--timer < 0) {
             timer = duration;
         }
-        if (minutes === 0 && seconds === 0) {
+        if (minutes == 0 && seconds == 0) {
             clearInterval(timerInterval);
         }
     }, 1000);
