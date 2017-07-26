@@ -7,6 +7,11 @@ function quizLife() {
         clearInterval(bonus);
         clearInterval(obstaclesInterval);
         clearInterval(timerInterval);
+        $('.quiz-board').on('click', function () {
+            console.log('clicked quiz board');
+            //start intervals...on the end of quiz, this is just test
+        });
+        quizForMoreLives()
     });
 }
 
@@ -14,9 +19,39 @@ function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function quizForMoreLifes() {
-    var multiplicand = randomNum(1, 10);
-    var multiplier = randomNum(1, 10);
+var wrongResult2;
+function quizForMoreLives() {
+    var multiplicand = randomNum(1, 15);
+    var multiplier = randomNum(1, 15);
     var correctResult = multiplicand * multiplier;
+    var wrongResult1 = correctResult + randomNum(1, 12);
 
+    function wrongRes2() {
+        if (correctResult > 30) {
+            wrongResult2 = correctResult - randomNum(1, 12);
+        }
+        else {
+            wrongResult2 = correctResult + randomNum(12, 20);
+        }
+    }
+
+    wrongRes2();
+    var answersArr = [wrongResult1, wrongResult2, correctResult];
+
+    answersArr.sort(function () {
+        return .5 - Math.random();
+    }); //or shuffleArr??
+    
+    var guessObj = {
+        multiplicand: multiplicand,
+        multiplier: multiplier,
+        answersArr: answersArr,
+        goodAnswer: correctResult
+    };
+
+    document.getElementById('multiplicand').innerHTML = guessObj.multiplicand;
+    document.getElementById('multiplier').innerHTML = guessObj.multiplier;
+    document.getElementById('answer1').innerHTML = guessObj.answersArr[0];
+    document.getElementById('answer2').innerHTML = guessObj.answersArr[1];
+    document.getElementById('answer3').innerHTML = guessObj.answersArr[2];
 }
