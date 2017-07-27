@@ -1215,7 +1215,9 @@ h3.carousel-caption__element {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 0.5em;
+    padding: 0.5em 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .answer-box {
@@ -1225,11 +1227,12 @@ h3.carousel-caption__element {
     background-color: rgba(1, 230, 198, 0.42);
     color: #fff;
     border-radius: 1em;
-    font-size: 3rem;
+    font-size: 2.7rem;
     min-height: 100px;
     cursor: pointer;
     padding-right: 0.1em;
     padding-left: 0.1em;
+    width: 2.2em;
 }
 
 .quiz {
@@ -1237,6 +1240,94 @@ h3.carousel-caption__element {
     width: 90%;
     position: relative;
     background-color: rgba(37, 106, 230, 0.53);
+}
+
+.hidden {
+    display: none;
+}
+
+.quiz .result-field {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0.8;
+    padding-bottom: 0.7em;
+}
+
+.result-desc {
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+    height: 50%;
+}
+
+.quiz-button {
+    box-shadow: 3px 5px 2px 0 #1564ad;
+    background: #79bbff linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    border-radius: 39px;
+    border: 1px solid #337bc4;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 22px;
+    text-decoration: none;
+    text-shadow: 4px 4px 3px #528ecc;
+    align-self: flex-end;
+    position: absolute;
+}
+
+.quiz-button:hover {
+    background: #378de5 linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    text-decoration: none;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.fade-down-quiz {
+    animation-name: fadeDownQuiz;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeDownQuiz {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fade-out-quiz {
+    animation-name: fadeOutQuiz;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOutQuiz {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
 }
 
 /************************/
