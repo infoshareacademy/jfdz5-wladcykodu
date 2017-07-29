@@ -1,14 +1,14 @@
 /**
  * GAME BOARD
  */
-var bonus;
-var obstaclesInterval;
-var releaseCounter = 0;
-var release = true;
-var restart = false;
-var gameTime = 60 * 10;
-var timerDisplay;
-var gameInProgress;
+var bonus,
+    obstaclesInterval,
+    releaseCounter = 0,
+    release = true,
+    restart = false,
+    gameTime = 60 * 10,
+    timerDisplay,
+    gameInProgress;
 
 document.getElementById('game-frame').style.display = "block";
 /*show game*/
