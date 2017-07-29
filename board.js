@@ -6,6 +6,9 @@ var obstaclesInterval;
 var releaseCounter = 0;
 var release = true;
 var restart = false;
+var gameTime = 60 * 10;
+var timerDisplay;
+var gameInProgress;
 
 document.getElementById('game-frame').style.display = "block";
 /*show game*/
@@ -27,12 +30,15 @@ $('.start-game-button').click(function showBoard() {
             .append('<div class="result-container-element">time<div id="timer">00:00</div></div>')
             .append('<div class="result-container-element">lives: <span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></div>');
         $('.login-board').replaceWith('<div class="game-in-progress"></div>');
+
+        gameInProgress = $('.game-in-progress');
+
         var i = 0;
         while (i < 713) {
-            $('.game-in-progress').append($('<div class="board-field">'));
+            gameInProgress.append($('<div class="board-field">'));
             i++;
         }
-        $('.game-in-progress').append($('<img class="games-auto" src="car.svg">'));
+        gameInProgress.append($('<img class="games-auto" src="car.svg">'));
 
         // score - add and substract function
         document.addEventListener("score", function (e) {
@@ -50,22 +56,13 @@ $('.start-game-button').click(function showBoard() {
         }, false);
 
         // setting obstacles
-        obstaclesInterval = setInterval(function () {
-            releaseCounter = releaseCounter < 3 ? releaseCounter + 1 : 1;
-            release = releaseCounter === 1 ? true : false;
-            restart = setObstacles(release, restart);
-        }, 300);
-
+        startObstacles();
         // adding bonusItems - createBonus function
-        bonus = setInterval(function () {
-            createBonus($('.game-in-progress'));
-        }, 4400);
-
+        startBonus();
         // added timer for game
         $(function ($) {
-            var tenMinutes = 60 * 10,
-                display = $('#timer');
-            gameTimer(tenMinutes, display);
+            timerDisplay = $('#timer');
+            gameTimer(gameTime);
         });
         stopGameAfterTime();
     })
@@ -79,3 +76,14 @@ $('.escape-game-button').click(function hideBoard() {
     $('.game-frame').remove();
 });
 
+function startBonus() {
+    bonus = setInterval(createBonus, 4400);
+}
+
+function startObstacles() {
+    obstaclesInterval = setInterval(function () {
+        releaseCounter = releaseCounter < 3 ? releaseCounter + 1 : 1;
+        release = releaseCounter === 1;
+        restart = setObstacles(release, restart);
+    }, 300);
+}

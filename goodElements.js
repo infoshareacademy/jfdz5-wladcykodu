@@ -13,7 +13,8 @@ var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
 
 var tmpArray = [];
 
-function createBonus(gameclass) {
+function createBonus() {
+
     if (tmpArray.length === 0) {
         tmpArray = bonusItemsClass.slice();// create copy of an array
     }
@@ -22,21 +23,7 @@ function createBonus(gameclass) {
     var index = Math.floor(Math.random() * tmpArray.length);
     var bonusItemClass = tmpArray[index];
     tmpArray.splice(index, 1);
-    console.log('ala', index, tmpArray, bonusItemClass);
-
-    /*if (tmpBonusItemsClass.length === 0) {
-     tmpBonusItemsClass = JSON.parse(JSON.stringify(bonusItemsClass));// create copy of an array
-     //JSON.stringify turns a Javascript object into JSON text and stores that JSON text in a string.
-     //JSON.parse turns a string of JSON text into a Javascript object.
-     shuffleArr(tmpBonusItemsClass); // sort bonusItemsClass in array
-
-     if (lastBonusItem !== null) {
-     while (lastBonusItem === tmpBonusItemsClass[tmpBonusItemsClass.length - 1][0]) {
-     console.log("ten sam, sortuje dalej");
-     shuffleArr(tmpBonusItemsClass);
-     }
-     }
-     }*/
+    console.log('current bonus: ', index, tmpArray, bonusItemClass);
 
     function buildBonus() {
         if (bonusItemClass.length !== 2) {
@@ -71,7 +58,7 @@ function createBonus(gameclass) {
         'left': posx + 'px',
         'top': posy + 'px',
         'display': 'none'
-    }).appendTo(gameclass).fadeIn(100, function () {
+    }).appendTo(gameInProgress).fadeIn(100, function () {
         buildBonus();
     }).delay(300).fadeOut(4000, function () {
         $(this).remove(); // removing divs
