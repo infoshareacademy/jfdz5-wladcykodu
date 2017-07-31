@@ -14,7 +14,7 @@ function stopGameAfterTime() {
 //game timer for game
 function gameTimer(duration) {
     if (currentTimer !== undefined) {
-        duration = currentTimer
+        duration = currentTimer;
     }
     var timer = duration,
         minutes,

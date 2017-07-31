@@ -47,10 +47,13 @@ $('.start-game-button').click(function showBoard() {
 
             if (e.detail.action === "add") {
                 scoreEl.innerHTML = score + e.detail.value;
-            } else if (e.detail.action === "substract") {
-                if (score > 0) {
+            } else if (e.detail.action === "subtract") {
+                if (score >= 0) {
                     scoreEl.innerHTML = score - e.detail.value;
                 }
+            }
+            if (score < 0) {
+                scoreEl.innerHTML = 0;
             }
 
         }, false);
@@ -65,7 +68,7 @@ $('.start-game-button').click(function showBoard() {
             gameTimer(gameTime);
         });
         stopGameAfterTime();
-    })
+    });
 });
 /*show instruction*/
 $('.instruction-button').click(function showInstruction() {

@@ -1257,7 +1257,7 @@ h3.carousel-caption__element {
     display: none;
 }
 
-.quiz .result-field {
+.result-field {
     position: absolute;
     top: -20%;
     left: 0;
@@ -1270,6 +1270,27 @@ h3.carousel-caption__element {
     opacity: 0.8;
     padding-bottom: 0.7em;
     border-radius: 1em;
+}
+
+.subtract-life-box {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0.8;
+    padding-bottom: 0.7em;
+    border-radius: 1em;
+}
+
+.subtract-life-desc {
+    color: #fff;
+    font-size: 2rem;
+    width: 100%;
+    height: 50%;
+    padding: 5%;
 }
 
 .result-desc {
@@ -1309,6 +1330,7 @@ h3.carousel-caption__element {
     background-color: red;
 }
 
+.fade-down-subst,
 .fade-down-quiz {
     animation-name: fadeDownQuiz;
     animation-duration: 1s;
@@ -1326,6 +1348,7 @@ h3.carousel-caption__element {
     }
 }
 
+.fade-out-subst,
 .fade-out-quiz {
     animation-name: fadeOutQuiz;
     animation-duration: 1s;

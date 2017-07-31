@@ -43,7 +43,7 @@ function quizForBonusLife() {
     var answersArr = [wrongResult1, wrongResult2, correctResult];
 
     answersArr.sort(function () {
-        return .5 - Math.random();
+        return 0.5 - Math.random();
     });
 
     var guessObj = {

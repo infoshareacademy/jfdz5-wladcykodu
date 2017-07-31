@@ -3,13 +3,13 @@ var timerInterval;
 // create an array named bonusItemsClass that contains svg files
 var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
                       ["parts_game/part2.svg", "bonus-img"],
-                      ["parts_game/part3.svg", "bonus-life"],
+                      ["parts_game/addLife.svg", "bonus-life"],
+                      ["parts_game/part3.svg", "bonus-img"],
                       ["parts_game/part4.svg", "bonus-img"],
                       ["parts_game/part5.svg", "bonus-img"],
                       ["parts_game/part6.svg", "bonus-img"],
-                      ["parts_game/oil.svg", "bonus-img"],
-                      ["parts_game/tank.svg", "bonus-img"],
-                      ["parts_game/repair.svg", "bonus-img"]];
+                      ["parts_game/subtractLife.svg", "subtract-life"],
+                      ["parts_game/part7.svg", "bonus-img"]];
 
 var tmpArray = [];
 
@@ -27,7 +27,7 @@ function createBonus() {
 
     function buildBonus() {
         if (bonusItemClass.length !== 2) {
-            return
+            return;
         }
 
         var bonusItem = document.createElement('img');
@@ -37,6 +37,7 @@ function createBonus() {
         console.log(bonusItem);
         document.getElementById('good-elem').appendChild(bonusItem);
         quizLife();
+        subtractLife();
     }
 
     var boardField = $('.board-field'),
@@ -71,5 +72,40 @@ function createBonus() {
     $bonusDiv.on('click', function () {
         $(this).css('visibility', 'hidden');
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 10}}));
+    });
+}
+
+function subtractLife() {
+    var $subtractLife = $('.subtract-life');
+    $subtractLife.on('click', function () {
+
+        gameInProgress.append('<div class="subtract-life-box wrong fade-down-subst"><span class="subtract-life-desc"></span><a href="#" class="quiz-button">ok</a></div>');
+        var subDesc = $('.subtract-life-desc');
+        subDesc.html("Oops... You lost one life :(");
+
+        clearInterval(bonus);
+        clearInterval(obstaclesInterval);
+        clearInterval(timerInterval);
+        document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 50}}));
+        var $lives = $('.result-container-element span');
+        if ($lives.length > 0) {
+            $lives[0].remove();
+        }
+        quitSub();
+    });
+}
+
+function quitSub() {
+    $('.quiz-button').on('click', function () {
+        $('.subtract-life-box')
+            .addClass("fade-out-subst")
+            .removeClass('fade-down-subst')
+            .delay(2000)
+            .queue(function () {
+                $(this).remove();
+            });
+        gameTimer(gameTime);
+        startBonus();
+        startObstacles();
     });
 }
