@@ -8,12 +8,13 @@ var bonus,
     restart = false,
     gameTime = 60 * 10,
     timerDisplay,
-    gameInProgress;
+    gameInProgress,
+    $gameboard = $('.game-board');
 
-document.getElementById('game-frame').style.display = "block";
+document.getElementById('game-frame').style.display = "flex";
 /*show game*/
 $('.start-game-button').click(function showBoard() {
-    $('.game-board').html('<div class="login-board"></div>');
+    $gameboard.html('<div class="login-board"></div>');
     $('.login-board')
         .append($('<img class="start-game-boom" src="game-images/start-game-boom.svg" />'))
         .append($('<input type="text" class="user-login higher-z-index">'))
@@ -72,7 +73,11 @@ $('.start-game-button').click(function showBoard() {
 });
 /*show instruction*/
 $('.instruction-button').click(function showInstruction() {
-    $('.game-board').html("tu bedzie instrukcja");
+    $gameboard.html('<div class="game-instruction"></div>');
+    var $instruction = $('.game-instruction');
+    $instruction.css({
+        'display': 'flex'
+    }).appendTo($gameboard);
 });
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {

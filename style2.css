@@ -1176,6 +1176,10 @@ h3.carousel-caption__element {
     }
 }
 
+.bonus-hov {
+    cursor: pointer;
+}
+
 .bonus-img {
     width: 50px;
     height: 50px;
@@ -1385,6 +1389,67 @@ h3.carousel-caption__element {
 /************************/
 /* End of Good elements */
 /************************/
+
+/***************/
+/* Instruction */
+/***************/
+
+.instruction {
+    display: inline;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: auto;
+}
+
+.img-instruction {
+    width: 2em;
+    margin-right: 1em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+.img-inline {
+    width: 2em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+.arrow {
+    width: 1.2em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+.instruction-item {
+    padding-bottom: 2%;
+    display: inherit;
+}
+
+.welcome {
+    display: inline;
+    vertical-align: middle;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding-right: 1em;
+}
+
+.game-instruction {
+    display: none;
+    background-color: #5cb85c;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.instruction-object {
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 4em;
+}
+
+/**********************/
+/* End of instruction */
+/**********************/
 
 /*****************/
 /* Bad elements */

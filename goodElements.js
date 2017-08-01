@@ -66,7 +66,7 @@ function createBonus() {
     });
     // mouseover event for added divs
     $bonusDiv.mouseover(function () {
-        $(this).addClass('newBonus-anim');
+        $(this).addClass('newBonus-anim bonus-hov');
     });
     // click event for divs - make them disapear and add score
     $bonusDiv.on('click', function () {
