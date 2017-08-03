@@ -1503,11 +1503,13 @@ h3.carousel-caption__element {
 /*****************/
 
 .board-field--obstacle {
-    background-color: black;
+    background-image: url("parts_game/zombie.svg");
+    background-size: 100%;
 }
 
 .board-field--collision {
     background-color: red;
+    border-radius: 25%;
 }
 
 /***********************/

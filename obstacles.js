@@ -34,6 +34,8 @@ function setObstacles(release, restart) {
                     $boardFileds[nextCellIndex].classList.add('board-field--obstacle');
                     var obstaclePosition = new elementPosition($boardFileds[nextCellIndex]);
                     var carPosition = new elementPosition($('.games-auto')[0]);
+                    // $boardFileds[nextCellIndex].setAttribute('title',obstaclePosition.serializePosition());
+                    // $('.games-auto')[0].setAttribute('title',carPosition.serializePosition());
                     var consoleMessage = '';
                     if (obstaclePosition.isTopContactTo(carPosition)) {
                         consoleMessage += 'Top ';
@@ -53,7 +55,7 @@ function setObstacles(release, restart) {
                         consoleMessage += 'Left ';
                     }
                     if ( consoleMessage.length > 0 ) {
-                        console.log(consoleMessage);
+                        // console.log(consoleMessage);
                     }
                 }
 
