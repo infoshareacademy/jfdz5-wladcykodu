@@ -17,7 +17,7 @@ function runOnEvent(functions, timeout) {
             setTimeout(func, timeout);
             //func();
         }
-    }
+    };
 }
 
 /************************************/

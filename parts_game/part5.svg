@@ -1,604 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="90"
-   height="90"
-   id="svg2"
-   version="1.1"
-   inkscape:version="0.47 r22583"
-   sodipodi:docname="wheel.svg">
-  <defs
-     id="defs4">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3775">
-      <stop
-         style="stop-color:#333333;stop-opacity:1;"
-         offset="0"
-         id="stop3777" />
-      <stop
-         style="stop-color:#333333;stop-opacity:0;"
-         offset="1"
-         id="stop3779" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3780">
-      <stop
-         style="stop-color:#f5f5f5;stop-opacity:1;"
-         offset="0"
-         id="stop3782" />
-      <stop
-         style="stop-color:#f5f5f5;stop-opacity:0;"
-         offset="1"
-         id="stop3784" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3709">
-      <stop
-         style="stop-color:#000000;stop-opacity:1;"
-         offset="0"
-         id="stop3711" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0;"
-         offset="1"
-         id="stop3713" />
-    </linearGradient>
-    <inkscape:path-effect
-       effect="spiro"
-       id="path-effect3632"
-       is_visible="true" />
-    <inkscape:path-effect
-       effect="spiro"
-       id="path-effect3628"
-       is_visible="true" />
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 526.18109 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="744.09448 : 526.18109 : 1"
-       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
-       id="perspective10" />
-    <inkscape:perspective
-       id="perspective2824"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3709"
-       id="linearGradient3715"
-       x1="245.55103"
-       y1="592.60706"
-       x2="377.65598"
-       y2="707.54584"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-231.27377,386.76099)" />
-    <inkscape:perspective
-       id="perspective3733"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3780"
-       id="linearGradient3786"
-       x1="70.851067"
-       y1="984.57495"
-       x2="76.82048"
-       y2="1014.0643"
-       gradientUnits="userSpaceOnUse" />
-    <inkscape:perspective
-       id="perspective2853"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <inkscape:perspective
-       id="perspective2867"
-       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
-       inkscape:vp_z="1 : 0.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_x="0 : 0.5 : 1"
-       sodipodi:type="inkscape:persp3d" />
-    <filter
-       inkscape:collect="always"
-       id="filter3887">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.7139476"
-         id="feGaussianBlur3889" />
-    </filter>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3775"
-       id="linearGradient3781"
-       x1="37.068485"
-       y1="1009.3514"
-       x2="30.701759"
-       y2="1021.8393"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.97243985,0,0,0.9724378,-5.1874142,28.124957)" />
-  </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.7669997"
-     inkscape:cx="93.634117"
-     inkscape:cy="50.550224"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="712"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
-     inkscape:window-maximized="1"
-     showguides="true"
-     inkscape:guide-bbox="true" />
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-962.36218)">
-    <path
-       style="opacity:0.72105264;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#100e0e;stroke-width:1.0267154;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       d="m 42.172947,980.76908 c -14.364065,0 -25.996887,11.63277 -25.996887,25.99682 0,14.3641 11.632822,26.0246 25.996887,26.0246 14.364064,0 26.024516,-11.6605 26.024516,-26.0246 0,-14.36405 -11.660452,-25.99682 -26.024516,-25.99682 z m -0.414402,4.33741 c 11.970054,0 21.659469,9.71702 21.659469,21.68711 0,11.97 -9.689415,21.6595 -21.659469,21.6595 -11.970054,0 -21.687095,-9.6895 -21.687095,-21.6595 0,-11.97009 9.717041,-21.68711 21.687095,-21.68711 z"
-       id="path3741"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:#4d4d4d;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 23.143182,1003.337 c -1.711826,-2.3179 0.994691,-5.8314 2.542107,-8.26204 1.07396,-1.68685 2.465935,-4.28521 4.448687,-4.02489 2.835329,0.37216 4.660533,7.20255 4.660533,7.20255 l -2.75395,5.08438 c 0,0 -7.135397,2.3856 -8.897377,0 z"
-       id="path2957"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2961"
-       d="m 35.441711,988.35563 c 1.133213,-2.64911 5.533175,-2.09204 8.412627,-1.98693 1.998432,0.0729 4.943969,-0.0409 5.722559,1.80111 1.113374,2.63394 -3.85507,7.66397 -3.85507,7.66397 l -5.778821,0.19663 c 0,0 -5.667714,-4.94796 -4.501295,-7.67478 z"
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 35.441711,988.35563 c 1.133213,-2.64911 5.533175,-2.09204 8.412627,-1.98693 1.998432,0.0729 4.943969,-0.0409 5.722559,1.80111 1.113374,2.63394 -3.85507,7.66397 -3.85507,7.66397 l -5.778821,0.19663 c 0,0 -5.667714,-4.94796 -4.501295,-7.67478 z"
-       id="path2963"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2965"
-       d="m 61.626522,1008.5133 c 1.784075,2.2626 -0.810276,5.8596 -2.280259,8.3379 -1.020178,1.72 -2.329536,4.3609 -4.31952,4.1634 -2.845653,-0.2827 -4.885396,-7.0521 -4.885396,-7.0521 l 2.592217,-5.1686 c 0,0 7.056603,-2.6094 8.892958,-0.2806 z"
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 54.47633,990.91334 c 2.867706,-0.28016 4.494856,3.8456 5.787202,6.42091 0.89696,1.78735 2.413043,4.31535 1.172332,5.88365 -1.774217,2.2428 -8.573554,0.3049 -8.573554,0.3049 l -2.951018,-4.97251 c 0,0 1.613295,-7.34861 4.565038,-7.63695 z"
-       id="path2967"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 48.918408,1024.7324 c -1.264295,2.5893 -5.630886,1.8127 -8.501479,1.5638 -1.992283,-0.1727 -4.939829,-0.2064 -5.625318,-2.085 -0.980222,-2.6865 4.233587,-7.4618 4.233587,-7.4618 l 5.781426,0.092 c 0,0 5.413132,5.2252 4.111784,7.8902 z"
-       id="path2969"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2971"
-       d="m 48.918408,1024.7324 c -1.264295,2.5893 -5.630886,1.8127 -8.501479,1.5638 -1.992283,-0.1727 -4.939829,-0.2064 -5.625318,-2.085 -0.980222,-2.6865 4.233587,-7.4618 4.233587,-7.4618 l 5.781426,0.092 c 0,0 5.413132,5.2252 4.111784,7.8902 z"
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 29.637905,1021.386 c -2.858155,0.3649 -4.606737,-3.7109 -5.974756,-6.2469 -0.949487,-1.7599 -2.539744,-4.2419 -1.346006,-5.8463 1.707043,-2.2943 8.560773,-0.5585 8.560773,-0.5585 l 3.096927,4.8829 c 0,0 -1.395025,7.3932 -4.336938,7.7688 z"
-       id="path2973"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:type="arc"
-       style="opacity:0.29473685;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="path2975"
-       sodipodi:cx="-53.348949"
-       sodipodi:cy="4.8312449"
-       sodipodi:rx="8.3950129"
-       sodipodi:ry="9.3428364"
-       d="m -44.953937,4.8312449 a 8.3950129,9.3428364 0 1 1 -16.790025,0 8.3950129,9.3428364 0 1 1 16.790025,0 z"
-       transform="matrix(1.0198634,0,0,0.90505982,96.511707,1001.2947)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       id="path2977"
-       d="m 42.170093,975.39921 c -17.329494,0 -31.363888,14.03437 -31.363888,31.36389 0,17.3295 14.034394,31.3973 31.363888,31.3973 17.329499,0 31.397224,-14.0678 31.397224,-31.3973 0,-17.32952 -14.067725,-31.36389 -31.397224,-31.36389 z m -0.499949,5.23288 c 14.441241,0 26.131015,11.72308 26.131015,26.16441 0,14.4412 -11.689774,26.131 -26.131015,26.131 -14.441249,0 -26.164353,-11.6898 -26.164353,-26.131 0,-14.44133 11.723104,-26.16441 26.164353,-26.16441 z"
-       style="fill:#151515;fill-opacity:1;fill-rule:evenodd;stroke:#100e0e;stroke-width:1.23888695;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:0.61944349, 0.61944349;stroke-dashoffset:0"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 35.441711,988.35563 c 1.133213,-2.64911 5.533175,-2.09204 8.412627,-1.98693 1.998432,0.0729 4.943969,-0.0409 5.722559,1.80111 1.113374,2.63394 -3.85507,7.66397 -3.85507,7.66397 l -5.778821,0.19663 c 0,0 -5.667714,-4.94796 -4.501295,-7.67478 z"
-       id="path2981"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2983"
-       d="m 35.441711,988.35563 c 1.133213,-2.64911 5.533175,-2.09204 8.412627,-1.98693 1.998432,0.0729 4.943969,-0.0409 5.722559,1.80111 1.113374,2.63394 -3.85507,7.66397 -3.85507,7.66397 l -5.778821,0.19663 c 0,0 -5.667714,-4.94796 -4.501295,-7.67478 z"
-       style="fill:#4d4d4d;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:#666666;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 61.626522,1008.5133 c 1.784075,2.2626 -0.810276,5.8596 -2.280259,8.3379 -1.020178,1.72 -2.329536,4.3609 -4.31952,4.1634 -2.845653,-0.2827 -4.885396,-7.0521 -4.885396,-7.0521 l 2.592217,-5.1686 c 0,0 7.056603,-2.6094 8.892958,-0.2806 z"
-       id="path2985"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2987"
-       d="m 54.47633,990.91334 c 2.867706,-0.28016 4.494856,3.8456 5.787202,6.42091 0.89696,1.78735 2.413043,4.31535 1.172332,5.88365 -1.774217,2.2428 -8.573554,0.3049 -8.573554,0.3049 l -2.951018,-4.97251 c 0,0 1.613295,-7.34861 4.565038,-7.63695 z"
-       style="fill:#4d4d4d;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2989"
-       d="m 48.918408,1024.7324 c -1.264295,2.5893 -5.630886,1.8127 -8.501479,1.5638 -1.992283,-0.1727 -4.939829,-0.2064 -5.625318,-2.085 -0.980222,-2.6865 4.233587,-7.4618 4.233587,-7.4618 l 5.781426,0.092 c 0,0 5.413132,5.2252 4.111784,7.8902 z"
-       style="fill:none;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="fill:#666666;stroke:#000000;stroke-width:0.78226262px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 48.918408,1024.7324 c -1.264295,2.5893 -5.630886,1.8127 -8.501479,1.5638 -1.992283,-0.1727 -4.939829,-0.2064 -5.625318,-2.085 -0.980222,-2.6865 4.233587,-7.4618 4.233587,-7.4618 l 5.781426,0.092 c 0,0 5.413132,5.2252 4.111784,7.8902 z"
-       id="path2991"
-       sodipodi:nodetypes="caacca"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path2993"
-       d="m 29.637905,1021.386 c -2.858155,0.3649 -4.606737,-3.7109 -5.974756,-6.2469 -0.949487,-1.7599 -2.539744,-4.2419 -1.346006,-5.8463 1.707043,-2.2943 8.560773,-0.5585 8.560773,-0.5585 l 3.096927,4.8829 c 0,0 -1.395025,7.3932 -4.336938,7.7688 z"
-       style="fill:url(#linearGradient3781);fill-opacity:1;stroke:#534545;stroke-width:0.78184074;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       id="path3063"
-       d="m -54.478252,931.70926 c -18.362182,0 -33.232903,14.87073 -33.232903,33.23293 0,18.3622 14.870721,33.26828 33.232903,33.26828 18.362183,0 33.268222,-14.90608 33.268222,-33.26828 0,-18.3622 -14.906039,-33.23293 -33.268222,-33.23293 z m -0.529746,5.54471 c 15.301817,0 27.688199,12.42171 27.688199,27.72353 0,15.30181 -12.386382,27.68825 -27.688199,27.68825 -15.301819,0 -27.723517,-12.38644 -27.723517,-27.68825 0,-15.30182 12.421698,-27.72353 27.723517,-27.72353 z"
-       style="opacity:0.45540167;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#100e0e;stroke-width:1.31249452;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3065"
-       d="m -78.804794,960.55865 c -2.188297,-2.96286 1.271556,-7.45433 3.249683,-10.56146 1.372887,-2.15645 3.152307,-5.47806 5.686944,-5.14534 3.624518,0.4758 5.957751,9.20744 5.957751,9.20744 l -3.52049,6.49936 c 0,0 -9.121472,3.04968 -11.373888,0 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -63.083071,941.40755 c 1.448632,-3.38654 7.073288,-2.67441 10.754211,-2.54004 2.554681,0.0932 6.320082,-0.0523 7.315388,2.30237 1.423271,3.36717 -4.928098,9.79723 -4.928098,9.79723 l -7.387309,0.25139 c 0,0 -7.245274,-6.32518 -5.754192,-9.81095 z"
-       id="path3067"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3069"
-       d="m -63.083071,941.40755 c 1.448632,-3.38654 7.073288,-2.67441 10.754211,-2.54004 2.554681,0.0932 6.320082,-0.0523 7.315388,2.30237 1.423271,3.36717 -4.928098,9.79723 -4.928098,9.79723 l -7.387309,0.25139 c 0,0 -7.245274,-6.32518 -5.754192,-9.81095 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -29.609936,967.17584 c 2.280657,2.89236 -1.03581,7.49072 -2.914951,10.6587 -1.304136,2.1987 -2.977945,5.57477 -5.521822,5.32216 -3.637716,-0.36125 -6.245205,-9.01495 -6.245205,-9.01495 l 3.313738,-6.60717 c 0,0 9.02075,-3.33586 11.36824,-0.35874 z"
-       id="path3071"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3073"
-       d="m -38.750325,944.67709 c 3.665908,-0.35814 5.745961,4.91607 7.398019,8.20817 1.146624,2.2848 3.084696,5.51642 1.498643,7.52131 -2.268056,2.86695 -10.95993,0.38968 -10.95993,0.38968 l -3.772409,-6.35645 c 0,0 2.062342,-9.39408 5.835677,-9.76271 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3075"
-       d="m -45.855247,987.90953 c -1.616203,3.30984 -7.198198,2.31727 -10.867796,1.99896 -2.546816,-0.22086 -6.31479,-0.26388 -7.191076,-2.66539 -1.253061,-3.43414 5.411968,-9.53848 5.411968,-9.53848 l 7.390638,0.11843 c 0,0 6.919833,6.67965 5.256266,10.08648 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -45.855247,987.90953 c -1.616203,3.30984 -7.198198,2.31727 -10.867796,1.99896 -2.546816,-0.22086 -6.31479,-0.26388 -7.191076,-2.66539 -1.253061,-3.43414 5.411968,-9.53848 5.411968,-9.53848 l 7.390638,0.11843 c 0,0 6.919833,6.67965 5.256266,10.08648 z"
-       id="path3077"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3079"
-       d="m -70.502317,983.63155 c -3.653699,0.46651 -5.888984,-4.7438 -7.63778,-7.98556 -1.213767,-2.24985 -3.24666,-5.42267 -1.720656,-7.47363 2.182186,-2.93284 10.943593,-0.71399 10.943593,-0.71399 l 3.958931,6.24199 c 0,0 -1.78332,9.45101 -5.544088,9.93119 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.45540167;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#100e0e;stroke-width:1.31249452;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3887)"
-       d="m -58.811163,920.87699 c -18.362182,0 -33.232903,14.87073 -33.232903,33.23293 0,18.3622 14.870721,33.26828 33.232903,33.26828 18.362183,0 33.268222,-14.90608 33.268222,-33.26828 0,-18.3622 -14.906039,-33.23293 -33.268222,-33.23293 z m -0.529746,5.54471 c 15.301817,0 27.688199,12.42171 27.688199,27.72353 0,15.30181 -12.386382,27.68825 -27.688199,27.68825 -15.301819,0 -27.723517,-12.38644 -27.723517,-27.68825 0,-15.30182 12.421698,-27.72353 27.723517,-27.72353 z"
-       id="path3083"
-       transform="matrix(0.699964,0,0,0.6999625,82.704569,338.92621)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -78.804794,960.55865 c -2.188297,-2.96286 1.271556,-7.45433 3.249683,-10.56146 1.372887,-2.15645 3.152307,-5.47806 5.686944,-5.14534 3.624518,0.4758 5.957751,9.20744 5.957751,9.20744 l -3.52049,6.49936 c 0,0 -9.121472,3.04968 -11.373888,0 z"
-       id="path3085"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3087"
-       d="m -63.083071,941.40755 c 1.448632,-3.38654 7.073288,-2.67441 10.754211,-2.54004 2.554681,0.0932 6.320082,-0.0523 7.315388,2.30237 1.423271,3.36717 -4.928098,9.79723 -4.928098,9.79723 l -7.387309,0.25139 c 0,0 -7.245274,-6.32518 -5.754192,-9.81095 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -63.083071,941.40755 c 1.448632,-3.38654 7.073288,-2.67441 10.754211,-2.54004 2.554681,0.0932 6.320082,-0.0523 7.315388,2.30237 1.423271,3.36717 -4.928098,9.79723 -4.928098,9.79723 l -7.387309,0.25139 c 0,0 -7.245274,-6.32518 -5.754192,-9.81095 z"
-       id="path3089"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3091"
-       d="m -29.609936,967.17584 c 2.280657,2.89236 -1.03581,7.49072 -2.914951,10.6587 -1.304136,2.1987 -2.977945,5.57477 -5.521822,5.32216 -3.637716,-0.36125 -6.245205,-9.01495 -6.245205,-9.01495 l 3.313738,-6.60717 c 0,0 9.02075,-3.33586 11.36824,-0.35874 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3887)"
-       d="m -38.750325,944.67709 c 3.665908,-0.35814 5.745961,4.91607 7.398019,8.20817 1.146624,2.2848 3.084696,5.51642 1.498643,7.52131 -2.268056,2.86695 -10.95993,0.38968 -10.95993,0.38968 l -3.772409,-6.35645 c 0,0 2.062342,-9.39408 5.835677,-9.76271 z"
-       id="path3093"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -45.855247,987.90953 c -1.616203,3.30984 -7.198198,2.31727 -10.867796,1.99896 -2.546816,-0.22086 -6.31479,-0.26388 -7.191076,-2.66539 -1.253061,-3.43414 5.411968,-9.53848 5.411968,-9.53848 l 7.390638,0.11843 c 0,0 6.919833,6.67965 5.256266,10.08648 z"
-       id="path3095"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:nodetypes="caacca"
-       id="path3097"
-       d="m -45.855247,987.90953 c -1.616203,3.30984 -7.198198,2.31727 -10.867796,1.99896 -2.546816,-0.22086 -6.31479,-0.26388 -7.191076,-2.66539 -1.253061,-3.43414 5.411968,-9.53848 5.411968,-9.53848 l 7.390638,0.11843 c 0,0 6.919833,6.67965 5.256266,10.08648 z"
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       style="opacity:0.63157893;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3887)"
-       d="m -70.502317,983.63155 c -3.653699,0.46651 -5.888984,-4.7438 -7.63778,-7.98556 -1.213767,-2.24985 -3.24666,-5.42267 -1.720656,-7.47363 2.182186,-2.93284 10.943593,-0.71399 10.943593,-0.71399 l 3.958931,6.24199 c 0,0 -1.78332,9.45101 -5.544088,9.93119 z"
-       id="path3099"
-       sodipodi:nodetypes="caacca"
-       transform="matrix(0.65881425,0,0,0.65881284,77.430648,371.0518)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <path
-       sodipodi:type="arc"
-       style="opacity:0.63157893;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="path3931"
-       sodipodi:cx="-58.358875"
-       sodipodi:cy="-8.7090979"
-       sodipodi:rx="4.4683132"
-       sodipodi:ry="4.4683132"
-       d="m -53.890562,-8.7090979 a 4.4683132,4.4683132 0 1 1 -8.936626,0 4.4683132,4.4683132 0 1 1 8.936626,0 z"
-       transform="matrix(0.78226351,0,0,0.78226184,87.755087,1012.3741)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002" />
-    <g
-       id="g3945"
-       transform="matrix(1.276056,0,0,1.2760534,105.5142,-278.17992)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002">
-      <path
-         sodipodi:type="arc"
-         style="opacity:0.63157893;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="path3941"
-         sodipodi:cx="-58.358875"
-         sodipodi:cy="-8.7090979"
-         sodipodi:rx="4.4683132"
-         sodipodi:ry="4.4683132"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         transform="matrix(0.34055239,0,0,0.34055239,-29.818801,1004.0102)" />
-      <path
-         transform="matrix(0.19922615,0,0,0.19922615,-38.066441,1002.7793)"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         sodipodi:ry="4.4683132"
-         sodipodi:rx="4.4683132"
-         sodipodi:cy="-8.7090979"
-         sodipodi:cx="-58.358875"
-         id="path3943"
-         style="opacity:0.63157893;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-    </g>
-    <g
-       transform="matrix(1.276056,0,0,1.2760534,112.08132,-272.0365)"
-       id="g3949"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002">
-      <path
-         transform="matrix(0.34055239,0,0,0.34055239,-29.818801,1004.0102)"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         sodipodi:ry="4.4683132"
-         sodipodi:rx="4.4683132"
-         sodipodi:cy="-8.7090979"
-         sodipodi:cx="-58.358875"
-         id="path3951"
-         style="opacity:0.63157893;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <path
-         sodipodi:type="arc"
-         style="opacity:0.63157893;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="path3953"
-         sodipodi:cx="-58.358875"
-         sodipodi:cy="-8.7090979"
-         sodipodi:rx="4.4683132"
-         sodipodi:ry="4.4683132"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         transform="matrix(0.19922615,0,0,0.19922615,-38.066441,1002.7793)" />
-    </g>
-    <g
-       id="g3955"
-       transform="matrix(1.276056,0,0,1.2760534,105.30235,-265.25757)"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002">
-      <path
-         sodipodi:type="arc"
-         style="opacity:0.63157893;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="path3957"
-         sodipodi:cx="-58.358875"
-         sodipodi:cy="-8.7090979"
-         sodipodi:rx="4.4683132"
-         sodipodi:ry="4.4683132"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         transform="matrix(0.34055239,0,0,0.34055239,-29.818801,1004.0102)" />
-      <path
-         transform="matrix(0.19922615,0,0,0.19922615,-38.066441,1002.7793)"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         sodipodi:ry="4.4683132"
-         sodipodi:rx="4.4683132"
-         sodipodi:cy="-8.7090979"
-         sodipodi:cx="-58.358875"
-         id="path3959"
-         style="opacity:0.63157893;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-    </g>
-    <g
-       transform="matrix(1.276056,0,0,1.2760534,99.158931,-271.82466)"
-       id="g3961"
-       inkscape:export-filename="D:\FASTALLOY\VAT\TTD\2009 TTD\TTD DEC 2009\today\Hind motor\logo\Wheel\wheel.png"
-       inkscape:export-xdpi="91.190002"
-       inkscape:export-ydpi="91.190002">
-      <path
-         transform="matrix(0.34055239,0,0,0.34055239,-29.818801,1004.0102)"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         sodipodi:ry="4.4683132"
-         sodipodi:rx="4.4683132"
-         sodipodi:cy="-8.7090979"
-         sodipodi:cx="-58.358875"
-         id="path3963"
-         style="opacity:0.63157893;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
-      <path
-         sodipodi:type="arc"
-         style="opacity:0.63157893;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#7b6d10;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         id="path3965"
-         sodipodi:cx="-58.358875"
-         sodipodi:cy="-8.7090979"
-         sodipodi:rx="4.4683132"
-         sodipodi:ry="4.4683132"
-         d="m -53.890562,-8.7090979 c 0,2.4677813 -2.000532,4.4683133 -4.468313,4.4683133 -2.467782,0 -4.468313,-2.000532 -4.468313,-4.4683133 0,-2.4677811 2.000531,-4.4683131 4.468313,-4.4683131 2.467781,0 4.468313,2.000532 4.468313,4.4683131 z"
-         transform="matrix(0.19922615,0,0,0.19922615,-38.066441,1002.7793)" />
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 430 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a">
+   <stop offset="0"/>
+   <stop stop-color="#707070" offset=".3438"/>
+   <stop stop-color="#fff" offset=".5"/>
+   <stop stop-color="#919191" offset=".5781"/>
+   <stop offset="1"/>
+  </linearGradient>
+  <linearGradient id="i" x1="745.09" x2="683.15" y1="162.86" y2="229.17" gradientTransform="matrix(1.0746 0 0 1.0038 -476.03 64.704)" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="h" x1="306.66" x2="400.02" y1="59.359" y2="407.77" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="g" x2="0" y1="-123.19" y2="633.24" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="f" x1="177.53" x2="364.48" y1="275.92" y2="162.45" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="e" x1="745.09" x2="683.15" y1="162.86" y2="229.17" gradientTransform="matrix(1.1686 0 0 1.0915 -389.72 162.62)" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="d" x1="461.38" x2="562.89" y1="156.8" y2="535.67" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="c" x2="0" y1="-64.016" y2="803.16" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+  <linearGradient id="b" x1="320.96" x2="524.25" y1="392.29" y2="268.9" gradientUnits="userSpaceOnUse" xlink:href="#a" spreadMethod="reflect"/>
+ </defs>
+ <g transform="translate(-213.99 -148.31)">
+  <path d="m335.13 194.46c-21.453 0-40.117 11.883-49.803 29.428-6.3461 8.8768-10.058 19.534-10.058 31.008 0 21.921 13.504 40.864 33.164 50.033-2.1728-2.1876-4.1397-4.5527-5.92-7.0408 0.13518 0.0948 0.2663 0.19369 0.40234 0.28738-6.2677-9.1357-9.9434-20.181-9.9434-32.1 0-5.6707 0.84065-11.154 2.3853-16.323 7.7636-22.48 30.34-38.739 56.988-38.739 8.3977 0 16.371 1.6237 23.623 4.5406h0.0288c2.0905 1.086 4.1074 2.2952 6.035 3.621-10.245-14.918-27.431-24.715-46.901-24.715z" fill="url(#i)"/>
+  <g transform="matrix(.91962 0 0 .91962 39.131 27.322)" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width=".43496">
+   <path d="m230.87 303.02 14.114 1.2598 20.24 11.686-14.114-1.2598z"/>
+   <path d="m265.78 337.68 14.534 7.486 20.24 11.686-14.534-7.486z"/>
+   <path d="m280.32 345.16 12.726-6.7739 20.24 11.686-12.726 6.7739z" fill="#333"/>
+   <path d="m293.04 338.39 27.497 4.3456 20.24 11.686-27.497-4.3456z"/>
+   <path d="m330.56 353.53 15.648-2.5197 20.24 11.686-15.648 2.5197z" fill="#1a1a1a"/>
+   <path d="m346.21 351.01 5.6236-13.311 20.24 11.686-5.6236 13.311z" fill="#333"/>
+   <path d="m351.84 337.7 23.992-12.087 20.24 11.686-23.992 12.087z" fill="#1a1a1a"/>
+   <path d="m375.83 325.61 14.059 2.8849 20.24 11.686-14.059-2.8849z" fill="#333"/>
+   <path d="m389.89 328.49 11.448-11.302 20.24 11.686-11.448 11.302z" fill="#1a1a1a"/>
+   <path d="m401.33 317.19-2.611-14.187 20.24 11.686 2.6109 14.187z" fill="#333"/>
+   <path d="m398.72 303 13.438-26.84 20.24 11.686-13.438 26.84z" fill="#1a1a1a"/>
+   <path d="m412.16 276.16 13.384-5.715 20.24 11.686-13.384 5.715z" fill="#333"/>
+   <path d="m425.55 270.45 2.1726-15.246 20.24 11.686-2.1728 15.246z" fill="#999"/>
+   <path d="m427.72 255.2-11.211-9.531 20.24 11.686 11.211 9.531z" fill="#b3b3b3"/>
+   <path d="m416.51 245.67-4.4917-27.132 20.24 11.686 4.4916 27.132z" fill="#808080"/>
+   <path d="m412.02 218.54 7.0297-12.452 20.24 11.686-7.0296 12.452z" fill="#999"/>
+   <path d="m419.05 206.09-7.3034-14.114 20.24 11.686 7.3035 14.114z" fill="#b3b3b3"/>
+   <path d="m397.41 190.31-20.304-19.865 20.24 11.686 20.304 19.865z" fill="#ccc"/>
+   <path d="m322.51 152.41-9.8414-10.791 20.24 11.686 9.8414 10.791z" fill="#808080"/>
+   <path d="m377.11 170.45-0.91293-14.68 20.24 11.686 0.9129 14.68z" fill="#b3b3b3"/>
   </g>
+  <path d="m327.08 157.25-14.339 2.2164-5.2724 12.224-22.231 11.183-13.03-2.6194-10.444 10.276 2.5522 12.862-12.257 23.977-12.492 5.2052-2.2164 14.138 10.242 8.8992 4.0298 25.824-6.3806 11.821 6.5821 12.963 12.996 1.1418 17.463 17.664 1.6791 13.164 13.366 6.9179 11.686-6.2462 25.321 3.9962 9.2014 9.9738 14.407-2.3507 5.1716-12.257 22.063-11.183 12.929 2.6866 10.545-10.444-2.4179-13.097 12.358-24.783 12.325-5.2724 2.0149-14.071-10.31-8.7985-4.1642-25.018 6.4813-11.485-6.7163-13.03-13.198-1.5448-18.672-18.336-0.83955-13.533-12.492-6.347-11.653 7.2537-25.22-4.0298-9.0671-9.9402zm8.0596 37.914c33.066 0 59.843 26.81 59.843 59.876s-26.777 59.843-59.843 59.843-59.876-26.777-59.876-59.843 26.81-59.876 59.876-59.876z" fill="url(#h)"/>
+  <path d="m327.48 162.14-13.622 2.1056-5.0087 11.613-21.12 10.624-12.378-2.4884-9.9218 9.7622 2.4246 12.219-11.645 22.779-11.868 4.9449-2.1056 13.431 9.7304 8.4542 3.8283 24.533-6.0615 11.23 6.2529 12.314 12.346 1.0847 16.589 16.781 1.5951 12.506 12.697 6.572 11.102-5.9339 24.055 3.7964 8.7414 9.4752 13.686-2.2332 4.913-11.645 20.96-10.624 12.283 2.5522 10.018-9.9218-2.297-12.442 11.74-23.544 11.708-5.0087 1.9141-13.367-9.7941-8.3585-3.956-23.768 6.1573-10.911-6.3806-12.378-12.538-1.4675-17.738-17.419-0.79758-12.857-11.868-6.0296-11.07 6.891-23.959-3.8283-8.6138-9.4432zm7.6567 36.018c31.413 0 56.851 25.47 56.851 56.883s-25.438 56.851-56.851 56.851-56.883-25.438-56.883-56.851 25.47-56.883 56.883-56.883z" fill="url(#g)"/>
+  <path d="m334.73 197.76c-31.409 0-56.861 25.479-56.861 56.888 0 16.564 7.0934 31.436 18.399 41.82-9.2516-10.104-14.905-23.542-14.905-38.326 0-31.409 25.452-56.888 56.861-56.888 14.66 0 28 5.5502 38.08 14.659 0.0471 0.0233 0.0896 0.0585 0.13649 0.0819-10.387-11.204-25.228-18.235-41.711-18.235z" fill="url(#f)"/>
+  <path transform="translate(199.89 941.21)" d="m175.31-726.41c9.8507 10.212 15.938 24.091 15.938 39.406 0 31.409-25.466 56.875-56.875 56.875-15.302 0-29.153-6.0735-39.375-15.906 10.342 10.715 24.807 17.406 40.875 17.406 31.409 0 56.875-25.466 56.875-56.875 0-16.078-6.7061-30.573-17.438-40.906z" fill="#4d4d4d"/>
+ </g>
+ <g transform="translate(-211.99 -146.31)">
+  <path d="m492.34 303.72c-23.329 0-43.623 12.922-54.156 32-6.9008 9.6527-10.938 21.242-10.938 33.719 0 23.837 14.684 44.436 36.062 54.406-2.3627-2.3788-4.5015-4.9506-6.4375-7.6562l0.4375 0.3125c-6.8155-9.9343-10.812-21.945-10.812-34.906 0-6.1664 0.91413-12.129 2.5938-17.75 8.4422-24.445 32.991-42.125 61.969-42.125 9.1318 0 17.802 1.7656 25.688 4.9375h0.0313c2.2733 1.1809 4.4664 2.4958 6.5625 3.9375-11.141-16.222-29.829-26.875-51-26.875z" fill="url(#e)"/>
+  <g transform="translate(170.46 121.97)" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+   <path d="m230.87 303.02 14.114 1.2598 20.24 11.686-14.114-1.2598z"/>
+   <path d="m265.78 337.68 14.534 7.486 20.24 11.686-14.534-7.486z"/>
+   <path d="m280.32 345.16 12.726-6.7739 20.24 11.686-12.726 6.7739z"/>
+   <path d="m293.04 338.39 27.497 4.3456 20.24 11.686-27.497-4.3456z" fill="#1a1a1a"/>
+   <path d="m330.56 353.53 15.648-2.5197 20.24 11.686-15.648 2.5197z" fill="#1a1a1a"/>
+   <path d="m346.21 351.01 5.6236-13.311 20.24 11.686-5.6236 13.311z" fill="#333"/>
+   <path d="m351.84 337.7 23.992-12.087 20.24 11.686-23.992 12.087z" fill="#1a1a1a"/>
+   <path d="m375.83 325.61 14.059 2.8849 20.24 11.686-14.059-2.8849z" fill="#333"/>
+   <path d="m389.89 328.49 11.448-11.302 20.24 11.686-11.448 11.302z" fill="#808080"/>
+   <path d="m401.33 317.19-2.611-14.187 20.24 11.686 2.6109 14.187z" fill="#999"/>
+   <path d="m398.72 303 13.438-26.84 20.24 11.686-13.438 26.84z" fill="#4d4d4d"/>
+   <path d="m412.16 276.16 13.384-5.715 20.24 11.686-13.384 5.715z" fill="#4d4d4d"/>
+   <path d="m425.55 270.45 2.1726-15.246 20.24 11.686-2.1728 15.246z" fill="#999"/>
+   <path d="m427.72 255.2-11.211-9.531 20.24 11.686 11.211 9.531z" fill="#b3b3b3"/>
+   <path d="m416.51 245.67-4.4917-27.132 20.24 11.686 4.4916 27.132z" fill="#808080"/>
+   <path d="m412.02 218.54 7.0297-12.452 20.24 11.686-7.0296 12.452z" fill="#999"/>
+   <path d="m419.05 206.09-7.3034-14.114 20.24 11.686 7.3035 14.114z" fill="#b3b3b3"/>
+   <path d="m397.41 190.31-20.304-19.865 20.24 11.686 20.304 19.865z" fill="#ccc"/>
+   <path d="m322.51 152.41-9.8414-10.791 20.24 11.686 9.8414 10.791z" fill="#808080"/>
+   <path d="m377.11 170.45-0.91293-14.68 20.24 11.686 0.9129 14.68z" fill="#b3b3b3"/>
+  </g>
+  <path d="m483.58 263.25-15.593 2.4101-5.7332 13.292-24.174 12.16-14.169-2.8483-11.357 11.174 2.7753 13.986-13.329 26.073-13.584 5.6602-2.4101 15.374 11.138 9.6771 4.3821 28.082-6.9383 12.854 7.1574 14.096 14.132 1.2416 18.989 19.208 1.8259 14.315 14.534 7.5225 12.708-6.7922 27.534 4.3456 10.006 10.846 15.666-2.5562 5.6237-13.329 23.992-12.16 14.059 2.9214 11.466-11.357-2.6292-14.242 13.438-26.95 13.402-5.7332 2.191-15.301-11.211-9.5675-4.5282-27.205 7.0478-12.489-7.3034-14.169-14.351-1.6798-20.304-19.938-0.91293-14.716-13.584-6.9018-12.671 7.8877-27.424-4.3821-9.8596-10.809zm8.7641 41.228c35.956 0 65.074 29.154 65.074 65.11s-29.117 65.074-65.074 65.074-65.11-29.117-65.11-65.074 29.154-65.11 65.11-65.11z" fill="url(#d)"/>
+  <path d="m484.02 268.56-14.813 2.2896-5.4465 12.628-22.966 11.552-13.46-2.7059-10.789 10.616 2.6366 13.287-12.662 24.77-12.905 5.3772-2.2896 14.605 10.581 9.1932 4.163 26.678-6.5914 12.211 6.7995 13.391 13.426 1.1795 18.04 18.248 1.7346 13.599 13.807 7.1464 12.073-6.4526 26.157 4.1283 9.5054 10.303 14.883-2.4284 5.3425-12.662 22.792-11.552 13.356 2.7753 10.893-10.789-2.4978-13.53 12.766-25.602 12.732-5.4465 2.0814-14.536-10.65-9.0891-4.3018-25.845 6.6955-11.864-6.9383-13.46-13.634-1.5958-19.288-18.941-0.86729-13.981-12.905-6.5567-12.038 7.4933-26.053-4.163-9.3667-10.269zm8.3259 39.167c34.159 0 61.82 27.696 61.82 61.855s-27.661 61.82-61.82 61.82-61.855-27.661-61.855-61.82 27.696-61.855 61.855-61.855z" fill="url(#c)"/>
+  <path d="m491.9 307.3c-34.154 0-61.831 27.707-61.831 61.861 0 18.012 7.7135 34.183 20.007 45.475-10.06-10.987-16.207-25.6-16.207-41.676 0-34.154 27.677-61.861 61.831-61.861 15.941 0 30.447 6.0353 41.409 15.94l0.14842 0.089c-11.295-12.184-27.433-19.829-45.357-19.829z" fill="url(#b)"/>
+  <path transform="translate(199.89 941.21)" d="m337.88-613.75c10.714 11.105 17.312 26.187 17.312 42.844 0 34.154-27.658 61.844-61.812 61.844-16.716 0-31.87-6.6585-43-17.438 11.217 11.4 26.806 18.5 44.062 18.5 34.154 0 61.812-27.689 61.812-61.844 0-17.198-7.039-32.709-18.375-43.906z" fill="#4d4d4d"/>
+ </g>
 </svg>
