@@ -8,8 +8,8 @@ $(document).keydown(function (e) {
     var left = $('.games-auto').offset().left;
     // var limitLeft = 25;
     // var limitRight = 775 - 25;
-    var limitLeft = 0;
-    var limitRight = 775;
+    var limitLeft = 25;
+    var limitRight = 775 + 25;
 
     var newPos = left
     var lastTwoRows = $('.board-field').slice(-62);
