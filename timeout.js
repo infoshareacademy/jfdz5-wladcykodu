@@ -36,5 +36,18 @@ function gameTimer(duration) {
             clearInterval(timerInterval);
         }
         currentTimer = timer;
+        //set information for user that game is speeding up
+        function speedInfo() {
+            if (currentTimer === 477 || currentTimer === 297 || currentTimer === 117 || currentTimer === 580) { //580 is for test only
+                gameInProgress.append('<div class="speed-up"></div>');
+                $('.speed-up')
+                    .delay(10000)
+                    .queue(function () {
+                        $(this).remove();
+                    });
+            }
+        }
+        speedInfo();
+
     }, 1000);
 }
