@@ -1232,12 +1232,17 @@ h3.carousel-caption__element {
     background-color: rgba(1, 230, 198, 0.42);
     color: #fff;
     border-radius: 1em;
-    font-size: 2.7rem;
+    font-size: 50px;
     min-height: 100px;
     cursor: pointer;
-    padding-right: 0.1em;
-    padding-left: 0.1em;
-    width: 2.2em;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 110px;
+    transition: all 1s ease;
+}
+
+.answer-box:hover {
+   background-color: #2e6da4;
 }
 
 .quiz {
@@ -1291,17 +1296,17 @@ h3.carousel-caption__element {
 
 .subtract-life-desc {
     color: #fff;
-    font-size: 2rem;
+    font-size: 45px;
     width: 100%;
-    height: 50%;
-    padding: 5%;
+    padding: 10px;
 }
 
 .result-desc {
     color: #fff;
-    font-size: 2rem;
+    font-size: 50px;
     width: 100%;
-    height: 50%;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .quiz-button {
@@ -1450,6 +1455,48 @@ h3.carousel-caption__element {
 /**********************/
 /* End of instruction */
 /**********************/
+
+/************************/
+/* Speed up information */
+/************************/
+
+@keyframes speedUP {
+    0% {
+        content: "Speed up!";
+        color: red;
+        font-size: 120px;
+    }
+    30% {
+        content: "1";
+        color: white;
+        font-size: 100px;
+    }
+    70% {
+        content: "2";
+        color: white;
+        font-size: 80px;
+    }
+    100% {
+        content: "3";
+        color: white;
+        font-size: 40px;
+    }
+}
+
+.speed-up {
+    position: absolute;
+
+}
+
+.speed-up:after {
+    content: "";
+    display: block;
+    animation: speedUP 5s linear reverse;
+}
+
+/*******************************/
+/* End of speed up information */
+/*******************************/
 
 /*****************/
 /* Bad elements */

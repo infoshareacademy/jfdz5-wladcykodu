@@ -24,6 +24,7 @@ function randomNum(min, max) {
 }
 
 var wrongResult2;
+//create quiz to win bonus life
 function quizForBonusLife() {
     var multiplicand = randomNum(5, 15);
     var multiplier = randomNum(5, 15);
@@ -63,7 +64,7 @@ function quizForBonusLife() {
     resultDesc = $('.result-desc');
 
     $('.answer-box').on('click', function (e) {
-
+        //if selected element is a good answer add bonus and points to score
         if (parseInt(e.target.innerHTML) === guessObj.goodAnswer) {
             resultField.removeClass('hidden').addClass("correct fade-down-quiz");
             resultDesc.html("Good Job! You win a bonus life!");
@@ -83,7 +84,7 @@ function quizForBonusLife() {
         quitQuiz();
     });
 }
-
+//quit from quiz (restart all intervals)
 function quitQuiz() {
     $('.quiz-button').on('click', function () {
         $('.quiz-board')
@@ -99,13 +100,13 @@ function quitQuiz() {
         startObstacles();
     });
 }
-
+//display timeout info
 function timeOutForQuiz() {
     resultField.removeClass('hidden').addClass("wrong fade-down-quiz");
     resultDesc.html("Too long... You lost :( Try next time...");
     quitQuiz();
 }
-
+//count down time to answer
 function countDownTime() {
     var seconds = 9,
         second = 0;

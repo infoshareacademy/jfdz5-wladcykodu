@@ -44,11 +44,11 @@ function createBonus() {
         fieldWidth = boardField.outerWidth(),
         fieldHeight = boardField.outerHeight(),
         // pick random color for div
-        color = '#' + Math.round(0xffffff * Math.random()).toString(16),
+        //color = '#' + Math.round(0xffffff * Math.random()).toString(16),
         $bonusDiv = $('<div id="good-elem"/>').css({
             'width': fieldWidth * 2,
-            'height': fieldHeight * 2,
-            'background-color': color
+            'height': fieldHeight * 2
+            //'background-color': color
         }),
         // random position of added divs
         posy = Math.floor((Math.random() * 19)) * (fieldHeight),
@@ -74,7 +74,7 @@ function createBonus() {
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 10}}));
     });
 }
-
+//subtract life when clicked on bonus item with class .subtract-life
 function subtractLife() {
     var $subtractLife = $('.subtract-life');
     $subtractLife.on('click', function () {
@@ -94,7 +94,7 @@ function subtractLife() {
         quitSub();
     });
 }
-
+//exit the window with information about loss of life
 function quitSub() {
     $('.quiz-button').on('click', function () {
         $('.subtract-life-box')
