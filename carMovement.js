@@ -37,14 +37,15 @@ function isValid(newPos, lastTwoRows) {
 
     var result = !obstacles.some(function (obj) {
         var childPos = $(obj).offset();
-        var parentPos = $(obj).parent().offset();
-        var childOffset = {
-            top: childPos.top - parentPos.top,
-            left: childPos.left - parentPos.left
-        }
-        console.log(childOffset.left, newPos)
+        // var parentPos = $(obj).parent().offset();
+        // var childOffset = {
+        //     top: childPos.top - parentPos.top,
+        //     left: childPos.left - parentPos.left
+        // }
+        // console.log(childOffset.left, newPos, (childOffset.left === newPos))
+        // console.log(childPos.left, newPos, (childPos.left === newPos))
         // return childOffset.left === newPos - 12
-        return childOffset.left === newPos
+        return childPos.left === newPos
     })
     return result
 }
