@@ -55,7 +55,7 @@ function setObstacles(release, restart) {
                         consoleMessage += 'Left ';
                     }
                     if ( consoleMessage.length > 0 ) {
-                        console.log(consoleMessage);
+                        // console.log(consoleMessage);
                     }
                 }
 
