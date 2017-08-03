@@ -4,12 +4,14 @@
 
 $(document).keydown(function (e) {
     var move = $('.board-field').outerWidth();
+    var car = $('.games-auto');
+    var board = car.parent();
     // var left = parseInt($('.games-auto').css('left'));
-    var left = $('.games-auto').offset().left;
+    var left = car.offset().left;
     // var limitLeft = 25;
     // var limitRight = 775 - 25;
-    var limitLeft = 25;
-    var limitRight = 775 + 25;
+    var limitLeft = board.offset().left - car.width();
+    var limitRight = limitLeft + board.width() + car.width();
 
     var newPos = left
     var lastTwoRows = $('.board-field').slice(-62);
@@ -24,7 +26,7 @@ $(document).keydown(function (e) {
 
         if (isValid(newPos, lastTwoRows)) {
             // $('.games-auto').css('left', newPos);
-            $('.games-auto').offset({left: newPos});
+            car.offset({left: newPos});
         }
     }
 });
