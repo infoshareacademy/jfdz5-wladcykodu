@@ -4,9 +4,12 @@
 
 $(document).keydown(function (e) {
     var move = $('.board-field').outerWidth();
-    var left = parseInt($('.games-auto').css('left'));
+    // var left = parseInt($('.games-auto').css('left'));
+    var left = $('.games-auto').offset().left;
+    // var limitLeft = 25;
+    // var limitRight = 775 - 25;
     var limitLeft = 25;
-    var limitRight = 775 - 25;
+    var limitRight = 775 + 25;
 
     var newPos = left
     var lastTwoRows = $('.board-field').slice(-62);
@@ -20,7 +23,8 @@ $(document).keydown(function (e) {
     if (newPos < limitRight && newPos > limitLeft) {
 
         if (isValid(newPos, lastTwoRows)) {
-            $('.games-auto').css('left', newPos);
+            // $('.games-auto').css('left', newPos);
+            $('.games-auto').offset({left: newPos});
         }
     }
 });
@@ -39,7 +43,8 @@ function isValid(newPos, lastTwoRows) {
             left: childPos.left - parentPos.left
         }
         console.log(childOffset.left, newPos)
-        return childOffset.left === newPos - 12
+        // return childOffset.left === newPos - 12
+        return childOffset.left === newPos
     })
     return result
 }
