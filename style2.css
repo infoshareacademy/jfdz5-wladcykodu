@@ -1050,6 +1050,7 @@ h3.carousel-caption__element {
 .game-board {
     height: 625px;
     width: 775px;
+    z-index: 999;
     margin: auto;
     position: relative;
     top: 0;
@@ -1148,6 +1149,18 @@ h3.carousel-caption__element {
     transform: translateX(-50%);
 }
 
+.game-end-board {
+    height: 625px;
+    width: 775px;
+    z-index: 1000;
+    margin: auto;
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /*****************/
 /* Good elements */
 /*****************/
