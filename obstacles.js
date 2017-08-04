@@ -20,6 +20,7 @@ function setObstacles(release, restart) {
 
         if ($lives.length === 0) {
             console.log('GAME OVER');
+            endGame();
         }
 
         restart = false;

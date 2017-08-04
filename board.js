@@ -79,6 +79,8 @@ $('.instruction-button').click(function showInstruction() {
         'display': 'flex'
     }).appendTo($gameboard);
 });
+
+
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {
     $('.game-frame').remove();
