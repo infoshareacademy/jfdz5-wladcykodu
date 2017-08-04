@@ -23,7 +23,7 @@ function createBonus() {
     var index = Math.floor(Math.random() * tmpArray.length);
     var bonusItemClass = tmpArray[index];
     tmpArray.splice(index, 1);
-    console.log('current bonus: ', index, tmpArray, bonusItemClass);
+    //console.log('current bonus: ', index, tmpArray, bonusItemClass);
 
     function buildBonus() {
         if (bonusItemClass.length !== 2) {
@@ -34,7 +34,6 @@ function createBonus() {
 
         bonusItem.src = bonusItemClass[0];
         bonusItem.className = bonusItemClass[1];
-        console.log(bonusItem);
         document.getElementById('good-elem').appendChild(bonusItem);
         quizLife();
         subtractLife();
@@ -104,8 +103,6 @@ function quitSub() {
             .queue(function () {
                 $(this).remove();
             });
-        gameTimer(gameTime);
-        startBonus();
-        startObstacles();
+        restartIntervals();
     });
 }

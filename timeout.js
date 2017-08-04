@@ -5,7 +5,6 @@ function stopGameAfterTime() {
         clearInterval(bonus);
         clearInterval(obstaclesInterval);
         clearInterval(timerInterval);
-        console.log('clear interval bonus and obstaclesInterval');
     }, 600000); // 10 minutes
 }
 
@@ -26,7 +25,7 @@ function gameTimer(duration) {
         seconds = seconds < 10 ? '0' + seconds : seconds;
 
         timerDisplay.text(minutes + ":" + seconds);
-        console.log(minutes + ":" + seconds);
+        //console.log(minutes + ":" + seconds);
 
         if (--timer < 0) {
             timer = duration;
@@ -37,7 +36,7 @@ function gameTimer(duration) {
         currentTimer = timer;
         //set information for user that game is speeding up
         function speedInfo() {
-            if (currentTimer === 477 || currentTimer === 297 || currentTimer === 117 || currentTimer === 580) { //580 is for test only
+            if (currentTimer === 477 || currentTimer === 297 || currentTimer === 117) {
                 gameInProgress.append('<div class="speed-up"></div>');
                 $('.speed-up')
                     .delay(10000)

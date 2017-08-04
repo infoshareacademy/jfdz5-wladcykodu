@@ -95,9 +95,7 @@ function quitQuiz() {
                 $(this).remove();
             });
         //restart intervals
-        gameTimer(gameTime);
-        startBonus();
-        startObstacles();
+        restartIntervals();
     });
 }
 //display timeout info

@@ -97,3 +97,9 @@ function startObstacles() {
         restart = setObstacles(release, restart);
     }, 300);
 }
+
+function restartIntervals() {
+    gameTimer(gameTime);
+    startBonus();
+    startObstacles();
+}
