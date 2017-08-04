@@ -2,7 +2,7 @@
  * GAME BOARD
  */
 var bonus,
-    score,
+    score = 0,
     currentTimer,
     obstaclesFrequency = 300,
     obstaclesInterval,
@@ -54,10 +54,12 @@ $('.start-game-button').click(function showBoard() {
             } else if (e.detail.action === "subtract") {
                 if (score >= 0) {
                     scoreEl.innerHTML = score - e.detail.value;
+                    console.log('oedejmij: ', score)
                 }
             }
             if (score < 0) {
                 scoreEl.innerHTML = 0;
+                console.log('zeruj: ', score)
             }
             score = parseInt(scoreEl.innerHTML);
         }, false);

@@ -16,13 +16,15 @@ function setObstacles(release, restart) {
         if ($lives.length > 0) {
             $lives[0].remove();
             var $lives = $('.result-container-element span');
-            document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 100 }}));
         }
 
         if ($lives.length === 0) {
             console.log('GAME OVER');
+            console.log('SCORE: ', score);
             clear();
             endGame();
+        } else {
+            document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: (score > 100 ? 100 : score)}}));
         }
 
         restart = false;
