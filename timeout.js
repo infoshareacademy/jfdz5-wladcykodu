@@ -1,14 +1,4 @@
 
-// stop game when time is over
-function stopGameAfterTime() {
-    setTimeout(function () {
-        clearInterval(bonus);
-        clearInterval(obstaclesInterval);
-        clearInterval(timerInterval);
-    }, 600000); // 10 minutes
-}
-
-
 //game timer for game
 function gameTimer(duration) {
     if (currentTimer !== undefined) {
@@ -30,8 +20,9 @@ function gameTimer(duration) {
         if (--timer < 0) {
             timer = duration;
         }
+        // stop game when time is over
         if (parseInt(minutes) === 0 && parseInt(seconds) === 0) {
-            clearInterval(timerInterval);
+            clear();
         }
         currentTimer = timer;
         //set information for user that game is speeding up

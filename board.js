@@ -58,7 +58,7 @@ $('.start-game-button').click(function showBoard() {
             if (score < 0) {
                 scoreEl.innerHTML = 0;
             }
-
+            score = parseInt(scoreEl.innerHTML);
         }, false);
 
         // setting obstacles
@@ -70,7 +70,6 @@ $('.start-game-button').click(function showBoard() {
             timerDisplay = $('#timer');
             gameTimer(gameTime);
         });
-        stopGameAfterTime();
     });
 });
 /*show instruction*/
@@ -81,13 +80,6 @@ $('.instruction-button').click(function showInstruction() {
         'display': 'flex'
     }).appendTo($gameboard);
 });
-
-/*clear intervals*/
-function clear() {
-    clearInterval(bonus);
-    clearInterval(obstaclesInterval);
-    clearInterval(timerInterval);
-}
 
 /*end-game board & ranking*/
 function endGame() {
@@ -118,8 +110,16 @@ function startObstacles() {
     }, 300);
 }
 
+//restart intervals
 function restartIntervals() {
     gameTimer(gameTime);
     startBonus();
     startObstacles();
+}
+
+//clear intervals
+function clear() {
+    clearInterval(bonus);
+    clearInterval(obstaclesInterval);
+    clearInterval(timerInterval);
 }

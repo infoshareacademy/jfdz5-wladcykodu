@@ -82,9 +82,7 @@ function subtractLife() {
         var subDesc = $('.subtract-life-desc');
         subDesc.html("Oops... You lost one life :(");
 
-        clearInterval(bonus);
-        clearInterval(obstaclesInterval);
-        clearInterval(timerInterval);
+        clear();
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 50}}));
         var $lives = $('.result-container-element span');
         if ($lives.length > 0) {

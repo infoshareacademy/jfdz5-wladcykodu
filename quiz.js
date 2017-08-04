@@ -11,9 +11,7 @@ function quizLife() {
 
         gameInProgress.append('<div class="quiz-board higher-z-index fade-in-quiz"><div class="count-down" id="count-down"></div><div class="quiz"><div><div class="question">Result of <span class="quiz-text" id="multiplicand">1</span> * <span class="quiz-text" id="multiplier">1</span> is: </div><div class="answers"><div class="option"><div class="answer-box" id="answer-1">1</div></div><div class="option"><div class="answer-box" id="answer-2">1</div></div><div class="option"><div class="answer-box" id="answer-3">1</div></div></div></div><div class="result-field hidden" id="result-field"><span class="result-desc" id="result-desc"></span><a href="#" class="quiz-button">ok</a></div></div></div>');
         countDownTime();
-        clearInterval(bonus);
-        clearInterval(obstaclesInterval);
-        clearInterval(timerInterval);
+        clear();
         quizForBonusLife();
         timeExpired = setTimeout(timeOutForQuiz, 10000);
     });
