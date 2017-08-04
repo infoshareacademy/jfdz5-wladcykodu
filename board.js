@@ -2,6 +2,8 @@
  * GAME BOARD
  */
 var bonus,
+    score,
+    currentTimer,
     obstaclesInterval,
     releaseCounter = 0,
     release = true,
@@ -44,7 +46,7 @@ $('.start-game-button').click(function showBoard() {
         // score - add and substract function
         document.addEventListener("score", function (e) {
             var scoreEl = document.getElementById('score');
-            var score = parseInt(scoreEl.innerHTML);
+            score = parseInt(scoreEl.innerHTML);
 
             if (e.detail.action === "add") {
                 scoreEl.innerHTML = score + e.detail.value;
