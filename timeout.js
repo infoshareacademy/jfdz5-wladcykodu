@@ -38,5 +38,26 @@ function gameTimer(duration) {
         }
         speedInfo();
 
+        function speedObstacles() {
+            var timeFactor  = [480, 300, 120];
+            var speedFactor = [200, 100, 70];
+            if (currentTimer === timeFactor[0] || currentTimer === timeFactor[1] || currentTimer === timeFactor[2]) {
+                switch (currentTimer) {
+                    case timeFactor[0]:
+                        obstaclesFrequency = speedFactor[0];
+                        break;
+                    case timeFactor[1]:
+                        obstaclesFrequency = speedFactor[1];
+                        break;
+                    case timeFactor[2]:
+                        obstaclesFrequency = speedFactor[2];
+                        break;
+                }
+                clearInterval(obstaclesInterval);
+                startObstacles();
+            }
+        }
+        speedObstacles();
+
     }, 1000);
 }

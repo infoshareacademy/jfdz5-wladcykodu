@@ -4,6 +4,7 @@
 var bonus,
     score,
     currentTimer,
+    obstaclesFrequency = 300,
     obstaclesInterval,
     releaseCounter = 0,
     release = true,
@@ -107,7 +108,7 @@ function startObstacles() {
         releaseCounter = releaseCounter < 3 ? releaseCounter + 1 : 1;
         release = releaseCounter === 1;
         restart = setObstacles(release, restart);
-    }, 300);
+    }, obstaclesFrequency);
 }
 
 //restart intervals

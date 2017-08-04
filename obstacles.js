@@ -16,6 +16,7 @@ function setObstacles(release, restart) {
         if ($lives.length > 0) {
             $lives[0].remove();
             var $lives = $('.result-container-element span');
+            document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 100 }}));
         }
 
         if ($lives.length === 0) {
