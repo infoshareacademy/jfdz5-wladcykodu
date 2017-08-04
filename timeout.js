@@ -1,4 +1,3 @@
-var currentTimer;
 
 // stop game when time is over
 function stopGameAfterTime() {
