@@ -82,6 +82,24 @@ $('.instruction-button').click(function showInstruction() {
     }).appendTo($gameboard);
 });
 
+/*clear intervals*/
+function clear() {
+    clearInterval(bonus);
+    clearInterval(obstaclesInterval);
+    clearInterval(timerInterval);
+}
+
+/*end-game board & ranking*/
+function endGame() {
+    $(".result-container").remove();
+    console.log("remove");
+    $(".game-in-progress").remove();
+    $('.game-board').append('<div class="game-end-board"></div>');
+    $('.game-end-board')
+        .append('<div class="thanks-for-games">Koniec gry! Dziękujemy!</div>')
+        .append('<div class="score-count">Twój wynik to <span><script>score</script></span></div>')
+        .append('<div class="ranking">Ranking</div>');
+}
 
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {
