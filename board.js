@@ -39,7 +39,7 @@ showBoard = function showBoard() {
             localStorage.setItem('gameResult', JSON.stringify(allLogins));
             readedValue = localStorage.getItem('gameResult');
             readedObject = JSON.parse(readedValue);
-            if (readedObject.length = 11) {
+            if (readedObject.length > 10) {
                 readedObject.shift();
                 localStorage.setItem('gameResult', JSON.stringify(readedObject));
             }
@@ -133,9 +133,9 @@ function endGame() {
         .append('<div class="score-count"></div>').text('Twój wynik to ' + score)
         .append('<div class="ranking">Ranking</div>')
         .append('<button class="btn btn-danger play-again-button higher-z-index">Zagraj ponownie!</button>');
-    $('.ranking').append('<table>');
-    $('table').append($('<tr>'));
-    $('tr')
+    $('.ranking').append($('<table>').addClass('rank-table'));
+    $('table.rank-table').append($('<tr>'));
+    $('table.rank-table tr')
         .append('<th>Name</th>')
         .append('<th>Date</th>')
         .append('<th>Score</th>');
@@ -149,12 +149,12 @@ function endGame() {
 
     function addToTable() {
         for (i = 0; i < readedObject.length; i++) {
-            $('table').html('<tr></tr>');
+            $('table.rank-table').append('<tr></tr>');
             console.log('create  tr');
-            $('tr')
-                .append($('td').text(allLogins[i].name))
-                .append($('td').text(allLogins[i].date))
-                .append($('td').text(allLogins[i].score));
+            $('table.rank-table tr:last-child')
+                .append($('<td>').text(allLogins[i].name))
+                .append($('<td>').text(allLogins[i].date))
+                .append($('<td>').text(allLogins[i].score));
         }
     }
 
