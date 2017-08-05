@@ -11,22 +11,50 @@ var bonus,
     gameTime = 60 * 10,
     timerDisplay,
     gameInProgress,
-    $gameboard = $('.game-board');
+    $gameboard = $('.game-board'),
+    userLogin,
+    readedValue,
+    readedObject,
+    allLogins,
+    showBoard;
 
-document.getElementById('game-frame').style.display = "flex";
-/*show game*/
-$('.start-game-button').click(function showBoard() {
+/*show game board after click start-game-button*/
+showBoard = function showBoard() {
     $gameboard.html('<div class="login-board"></div>');
     $('.login-board')
         .append($('<img class="start-game-boom" src="game-images/start-game-boom.svg" />'))
         .append($('<input type="text" class="user-login higher-z-index">'))
         .append($('<input type="button" value="Zapisz!" class="btn btn-danger send-login-button higher-z-index">'));
     $('.send-login-button').click(function sendLoginAndStartGame() {
-        var userLogin = $('.user-login').val();
-        var rankValue = {
-            name: userLogin
-        };
-        localStorage.setItem('gameResult', JSON.stringify(rankValue));
+        if (localStorage.hasOwnProperty('gameResult')) {
+            userLogin = $('.user-login').val();
+            readedValue = localStorage.getItem('gameResult');
+            readedObject = JSON.parse(readedValue);
+            allLogins = readedObject;
+            actuallyUser = {
+                name: userLogin
+            };
+            allLogins.push(actuallyUser);
+            localStorage.setItem('gameResult', JSON.stringify(allLogins));
+            readedValue = localStorage.getItem('gameResult');
+            readedObject = JSON.parse(readedValue);
+            if (readedObject.length = 11) {
+                readedObject.shift();
+                localStorage.setItem('gameResult', JSON.stringify(readedObject));
+            }
+/*            localStorage.setItem('gameResult', JSON.stringify(readedObject));*/
+        } else {
+            userLogin = $('.user-login').val();
+            allLogins = [];
+            actuallyUser = {
+                name: userLogin
+            };
+
+            allLogins.push(actuallyUser);
+            localStorage.setItem('gameResult', JSON.stringify(allLogins));
+        }
+        console.log(localStorage.getItem('gameResult'));
+
         $('.game-board').prepend('<div class="result-container"></div>');
         $('.result-container')
             .append('<div class="result-container-element">score: <div id="score">0</div></div>')
@@ -71,7 +99,11 @@ $('.start-game-button').click(function showBoard() {
             gameTimer(gameTime);
         });
     });
-});
+}
+
+document.getElementById('game-frame').style.display = "flex";
+/*show game*/
+$('.start-game-button').click(showBoard);
 /*show instruction*/
 $('.instruction-button').click(function showInstruction() {
     $gameboard.html('<div class="game-instruction"></div>');
@@ -80,18 +112,60 @@ $('.instruction-button').click(function showInstruction() {
         'display': 'flex'
     }).appendTo($gameboard);
 });
+/*instructions play button*/
+
 
 /*end-game board & ranking*/
 function endGame() {
+    readedValue = localStorage.getItem('gameResult');
+    readedObject = JSON.parse(readedValue);
+    var date = new Date;
+    actuallyUser.date = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    actuallyUser.score = score;
+    localStorage.setItem('gameResult', JSON.stringify(allLogins));
+
     $(".result-container").remove();
-    console.log("remove");
     $(".game-in-progress").remove();
     $('.game-board').append('<div class="game-end-board"></div>');
     $('.game-end-board')
         .append('<div class="thanks-for-games">Koniec gry! Dziękujemy!</div>')
-        .append('<div class="score-count">Twój wynik to <span><script>score</script></span></div>')
-        .append('<div class="ranking">Ranking</div>');
+        .append('<div class="score-count"></div>').text('Twój wynik to ' + score)
+        .append('<div class="ranking">Ranking</div>')
+        .append('<button class="btn btn-danger play-again-button higher-z-index">Zagraj ponownie!</button>');
+    $('.ranking').append('<table>');
+    $('table').append($('<tr>'));
+    $('tr')
+        .append('<th>Name</th>')
+        .append('<th>Date</th>')
+        .append('<th>Score</th>');
+
+    readedValue = localStorage.getItem('gameResult');
+    console.log(readedValue);
+    readedObject = JSON.parse(readedValue);
+    console.log(readedObject);
+    allLogins = readedObject;
+    console.log(allLogins);
+
+    function addToTable() {
+        for (i = 0; i < readedObject.length; i++) {
+            $('table').html('<tr></tr>');
+            console.log('create  tr');
+            $('tr')
+                .append($('td').text(allLogins[i].name))
+                .append($('td').text(allLogins[i].date))
+                .append($('td').text(allLogins[i].score));
+        }
+    }
+
+    addToTable();
+
 }
+
+/*play again button*/
+$('.play-again-button').click(function () {
+    $('.game-end-board').remove();
+    showBoard;
+});
 
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {
