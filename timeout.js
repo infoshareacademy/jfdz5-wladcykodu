@@ -23,11 +23,12 @@ function gameTimer(duration) {
         // stop game when time is over
         if (parseInt(minutes) === 0 && parseInt(seconds) === 0) {
             clear();
+            endGame();
         }
         currentTimer = timer;
         //set information for user that game is speeding up
         function speedInfo() {
-            if (currentTimer === 477 || currentTimer === 297 || currentTimer === 117) {
+            if (currentTimer === 485 || currentTimer === 305 || currentTimer === 125) {
                 gameInProgress.append('<div class="speed-up"></div>');
                 $('.speed-up')
                     .delay(10000)
@@ -37,6 +38,27 @@ function gameTimer(duration) {
             }
         }
         speedInfo();
+
+        function speedObstacles() {
+            var timeFactor  = [480, 300, 120];
+            var speedFactor = [200, 100, 70];
+            if (currentTimer === timeFactor[0] || currentTimer === timeFactor[1] || currentTimer === timeFactor[2]) {
+                switch (currentTimer) {
+                    case timeFactor[0]:
+                        obstaclesFrequency = speedFactor[0];
+                        break;
+                    case timeFactor[1]:
+                        obstaclesFrequency = speedFactor[1];
+                        break;
+                    case timeFactor[2]:
+                        obstaclesFrequency = speedFactor[2];
+                        break;
+                }
+                clearInterval(obstaclesInterval);
+                startObstacles();
+            }
+        }
+        speedObstacles();
 
     }, 1000);
 }

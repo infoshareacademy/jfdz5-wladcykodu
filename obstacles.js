@@ -20,8 +20,11 @@ function setObstacles(release, restart) {
 
         if ($lives.length === 0) {
             console.log('GAME OVER');
+            console.log('SCORE: ', score);
             clear();
             endGame();
+        } else {
+            document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: (score > 100 ? 100 : score)}}));
         }
 
         restart = false;

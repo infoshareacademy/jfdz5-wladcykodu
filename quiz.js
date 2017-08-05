@@ -2,7 +2,13 @@ var countDownInterval,
     countDownQuiz,
     timeExpired,
     resultField,
-    resultDesc;
+    resultDesc,
+    multiplicand,
+    multiplier,
+    correctResult,
+    wrongResult1,
+    wrongResult2,
+    answersArr;
 
 function quizLife() {
     //add event to selected item from array of bonusItems
@@ -21,25 +27,28 @@ function randomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-var wrongResult2;
 //create quiz to win bonus life
 function quizForBonusLife() {
-    var multiplicand = randomNum(5, 15);
-    var multiplier = randomNum(5, 15);
-    var correctResult = multiplicand * multiplier;
-    var wrongResult1 = correctResult + randomNum(1, 12);
-
-    function wrongRes2() {
-        if (correctResult > 30) {
-            wrongResult2 = correctResult - randomNum(1, 12);
-        }
-        else {
-            wrongResult2 = correctResult + randomNum(12, 20);
-        }
+    if (currentTimer <= 480) {
+        multiplicand = randomNum(10, 20);
+        multiplier = randomNum(10, 20);
+        correctResult = multiplicand * multiplier;
+        wrongResult1 = correctResult + randomNum(1, 12);
     }
-
+    else if (currentTimer <= 300) {
+        multiplicand = randomNum(15, 30);
+        multiplier = randomNum(15, 30);
+        correctResult = multiplicand * multiplier;
+        wrongResult1 = correctResult + randomNum(1, 12);
+    }
+    else {
+        multiplicand = randomNum(5, 15);
+        multiplier = randomNum(5, 15);
+        correctResult = multiplicand * multiplier;
+        wrongResult1 = correctResult + randomNum(1, 12);
+    }
     wrongRes2();
-    var answersArr = [wrongResult1, wrongResult2, correctResult];
+    answersArr = [wrongResult1, wrongResult2, correctResult];
 
     answersArr.sort(function () {
         return 0.5 - Math.random();
@@ -116,4 +125,12 @@ function countDownTime() {
         }
         second++;
     }, 1000);
+}
+function wrongRes2() {
+    if (correctResult > 30) {
+        wrongResult2 = correctResult - randomNum(1, 12);
+    }
+    else {
+        wrongResult2 = correctResult + randomNum(12, 20);
+    }
 }

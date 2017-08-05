@@ -70,7 +70,7 @@ function createBonus() {
     // click event for divs - make them disapear and add score
     $bonusDiv.on('click', function () {
         $(this).css('visibility', 'hidden');
-        document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 10}}));
+        document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 20}}));
     });
 }
 //subtract life when clicked on bonus item with class .subtract-life
