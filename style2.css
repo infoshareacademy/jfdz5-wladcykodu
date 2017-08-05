@@ -1010,21 +1010,27 @@ h3.carousel-caption__element {
 .game-frame {
     /*    display: none;*/
     position: fixed;
-    height: 95vh;
-    width: 97vw;
-    background: white;
+    height: 100vh;
+    width: 100vw;
     z-index: 1000;
-    bottom: 2.5vh;
-    right: 2.5vw;
+    bottom: 0;
+    right: 0;
     text-align: center;
     background: url('game-images/grass-background.png');
     background-repeat: repeat;
+}
+.escape-game-button-container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .escape-game-button {
     width: 30px;
     height: 30px;
-    background: transparent;
+    background: white;
+    border: 1px solid black;
+    border-radius: 100%;
     position: relative;
     float: right;
     margin-top: 10px;
@@ -1033,18 +1039,29 @@ h3.carousel-caption__element {
 
 .escape-game-line {
     position: absolute;
-    width: 100%;
+    width: 20px;
 
 }
 
 .escape-game-button .line1 {
-    border-top: 4px solid black;
-    transform: rotate(45deg) translateX(-10px) translateY(8px);
+    border-top: 3px solid black;
+/*    transform: rotate(45deg) translateX(-10px) translateY(8px);*/
+    transform: rotate(45deg);
+    left:4px;
+    top: 13px;
 }
 
 .escape-game-button .line2 {
-    border-top: 4px solid black;
-    transform: rotate(-45deg) translateX(-8px) translateY(-10px);
+    border-top: 3px solid black;
+/*    transform: rotate(-45deg) translateX(-8px) translateY(-10px);*/
+    transform:rotate(-45deg);
+    left:4px;
+    top: 13px;
+}
+.start-game-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .game-board {
