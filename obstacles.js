@@ -9,6 +9,7 @@ function setObstacles(release, restart) {
 
     if ( restart ) {
         sleep(1000);
+        removeBoom();
         $('.board-field--obstacle').each(function () {
             this.classList.remove('board-field--obstacle', 'board-field--collision')
         });
@@ -55,7 +56,6 @@ function setObstacles(release, restart) {
                         consoleMessage += 'Bottom ';
                         $boardFileds[nextCellIndex].classList.add('board-field--collision');
                         gameInProgress.append($collisionSound);
-
                         restart = true;
                     }
 
@@ -73,6 +73,9 @@ function setObstacles(release, restart) {
         }
     }
 
+    if (restart) {
+        showBoom(gameInProgress);
+    }
     if ( release ) {
         var randomCellIndex = Math.floor(rowSize * Math.random());
         $boardFileds[randomCellIndex].classList.add('board-field--obstacle');

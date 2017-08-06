@@ -1703,6 +1703,21 @@ audio {
     border-radius: 25%;
 }
 
+.boom {
+    z-index: 1000;
+    height: 150px;
+    width: 75px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    background-image: url("game-images/start-game-boom.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 /***********************/
 /* End of Bad elements */
 /***********************/

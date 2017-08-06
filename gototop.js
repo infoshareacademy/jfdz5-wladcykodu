@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     // scroll body to 0px on click
-    $('#go-to-top, .logo').click(function () {
+    $('#go-to-top, .navbar-brand').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
