@@ -371,7 +371,7 @@
         <div class="row">
             <div class="col-md-6 col-lg-3 person members slide-in-left">
                 <div class="person__img hover__effect">
-                    <img class="img-responsive img-circle" src="photo2.jpeg">
+                    <img class="img-responsive img-circle" src="ola.jpg">
                     <div class="second-side">
                         <h2>Contact me</h2>
                         <a href="#"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
@@ -390,11 +390,7 @@
                     </h3>
                 </div>
                 <p class="person__bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat.
+                    Po 7 latach pracy w korporacji ubezpieczeniowej postanowiła zmienić swoje życie i zostać front-end developerem. Prywatnie właścicielka dwójki kotów i miłośniczka robienia na drutch.
                 </p>
 
             </div>
@@ -566,16 +562,19 @@
 
 <!-- Game board -->
 <div id="game-frame" class="game-frame">
-    <button class="escape-game-button">
-        <span class="escape-game-line line1"></span>
-        <span class="escape-game-line line2"></span>
-    </button>
+    <div class="escape-game-button-container">
+        <button class="escape-game-button">
+            <span class="escape-game-line line1"></span>
+            <span class="escape-game-line line2"></span>
+        </button>
+    </div>
     <div id="game-board" class="game-board">
-        <h3 class="start-game-title higher-z-index">auto parts game</h3>
-        <img class="start-game-boom" src="game-images/start-game-boom.svg"/>
-        <img class="start-game-auto higher-z-index" src="game-images/start-game-auto.png"/>
-        <button class="btn btn-danger start-game-button higher-z-index">GRAJ</button>
-        <button class="btn btn-danger instruction-button higher-z-index">INSTRUKCJA</button>
+        <div class="start-game-frame">
+            <h3 class="start-game-title higher-z-index">auto parts game</h3>
+            <img class="start-game-auto higher-z-index" src="game-images/start-game-auto.png"/>
+            <button class="btn btn-danger start-game-button higher-z-index" data-lang="Play!">Graj!</button>
+            <button class="btn btn-danger instruction-button higher-z-index" data-lang="Instruction">Instrukcja</button>
+        </div>
     </div>
 </div>
 <!-- Game board end-->
@@ -615,7 +614,7 @@
     </div>
 
     <h4 class="instruction-object"><span data-lang="Good luck!">Powodzenia!</span><img src="parts_game/goodLuck.svg" alt="instruction item" class="img-inline"></h4>
-
+    <button class="btn btn-danger start-game-button higher-z-index" data-lang="Play!">Zagraj!</button>
 </div>
 <!--Game instruction end-->
 
