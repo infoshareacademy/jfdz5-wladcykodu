@@ -1316,12 +1316,14 @@ h3.carousel-caption__element {
 .btn-danger:focus {
     box-shadow: 2px 4px 1px 0 #ff4845;
     background-color: #ff0f1e;
-    border-radius: 1.3em;
+    border-radius: 1.3em !important;
+    border:none !important;
     cursor: pointer;
     color: #fff;
     font-size: 1.1em;
     padding: 0.5em 1.5em;
 }
+
 
 /*****************/
 /* Good elements */

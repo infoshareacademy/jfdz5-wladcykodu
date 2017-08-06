@@ -108,7 +108,7 @@ showBoard = function showBoard() {
     });
 };
 
-document.getElementById('game-frame').style.display = "flex";
+document.getElementById('game-frame').style.display = "none";
 /*show game*/
 $('.start-game-button').click(showBoard);
 
