@@ -9,7 +9,7 @@ var bonus,
     releaseCounter = 0,
     release = true,
     restart = false,
-    gameTime = 60 * 10,
+    gameTime = 60 * 5,
     timerDisplay,
     gameInProgress,
     $gameEndBoard,
@@ -50,9 +50,9 @@ $('.start-game-button').click(function showBoard() {
         gameInProgress.append($('<img class="games-auto" src="car.svg">'));
 
         //music for game - background theme and welcome message
-        $welcomeMusic = $('<embed src="music/welcome.ogg" autostart="true" loop="false" width="0" height="0">');
-        $musicForGame = $('<embed src="music/theme.ogg" autostart="true" loop="true" width="0" height="0">');
+        $welcomeMusic = $('<audio autoplay><source src="music/welcome.ogg" type="audio/ogg"/></audio>');
         gameInProgress.append($welcomeMusic).delay(3000).queue(function (next) {
+            $musicForGame = $('<audio autoplay loop><source src="music/theme.ogg" type="audio/ogg"/></audio>');
             $(this).append($musicForGame);
             next();
         });

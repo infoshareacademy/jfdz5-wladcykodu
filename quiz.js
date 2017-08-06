@@ -30,15 +30,15 @@ function randomNum(min, max) {
 
 //create quiz to win bonus life
 function quizForBonusLife() {
-    if (currentTimer <= 480) {
+    if (currentTimer <= 240) {
         multiplicand = randomNum(10, 20);
         multiplier = randomNum(10, 20);
         correctResult = multiplicand * multiplier;
         wrongResult1 = correctResult + randomNum(1, 12);
     }
-    else if (currentTimer <= 300) {
-        multiplicand = randomNum(15, 30);
-        multiplier = randomNum(15, 30);
+    else if (currentTimer <= 150) {
+        multiplicand = randomNum(15, 25);
+        multiplier = randomNum(15, 25);
         correctResult = multiplicand * multiplier;
         wrongResult1 = correctResult + randomNum(1, 12);
     }

@@ -16,7 +16,7 @@ function setObstacles(release, restart) {
         var $lives = $('.result-container-element span');
         if ($lives.length > 0) {
             $lives[0].remove();
-            var $lives = $('.result-container-element span');
+            $lives = $('.result-container-element span');
         }
 
         if ($lives.length === 0) {

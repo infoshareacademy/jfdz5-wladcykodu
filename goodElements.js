@@ -88,9 +88,15 @@ function subtractLife() {
         var $lives = $('.result-container-element span');
         if ($lives.length > 0) {
             $lives[0].remove();
+            $lives = $('.result-container-element span');
         }
+    if ($lives.length === 0) {
+        clear();
+        endGame();
+    }
         quitSub();
     });
+
     musicIfCollectedItem();
 }
 //exit the window with information about loss of life
