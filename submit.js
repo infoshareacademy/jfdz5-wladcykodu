@@ -14,7 +14,7 @@ document.getElementById('gameStartBtn').addEventListener('click', function (even
     document.getElementById('submit-message').style.display = 'none';
     $('#enrollmentForm input').removeAttr('disabled');
     //Here add the code to run the game
-    document.getElementById('game-frame').style.display = "block";
+    document.getElementById('game-frame').style.display = "flex";
 });
 
 document.getElementById('submitMessageCloseBtn').addEventListener('click', function (event) {

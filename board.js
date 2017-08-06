@@ -38,8 +38,11 @@ showBoard = function showBoard() {
     $('.send-login-button').click(function sendLoginAndStartGame() {
         if (localStorage.hasOwnProperty('gameResult')) {
             temporaryUserLogin = $('.user-login').val();
-            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val : 'login';
+            console.log(temporaryUserLogin);
+            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val() : 'login';
+            console.log(userLogin);
             readedValue = localStorage.getItem('gameResult');
+            console.log(readedValue);
             readedObject = JSON.parse(readedValue);
             allLogins = readedObject;
             actuallyUser = {
