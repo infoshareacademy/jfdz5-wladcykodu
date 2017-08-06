@@ -158,14 +158,16 @@ function endGame() {
     $(".game-in-progress").remove();
     $('.game-board').append('<div class="game-end-board"></div>');
     $gameEndBoard = $('.game-end-board');
-    $musicForGame.remove();
-    $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
-    $gameEndBoard.append($endSound);
+
 
     $('.game-end-board')
         .append('<div>').html('<h4 class="thanks-for-games">End of the game! Thank you!</h4><h5 class="score-count">Your result is </h5>' + score)
         .append('<div class="ranking"><h5>Ranking</h5></div>')
         .append('<button class="btn btn-danger play-again-button higher-z-index">Play again!</button>');
+    $musicForGame.remove();
+    $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    $gameEndBoard.append($endSound);
+
     $('.ranking').append($('<table>').addClass('rank-table'));
     $('table.rank-table').append($('<tr>'));
     $('table.rank-table tr')
