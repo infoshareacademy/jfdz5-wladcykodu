@@ -13,8 +13,9 @@ var countDownInterval,
 function quizLife() {
     //add event to selected item from array of bonusItems
     var $quiz = $('.bonus-life');
+    var $quizBonusSound= $('<embed src="music/bonusLifeSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $quiz.on('click', function () {
-
+        gameInProgress.append($quizBonusSound);
         gameInProgress.append('<div class="quiz-board higher-z-index fade-in-quiz"><div class="count-down" id="count-down"></div><div class="quiz"><div><div class="question">Result of <span class="quiz-text" id="multiplicand">1</span> * <span class="quiz-text" id="multiplier">1</span> is: </div><div class="answers"><div class="option"><div class="answer-box" id="answer-1">1</div></div><div class="option"><div class="answer-box" id="answer-2">1</div></div><div class="option"><div class="answer-box" id="answer-3">1</div></div></div></div><div class="result-field hidden" id="result-field"><span class="result-desc" id="result-desc"></span><a href="#" class="quiz-button">ok</a></div></div></div>');
         countDownTime();
         clear();
@@ -72,7 +73,10 @@ function quizForBonusLife() {
 
     $('.answer-box').on('click', function (e) {
         //if selected element is a good answer add bonus and points to score
+        var $goodAnswerSound = $('<embed src="music/goodAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
+        var $wrongAnswerSound = $('<embed src="music/wrongAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
         if (parseInt(e.target.innerHTML) === guessObj.goodAnswer) {
+            gameInProgress.append($goodAnswerSound);
             resultField.removeClass('hidden').addClass("correct fade-down-quiz");
             resultDesc.html("Good Job! You win a bonus life!");
             document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 100}}));
@@ -82,6 +86,7 @@ function quizForBonusLife() {
             clearTimeout(timeExpired);
         }
         else {
+            gameInProgress.append($wrongAnswerSound);
             resultField.removeClass('hidden').addClass("wrong fade-down-quiz");
             resultDesc.html("You lost :( Try next time...");
             clearInterval(countDownInterval);
@@ -94,6 +99,7 @@ function quizForBonusLife() {
 //quit from quiz (restart all intervals)
 function quitQuiz() {
     $('.quiz-button').on('click', function () {
+        gameInProgress.append($quizButtonSound);
         $('.quiz-board')
             .addClass("fade-out-quiz")
             .removeClass('fade-in-quiz')

@@ -12,6 +12,11 @@ var bonus,
     gameTime = 60 * 10,
     timerDisplay,
     gameInProgress,
+    $gameEndBoard,
+    $musicForGame,
+    $welcomeMusic,
+    $quizButtonSound = $('<embed src="music/buttonOkaySound.ogg" autostart="true" loop="false" width="0" height="0">'),
+    $endSound,
     $gameboard = $('.game-board');
 
 document.getElementById('game-frame').style.display = "flex";
@@ -43,6 +48,14 @@ $('.start-game-button').click(function showBoard() {
             i++;
         }
         gameInProgress.append($('<img class="games-auto" src="car.svg">'));
+
+        //music for game - background theme and welcome message
+        $welcomeMusic = $('<embed src="music/welcome.ogg" autostart="true" loop="false" width="0" height="0">');
+        $musicForGame = $('<embed src="music/theme.ogg" autostart="true" loop="true" width="0" height="0">');
+        gameInProgress.append($welcomeMusic).delay(3000).queue(function (next) {
+            $(this).append($musicForGame);
+            next();
+        });
 
         // score - add and substract function
         document.addEventListener("score", function (e) {
@@ -90,10 +103,14 @@ function endGame() {
     console.log("remove");
     $(".game-in-progress").remove();
     $('.game-board').append('<div class="game-end-board"></div>');
-    $('.game-end-board')
+    $gameEndBoard = $('.game-end-board');
+    $gameEndBoard
         .append('<div class="thanks-for-games">Koniec gry! Dziękujemy!</div>')
-        .append('<div class="score-count">Twój wynik to <span><script>score</script></span></div>')
+        .append('<div class="score-count">Twój wynik to <span>score</span></div>')
         .append('<div class="ranking">Ranking</div>');
+    $musicForGame.remove();
+    $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    $gameEndBoard.append($endSound);
 }
 
 /*hide game feame*/

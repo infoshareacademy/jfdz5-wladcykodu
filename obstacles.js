@@ -5,6 +5,7 @@ function setObstacles(release, restart) {
     var $boardFileds = $('.board-field');
     var rowSize = 31;
     var rowCount = 23;
+    var $collisionSound = $('<embed src="music/crashSound.ogg" autostart="true" loop="false" width="0" height="0">');
 
     if ( restart ) {
         sleep(1000);
@@ -53,6 +54,8 @@ function setObstacles(release, restart) {
                     if ( obstaclePosition.isBottomContactTo(carPosition) ) {
                         consoleMessage += 'Bottom ';
                         $boardFileds[nextCellIndex].classList.add('board-field--collision');
+                        gameInProgress.append($collisionSound);
+
                         restart = true;
                     }
 

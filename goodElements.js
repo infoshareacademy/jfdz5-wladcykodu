@@ -67,6 +67,7 @@ function createBonus() {
     $bonusDiv.mouseover(function () {
         $(this).addClass('newBonus-anim bonus-hov');
     });
+
     // click event for divs - make them disapear and add score
     $bonusDiv.on('click', function () {
         $(this).css('visibility', 'hidden');
@@ -76,12 +77,12 @@ function createBonus() {
 //subtract life when clicked on bonus item with class .subtract-life
 function subtractLife() {
     var $subtractLife = $('.subtract-life');
+    var $subtractLifeSound = $('<embed src="music/skullSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $subtractLife.on('click', function () {
-
+        gameInProgress.append($subtractLifeSound);
         gameInProgress.append('<div class="subtract-life-box wrong fade-down-subst"><span class="subtract-life-desc"></span><a href="#" class="quiz-button">ok</a></div>');
         var subDesc = $('.subtract-life-desc');
         subDesc.html("Oops... You lost one life :(");
-
         clear();
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 50}}));
         var $lives = $('.result-container-element span');
@@ -90,10 +91,12 @@ function subtractLife() {
         }
         quitSub();
     });
+    musicIfCollectedItem();
 }
 //exit the window with information about loss of life
 function quitSub() {
     $('.quiz-button').on('click', function () {
+        gameInProgress.append($quizButtonSound);
         $('.subtract-life-box')
             .addClass("fade-out-subst")
             .removeClass('fade-down-subst')
@@ -102,5 +105,13 @@ function quitSub() {
                 $(this).remove();
             });
         restartIntervals();
+    });
+}
+
+function musicIfCollectedItem() {
+//music for bonus
+    $('.bonus-img').on('click', function () {
+        var $collectMusic = $('<embed src="music/collectSound.ogg" autostart="true" loop="false" width="0" height="0">');
+        gameInProgress.append($collectMusic);
     });
 }
