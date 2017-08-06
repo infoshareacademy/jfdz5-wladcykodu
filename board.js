@@ -9,7 +9,7 @@ var bonus,
     releaseCounter = 0,
     release = true,
     restart = false,
-    gameTime = 60 * 10,
+    gameTime = 60 * 5,
     timerDisplay,
     gameInProgress,
     $gameboard = $('.game-board'),
@@ -19,6 +19,12 @@ var bonus,
     readedObject,
     allLogins,
     showBoard;
+    $gameEndBoard,
+    $musicForGame,
+    $welcomeMusic,
+    $quizButtonSound = $('<embed src="music/buttonOkaySound.ogg" autostart="true" loop="false" width="0" height="0">'),
+    $endSound,
+    $gameboard = $('.game-board');
 
 /*show game board after click start-game-button*/
 showBoard = function showBoard() {
@@ -78,6 +84,16 @@ showBoard = function showBoard() {
             .append('<div class="road-dashed-line road-dashed-line-5">')
             .append('<div class="road-dashed-line road-dashed-line-6">')
             .append($('<img class="games-auto" src="car.svg">'));
+        gameInProgress.append($('<img class="games-auto" src="car.svg">'));
+
+        //music for game - background theme and welcome message
+        $welcomeMusic = $('<audio autoplay><source src="music/welcome.ogg" type="audio/ogg"/></audio>');
+        gameInProgress.append($welcomeMusic).delay(3000).queue(function (next) {
+            $musicForGame = $('<audio autoplay loop><source src="music/theme.ogg" type="audio/ogg"/></audio>');
+            $(this).append($musicForGame);
+            next();
+        });
+
         // score - add and substract function
         document.addEventListener("score", function (e) {
             var scoreEl = document.getElementById('score');
@@ -86,9 +102,10 @@ showBoard = function showBoard() {
             if (e.detail.action === "add") {
                 scoreEl.innerHTML = score + e.detail.value;
             } else if (e.detail.action === "subtract") {
-                if (score >= 0) {
+                if (score > 0) {
                     scoreEl.innerHTML = score - e.detail.value;
                 }
+                score = parseInt(scoreEl.innerHTML);
             }
             if (score < 0) {
                 scoreEl.innerHTML = 0;
@@ -120,8 +137,6 @@ $('.instruction-button').click(function showInstruction() {
         'display': 'flex'
     }).appendTo($gameboard);
 });
-/*instructions play button*/
-
 
 /*end-game board & ranking*/
 function endGame() {
@@ -135,6 +150,14 @@ function endGame() {
     $(".result-container").remove();
     $(".game-in-progress").remove();
     $('.game-board').append('<div class="game-end-board"></div>');
+    $gameEndBoard = $('.game-end-board');
+    $gameEndBoard
+        .append('<div class="thanks-for-games">Koniec gry! Dziękujemy!</div>')
+        .append('<div class="score-count">Twój wynik to <span>score</span></div>')
+        .append('<div class="ranking">Ranking</div>');
+    $musicForGame.remove();
+    $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    $gameEndBoard.append($endSound);
     $('.game-end-board')
         .append('<div class="thanks-for-games" data-lang="End of the game! Thank you!">Koniec gry! Dziękujemy!</div>')
         .append('<div class="score-count" data-lang="Your result is "></div>').text('Twój wynik to ' + score)

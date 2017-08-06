@@ -28,7 +28,7 @@ function gameTimer(duration) {
         currentTimer = timer;
         //set information for user that game is speeding up
         function speedInfo() {
-            if (currentTimer === 485 || currentTimer === 305 || currentTimer === 125) {
+            if (currentTimer === 244 || currentTimer === 154 || currentTimer === 64) {
                 gameInProgress.append('<div class="speed-up"></div>');
                 $('.speed-up')
                     .delay(10000)
@@ -40,7 +40,7 @@ function gameTimer(duration) {
         speedInfo();
 
         function speedObstacles() {
-            var timeFactor  = [480, 300, 120];
+            var timeFactor  = [240, 150, 60];
             var speedFactor = [200, 100, 70];
             if (currentTimer === timeFactor[0] || currentTimer === timeFactor[1] || currentTimer === timeFactor[2]) {
                 switch (currentTimer) {

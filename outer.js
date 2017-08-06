@@ -27,6 +27,7 @@ function runOnEvent(functions, timeout) {
 function runIfEventStopped(func, args, timeout) {
     var isRunning;
     return function () {
+
         // clear last timeout of func - this aborts last execution if possible
         clearTimeout(isRunning);
 
@@ -34,7 +35,7 @@ function runIfEventStopped(func, args, timeout) {
         var context = this;
 
         var later = function () {
-            func.apply(context, args);//assign a function (e.g slideInView) to a variable
+            func.apply(context, args); //assign a function (e.g slideInView) to a variable
         };
 
         // run new func at end of timeout (if timeout will not be cleared by next scroll event)
@@ -80,13 +81,17 @@ function highlightSection() {
     // distance to which user scroll down the page / number of pixels the window has been scrolled
     var scrollPosition = $(window).scrollTop();
     var menuHeight = 100;
+
     // check the position of each of the sections compared to the windows scroll position
     if (scrollPosition) {
+
         // .each() iterates over the DOM elements
         $('.nav a').each(function (i) {
             var refLink = $(this);
+
             // refLink as its source of ID
             var refSection = $(refLink.attr('href'));
+
             //.position().top - position from the top; compare current position and every section position in each scroll
             if (refSection.position().top - menuHeight <= scrollPosition && refSection.position().top +
                 refSection.height() > scrollPosition) {
@@ -116,16 +121,17 @@ function highlightSection() {
 
 function slideInView() {
     var $members = $('.members');
-    //console.log("slides");
     var topPosition = $(window).scrollTop();
-
     var windowHeight = $(window).height();
+
     //vertical position of the scroll bar
     var bottomPosition = (topPosition + windowHeight);
 
     $.each($members, function () {
+
         //height of the members with padding and border
         var membersHeight = $(this).outerHeight();
+
         //distance of members relative to the top
         var memberTopPosition = $(this).offset().top;
         var memberBottomPosition = (topPosition + membersHeight);
@@ -156,11 +162,13 @@ var x = setInterval(function () {
 
     document.getElementById("time-out").innerHTML = day + "d " + hour + "h "
         + minute + "m " + second + "s ";
+
     // when the count down is over
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("time-out").innerHTML = "OUR APP IS WORKING";
     }
+
     // update count down every 1 second
 }, 1000);
 
