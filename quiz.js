@@ -82,7 +82,7 @@ function quizForBonusLife() {
             resultField.removeClass('hidden').addClass("correct fade-down-quiz");
             resultDesc.html('<span data-lang="Good Job! You win a bonus life!">Dobra robota! Zdobyłeś życie!</span>');
             document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 100}}));
-            $($('.result-container-element')[2]).append('<span class="glyphicon glyphicon-heart"></span>');
+            $($('.lives')).append('<span class="glyphicon glyphicon-heart"></span>');
             clearInterval(countDownInterval);
             countDownQuiz.innerHTML = '';
             clearTimeout(timeExpired);

@@ -1316,13 +1316,13 @@ h3.carousel-caption__element {
 .btn-danger:focus {
     box-shadow: 2px 4px 1px 0 #ff4845;
     background-color: #ff0f1e;
-    border-radius: 1.3em !important;
-    border:none !important;
+    border-radius: 1.3em;
     cursor: pointer;
     color: #fff;
     font-size: 1.1em;
     padding: 0.5em 1.5em;
 }
+.btn:focus, .btn:active:focus, .btn.active:focus { outline: none; ! important; outline-style: none; }
 
 
 /*****************/
@@ -1618,6 +1618,8 @@ audio {
     font-size: 1.7em;
     font-weight: bold;
     padding-right: 1em;
+    padding-top: 5px;
+    padding-left: 20px;
 }
 
 .game-instruction {

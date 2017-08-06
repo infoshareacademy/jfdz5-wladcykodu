@@ -30,7 +30,7 @@ showBoard = function showBoard() {
     $gameboard.html('<div class="login-board"></div>');
     $('.login-board').append($('<div class="login-frame">'));
     $('.login-frame')
-        .append($('<h2 data-lang="Please enter your login.">Podaj swój login.</h2>'))
+        .append($('<h2><span data-lang="Please enter your login.">Podaj swój login.</span></h2>'))
         .append($('<h4 data-lang="After the game you will see a top 10 ranking.">Po zakończeniu gry zostanie wyświetlony ranking 10 najlelpszych wyników.</h4>'))
         .append($('<h4 data-lang="Have fun and beat the records!">Baw się i pobijaj rekordy!</h4>'))
         .append($('<input type="text" placeholder="login" class="user-login higher-z-index">'))
@@ -54,11 +54,15 @@ showBoard = function showBoard() {
             readedObject = JSON.parse(readedValue);
         } else {
             temporaryUserLogin = $('.user-login').val();
-            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val : 'login';
+            console.log(temporaryUserLogin);
+            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val() : 'login';
+            console.log(userLogin);
             allLogins = [];
+            console.log(allLogins);
             actuallyUser = {
                 name: userLogin
             };
+            console.log(actuallyUser);
 
             allLogins.push(actuallyUser);
             localStorage.setItem('gameResult', JSON.stringify(allLogins));
@@ -154,16 +158,11 @@ function endGame() {
     $(".game-in-progress").remove();
     $('.game-board').append('<div class="game-end-board"></div>');
     $gameEndBoard = $('.game-end-board');
-    $gameEndBoard
-        .append('<div class="thanks-for-games">Koniec gry! Dziękujemy!</div>')
-        .append('<div class="score-count">Twój wynik to <span>score</span></div>')
-        .append('<div class="ranking">Ranking</div>');
     $musicForGame.remove();
     $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $gameEndBoard.append($endSound);
     $('.game-end-board')
-        .append('<div class="thanks-for-games" data-lang="End of the game! Thank you!">Koniec gry! Dziękujemy!</div>')
-        .append('<div class="score-count" data-lang="Your result is "></div>').text('Twój wynik to ' + score)
+        .append('<div>').html('<h2 class="thanks-for-games" data-lang="End of the game! Thank you!">Koniec gry! Dziękujemy!</h2><h3 class="score-count" data-lang="Your result is ">Twój wynik to :</h3>' + score)
         .append('<div class="ranking"><h3>Ranking</h3></div>')
         .append('<button class="btn btn-danger play-again-button higher-z-index" data-lang="Play again!">Zagraj ponownie!</button>');
     $('.ranking').append($('<table>').addClass('rank-table'));
@@ -193,7 +192,7 @@ function endGame() {
 }
 
 /*play again button*/
-$('.play-again-button').click(showBoard);
+$('body').on('click', '.play-again-button',showBoard);
 
 
 /*hide game feame*/
