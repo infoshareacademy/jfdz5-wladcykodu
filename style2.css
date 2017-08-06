@@ -1220,7 +1220,7 @@ h3.carousel-caption__element {
     height: 573px;
     width: 4px;
     bottom: 1px;
-    trnsform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .road-line.road-line-1 {
@@ -1237,7 +1237,7 @@ h3.carousel-caption__element {
     width: 2px;
     border-left: 2px dashed grey;
     bottom: 1px;
-    trnsform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .road-dashed-line.road-dashed-line-1 {
@@ -1311,6 +1311,7 @@ h3.carousel-caption__element {
     color: #fff;
     font-size: 1.1em;
     padding: 0.5em 1.5em;
+    outline: 0 none;
 }
 
 .btn-danger:focus {
@@ -1322,6 +1323,7 @@ h3.carousel-caption__element {
     color: #fff;
     font-size: 1.1em;
     padding: 0.5em 1.5em;
+    outline: 0 none;
 }
 
 
@@ -1710,3 +1712,4 @@ audio {
 /*********************************************************/
 /************************* GAME **************************/
 /*********************************************************/
+

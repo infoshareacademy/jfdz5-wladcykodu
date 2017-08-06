@@ -22,7 +22,6 @@ function gameTimer(duration) {
         }
         // stop game when time is over
         if (parseInt(minutes) === 0 && parseInt(seconds) === 0) {
-            clear();
             endGame();
         }
         currentTimer = timer;
