@@ -201,6 +201,7 @@ $('body').on('click', '.play-again-button',showBoard);
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {
     $('.game-frame').remove();
+    clear();
 });
 
 function startBonus() {
