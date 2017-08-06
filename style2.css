@@ -1019,6 +1019,7 @@ h3.carousel-caption__element {
     background: url('game-images/grass-background.png');
     background-repeat: repeat;
 }
+
 .escape-game-button-container {
     position: absolute;
     right: 20px;
@@ -1046,17 +1047,18 @@ h3.carousel-caption__element {
 .escape-game-button .line1 {
     border-top: 3px solid white;
     transform: rotate(45deg);
-    left:4px;
+    left: 4px;
     top: 13px;
 }
 
 .escape-game-button .line2 {
     border-top: 3px solid white;
-    transform:rotate(-45deg);
-    left:4px;
+    transform: rotate(-45deg);
+    left: 4px;
     top: 13px;
 }
-.start-game-frame, .login-frame {
+
+.start-game-frame, .login-frame, .change-auto-frame {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1090,16 +1092,15 @@ h3.carousel-caption__element {
 
 .start-game-title {
     text-transform: uppercase;
+    text-shadow: 2px 2px #FF0000;
     padding-bottom: 3%;
     font-size: 40px;
 }
-
 
 .start-game-auto {
     height: 20%;
     padding-bottom: 3%;
 }
-
 
 .start-game-button, .instruction-button {
     color: black;
@@ -1123,6 +1124,10 @@ h3.carousel-caption__element {
     position: relative;
 }
 
+.login-frame h2 {
+    color: #ffada3;
+}
+
 .send-login-button, .user-login {
     text-align: center;
     color: black;
@@ -1132,6 +1137,9 @@ h3.carousel-caption__element {
 .user-login {
     color: grey;
     height: 50px;
+    background-color: #ffada3;
+    border: 1px solid red;
+    box-shadow: 3px 3px 5px #ff0f1e;
 }
 
 .result-container {
@@ -1205,13 +1213,14 @@ h3.carousel-caption__element {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .road-line {
     background-color: grey;
     position: absolute;
     height: 573px;
     width: 4px;
     bottom: 1px;
-    trnsform:rotate(90deg);
+    trnsform: rotate(90deg);
 }
 
 .road-line.road-line-1 {
@@ -1228,7 +1237,7 @@ h3.carousel-caption__element {
     width: 2px;
     border-left: 2px dashed grey;
     bottom: 1px;
-    trnsform:rotate(90deg);
+    trnsform: rotate(90deg);
 }
 
 .road-dashed-line.road-dashed-line-1 {
@@ -1236,7 +1245,7 @@ h3.carousel-caption__element {
 }
 
 .road-dashed-line.road-dashed-line-2 {
-   left: 222px;
+    left: 222px;
 }
 
 .road-dashed-line.road-dashed-line-3 {
@@ -1283,7 +1292,6 @@ h3.carousel-caption__element {
     font-size: 20px;
 }
 
-
 .ranking table td, .ranking table th {
     border: 1px solid black;
     text-align: center;
@@ -1294,6 +1302,7 @@ h3.carousel-caption__element {
 .ranking h3 {
     margin-top: 0;
 }
+
 .btn-danger {
     box-shadow: 2px 4px 1px 0 #ff4845;
     background-color: #ff0f1e;
@@ -1408,7 +1417,7 @@ h3.carousel-caption__element {
 }
 
 .answer-box:hover {
-   background-color: #2e6da4;
+    background-color: #2e6da4;
 }
 
 .quiz {
@@ -1627,6 +1636,7 @@ h3.carousel-caption__element {
     bottom: 10px;
     margin-bottom: 0;
 }
+
 /**********************/
 /* End of instruction */
 /**********************/

@@ -14,6 +14,7 @@ var bonus,
     gameInProgress,
     $gameboard = $('.game-board'),
     userLogin,
+    temporaryUserLogin,
     readedValue,
     readedObject,
     allLogins,
@@ -31,7 +32,8 @@ showBoard = function showBoard() {
         .append($('<input type="button" value="Zapisz" data-lang="Send" class="btn btn-danger send-login-button higher-z-index">'));
     $('.send-login-button').click(function sendLoginAndStartGame() {
         if (localStorage.hasOwnProperty('gameResult')) {
-            userLogin = $('.user-login').val();
+            temporaryUserLogin = $('.user-login').val();
+            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val : 'login';
             readedValue = localStorage.getItem('gameResult');
             readedObject = JSON.parse(readedValue);
             allLogins = readedObject;
@@ -109,6 +111,7 @@ showBoard = function showBoard() {
 document.getElementById('game-frame').style.display = "flex";
 /*show game*/
 $('.start-game-button').click(showBoard);
+
 /*show instruction*/
 $('.instruction-button').click(function showInstruction() {
     $gameboard.html('<div class="game-instruction"></div>');
@@ -145,30 +148,22 @@ function endGame() {
         .append('<th data-lang="Score">Wynik</th>');
 
     readedValue = localStorage.getItem('gameResult');
-    console.log(readedValue);
     readedObject = JSON.parse(readedValue);
-    console.log(readedObject);
     allLogins = readedObject;
-    console.log(allLogins);
-
     allLogins.sort(function (log1, log2) {
         return log2.score - log1.score;
     });
     allLogins.splice(10);
-
     function addToTable() {
         for (i = 0; i < allLogins.length; i++) {
             $('table.rank-table').append('<tr></tr>');
-            console.log('create  tr');
             $('table.rank-table tr:last-child')
                 .append($('<td>').text(allLogins[i].name))
                 .append($('<td>').text(allLogins[i].date))
                 .append($('<td>').text(allLogins[i].score));
         }
     }
-
     addToTable();
-
 }
 
 /*play again button*/

@@ -23,8 +23,6 @@ $(document).keydown(function (e) {
     }
 
     if (newPos < limitRight && newPos > limitLeft) {
-        console.log(limitLeft, newPos, move, newPos+move, limitRight);
-
         if (isValid(newPos, lastTwoRows)) {
             car.offset({left: newPos});
         }
