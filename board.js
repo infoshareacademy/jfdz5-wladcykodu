@@ -30,11 +30,11 @@ showBoard = function showBoard() {
     $gameboard.html('<div class="login-board"></div>');
     $('.login-board').append($('<div class="login-frame">'));
     $('.login-frame')
-        .append($('<h2><span data-lang="Please enter your login.">Podaj swój login.</span></h2>'))
-        .append($('<h4 data-lang="After the game you will see a top 10 ranking.">Po zakończeniu gry zostanie wyświetlony ranking 10 najlelpszych wyników.</h4>'))
-        .append($('<h4 data-lang="Have fun and beat the records!">Baw się i pobijaj rekordy!</h4>'))
+        .append($('<h2 class="enter-login">Please enter your login.</h2>'))
+        .append($('<h4>After the game you will see a top 10 ranking.</h4>'))
+        .append($('<h4>Have fun and beat the records!</h4>'))
         .append($('<input type="text" placeholder="login" class="user-login higher-z-index">'))
-        .append($('<input type="button" value="Zapisz" data-lang="Send" class="btn btn-danger send-login-button higher-z-index">'));
+        .append($('<input type="button" value="Send" data-lang="Send" class="btn btn-danger send-login-button higher-z-index">'));
     $('.send-login-button').click(function sendLoginAndStartGame() {
         if (localStorage.hasOwnProperty('gameResult')) {
             temporaryUserLogin = $('.user-login').val();
@@ -70,9 +70,9 @@ showBoard = function showBoard() {
 
         $('.game-board').prepend('<div class="result-container"></div>');
         $('.result-container')
-            .append('<div class="result-container-element" data-lang="Score">Punkty: <div id="score">0</div></div>')
-            .append('<div class="result-container-element" data-lang="Time">Czas<div id="timer">00:00</div></div>')
-            .append('<div class="result-container-element"><p data-lang="Lives">Życia:</p><div class="lives"><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></div></div>');
+            .append('<div class="result-container-element">Score: <div id="score">0</div></div>')
+            .append('<div class="result-container-element">Time<div id="timer">00:00</div></div>')
+            .append('<div class="result-container-element"><p>Lives:</p><div class="lives"><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span><span class="glyphicon glyphicon-heart"></span></div></div>');
         $('.login-board').replaceWith('<div class="game-in-progress"></div>');
         gameInProgress = $('.game-in-progress');
 
@@ -161,16 +161,17 @@ function endGame() {
     $musicForGame.remove();
     $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $gameEndBoard.append($endSound);
+
     $('.game-end-board')
-        .append('<div>').html('<h2 class="thanks-for-games" data-lang="End of the game! Thank you!">Koniec gry! Dziękujemy!</h2><h3 class="score-count" data-lang="Your result is ">Twój wynik to :</h3>' + score)
-        .append('<div class="ranking"><h3>Ranking</h3></div>')
-        .append('<button class="btn btn-danger play-again-button higher-z-index" data-lang="Play again!">Zagraj ponownie!</button>');
+        .append('<div>').html('<h4 class="thanks-for-games">End of the game! Thank you!</h4><h5 class="score-count">Your result is </h5>' + score)
+        .append('<div class="ranking"><h5>Ranking</h5></div>')
+        .append('<button class="btn btn-danger play-again-button higher-z-index">Play again!</button>');
     $('.ranking').append($('<table>').addClass('rank-table'));
     $('table.rank-table').append($('<tr>'));
     $('table.rank-table tr')
         .append('<th>Login</th>')
-        .append('<th data-lang="Date">Data</th>')
-        .append('<th data-lang="Score">Wynik</th>');
+        .append('<th>Date</th>')
+        .append('<th>Score</th>');
 
     readedValue = localStorage.getItem('gameResult');
     readedObject = JSON.parse(readedValue);
@@ -189,7 +190,9 @@ function endGame() {
         }
     }
     addToTable();
+
 }
+
 
 /*play again button*/
 $('body').on('click', '.play-again-button',showBoard);
