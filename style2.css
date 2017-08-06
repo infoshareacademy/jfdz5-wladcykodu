@@ -720,7 +720,7 @@ h3.carousel-caption__element {
 }
 
 .person__bio {
-    text-align: center;
+    text-align: left;
     font-size: 1em;
     line-height: 1.5em;
     color: white;
@@ -752,7 +752,7 @@ h3.carousel-caption__element {
 
 .hover__effect .second-side {
     position: absolute;
-    background-color: rgba(163, 13, 5, 0.3);
+    background-color: rgba(163, 13, 5, 0.4);
     transition: all 0.5s linear;
     filter: alpha(opacity=0);
     top: 0;
@@ -1402,6 +1402,10 @@ h3.carousel-caption__element {
         opacity: 1;
         transform: none;
     }
+}
+
+audio {
+    display:none;
 }
 
 /************************/

@@ -82,7 +82,7 @@ function subtractLife() {
         gameInProgress.append($subtractLifeSound);
         gameInProgress.append('<div class="subtract-life-box wrong fade-down-subst"><span class="subtract-life-desc"></span><a href="#" class="quiz-button">ok</a></div>');
         var subDesc = $('.subtract-life-desc');
-        subDesc.html("Oops... You lost one life :(");
+        subDesc.html('<span data-lang="Oops... You lost one life :(">Niestety, straciłeś jedno życie :( </span>');
         clear();
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "subtract", value: 50}}));
         var $lives = $('.result-container-element span');
