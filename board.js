@@ -65,14 +65,13 @@ $('.start-game-button').click(function showBoard() {
             if (e.detail.action === "add") {
                 scoreEl.innerHTML = score + e.detail.value;
             } else if (e.detail.action === "subtract") {
-                if (score >= 0) {
+                if (score > 0) {
                     scoreEl.innerHTML = score - e.detail.value;
-                    console.log('oedejmij: ', score)
                 }
+                score = parseInt(scoreEl.innerHTML);
             }
             if (score < 0) {
                 scoreEl.innerHTML = 0;
-                console.log('zeruj: ', score)
             }
             score = parseInt(scoreEl.innerHTML);
         }, false);
