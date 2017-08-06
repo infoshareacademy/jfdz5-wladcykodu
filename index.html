@@ -7,393 +7,653 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Auto-parts search engine</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link href="style2.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="icon.ico" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
 
-<header>
-    <nav class="nav">
-        <div class="nav-left">
-            <a href="#"><img src="logo4.png" alt="auto-parts logo"></a>
-        </div>
+<header class="header">
+    <nav id="nav" class="navbar navbar-inverse navbar--height">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a class="navbar-brand" href="#"><img src="logo4.png" class="img-responsive" alt="logo"></a>
+                    <div>
+                        <img src="gb.svg" alt="English" title="English" data-flag="pl.svg" data-alt="Polski"
+                             class="language-toggle" onclick="translatePage()">
+                    </div>
+                </div>
 
-
-        <input type="checkbox" id="menu-toggle" class="is-hidden"/>
-        <label for="menu-toggle" class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-
-        <div class="nav-right nav-menu">
-            <ul>
-                <li class="nav-item"><a href="#functions">Funkcje</a></li><!--Functions-->
-                <li class="nav-item"><a href="#product-info">Informacje o produkcie</a></li><!--Product info-->
-                <li class="nav-item"><a href="#enrollment">Zapisz się</a></li><!--Enroll-->
-                <li class="nav-item"><a href="#team-info">O nas</a></li><!--About Us-->
-                <li class="nav-item"><a href="#contact-us">Kontakt</a></li><!--Contact-->
-            </ul>
-        </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-navbar">
+                <ul class="nav navbar-nav navbar-right" id="ul-navigation">
+                    <li class="nav__item"><a href="#functions" data-lang="Functions">Funkcje</a>
+                    </li><!--Functions-->
+                    <li class="nav__item"><a href="#product-info" data-lang="Product"> O produkcie</a></li>
+                    <!--Product info-->
+                    <li class="nav__item"><a href="#enrollment" data-lang="Subscribe">Zapisz
+                        się</a></li><!--Enroll-->
+                    <li class="nav__item"><a href="#team-info" data-lang="Team">O
+                        nas</a></li><!--About Us-->
+                    <li class="nav__item"><a href="#contact-us" data-lang="Contact">Kontakt</a>
+                    </li><!--Contact-->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
+    <div id="go-to-top" class="go-to-top">
+        <a href="#" class="return-link">
+            <img src="car.svg" alt="car.svg"/>
+        </a>
+    </div>
 </header>
-<div class="site-container">
-    <main class="main-container">
+<main class="main-container">
+
+    <!-- START INTRODUCTION -->
+
+    <div id="introduction" class="container container--section main-container-item introduction__container">
+
+        <div class="introduction__content">
+            <!--start carousel -->
+            <div id="introduction-carousel" class="carousel slide" data-ride="carousel">
+                <!-- start point markers -->
+                <ol class="carousel-indicators">
+                    <li data-target="#introduction-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="1"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="2"></li>
+                    <li data-target="#introduction-carousel" data-slide-to="3"></li>
+                </ol>
+                <!-- end point markers -->
+
+                <!-- start slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="introduction-1.png" class="carousel-img" alt="">
+                        <div class="carousel-caption">
+                            <h3 class="header-text-size carousel-caption__element">auto parts</h3>
+                            <p class="normal-text-size carousel-caption__element"
+                               data-lang="Modern car parts search engine">nowoczesna wyszukiwarka części
+                                samochodowych</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img id="carousel-image" src="introduction-2.png" class="carousel-img" alt="">
+                        <div class="carousel-caption">
+                            <h3 class="header-text-size carousel-caption__element"
+                                data-lang="The Big Premiere in October!">premiera już w październiku!</h3>
+                            <p id="time-out"></p>
+                            <p class="normal-text-size carousel-caption__element" data-lang="Be up to date">chcesz być
+                                na bieżąco?</p>
+                            <a href="#enrollment" class="carousel-caption__element">
+                                <input type="button" value="Zapisz się!" class="btn btn-default"
+                                       data-lang="Subscribe!"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="introduction-3.png" class="carousel-img" alt="">
+                        <div class="carousel-caption carousel-caption--light">
+                            <h3 class="header-text-size carousel-caption__element"
+                                data-lang="search engine of the future">wyszukiwarka przyszłości</h3>
+                            <p class="normal-text-size carousel-caption__element" data-lang="fast">szybka</p>
+                            <p class="normal-text-size carousel-caption__element" data-lang="cheap">tania</p>
+                            <p class="normal-text-size carousel-caption__element" data-lang="intuitive">intuicyjna</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="introduction-4.png" class="carousel-img carousel-caption__element" alt="">
+                        <div class="carousel-caption carousel-caption--light">
+                            <img src="crown.svg" class="crown-icon" alt="">
+                            <h3 class="header-text-size carousel-caption__element">
+                                władcy kodu</h3>
+                            <p class="normal-text-size carousel-caption__element"
+                               data-lang="We create a tool according to your needs">tworzymy narzędzie z myślą o Twoich
+                                potrzebach</p>
+                            <a href="#team-info" class="carousel-caption__element">
+                                <input type="button" value="Poznaj nas!" class="btn btn-default"
+                                       data-lang="Meet our team!"/>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end slides -->
+
+                <!-- start arrows -->
+                <a class="left carousel-control" href="#introduction-carousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#introduction-carousel" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+                <!-- end arrows -->
+            </div>
+            <!--end carousel -->
+        </div>
 
 
-        <!-- START INTRODUCTION -->
+        <!--VIEW INTRODUCTION FOR SCREENS > 768PX -->
+        <div class="introduction__content--mobile">
 
-        <div id="introduction" class="main-container-item introduction-container">
-            <div class="inIntroduction">
-                <div class="introductionElement introduction-logo-container">
-                    <div class="introductionLogo">
-                        <h1>AUTO</h1>
-                        <h1>PARTS</h1>
+            <h3 class="header-text-size introduction__content--mobile--element">auto parts</h3>
+            <p class="normal-text-size introduction__content--mobile--element"
+               data-lang="Modern automotive parts search engine">nowoczesna wyszukiwarka części samochodowych</p>
+            <p class="normal-text-size introduction__content--mobile--element"
+               data-lang="fast... cheap... intuitively...">szybko. tanio. intuicyjnie.</p>
+            <div class="introduction__content--mobile--element">
+                <h3 class="normal-text-size" data-lang="The Big Premiere in August!"> premiera już w październiku!</h3>
+                <a href="#enrollment">
+                    <input type="button" value="Zapisz się!" class="btn btn-default" data-lang="Subscribe!"/>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- END INTRODUCTION  -->
+
+    <!-- START FUNCTIONS -->
+
+    <div id="functions" class="container container--section main-container-item functions__container">
+        <div class="row functions__row">
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon1.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon2.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon3.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon4.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon5.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon6.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon7.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon8.svg" alt="">
+            </div>
+            <p class="functions__element col-xs-12 col-sm-3 col-lg-2 function__text function--1 normal-text-size"
+               data-lang="We have parts of all car brands.">Posiadamy części wszytkich marek.
+            </p>
+            <p class="functions__element col-xs-12 col-sm-3 col-lg-2 function__text function--2 normal-text-size"
+               data-lang="We will compare prices for You from many sources.">Porównamy dla Ciebie ceny z wielu
+                źródeł.</p>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon9.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon10.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon11.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon12.svg" alt="">
+            </div>
+            <p class="functions__element col-xs-12 col-sm-3 col-lg-2 function__text function--3 normal-text-size"
+               data-lang="You will save time and money with us.">Z nami
+                zaoszczędzisz czas i pieniądze.</p>
+            <p class="functions__element col-xs-12 col-sm-3 col-lg-2 function__text function--4 normal-text-size"
+               data-lang="We have new and used car parts.">
+                Posiadamy części nowe i używane.</p>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon13.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon14.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon15.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon16.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon4.svg" alt="">
+            </div>
+            <div class="functions__element hidden-xs col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon3.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 col-sm-3 col-lg-2">
+                <img class="function__icon" src="function-icons/icon2.svg" alt="">
+            </div>
+            <div class="functions__element col-xs-4 hidden-sm hidden-md col-lg-2">
+                <img class="function__icon" src="function-icons/icon1.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- END FUNCTIONS  -->
+
+    <!--#product-info-->
+    <section id="product-info" class="container product-info container--section container-center main-container-item">
+        <div class="row">
+            <div class="product-info__text product-desc product-desc__btm">
+                <p data-lang="Wecome! We are Władcy Kodu - builders of auto parts search engine and the only entity with the right to distribute and advertise. The planned launch date of our service is October 2017. The tool will be completely for free. The only thing you will have to do to use it is to register and provide your personal information (name, delivery address, email address and phone number). Want to know us closer? At the footer of the page you will find links to our pages in social media.">
+                    Witamy! Jesteśmy Władcy Kodu - twórcy wyszukiwarki części samochodowych AUTO
+                    PARTS i
+                    jedyny podmiot posiadający prawa do jej dystrybucji i reklamy. Planowana data premiery naszej
+                    aplikacji to październik 2017. Narzędzie będzie w pełni darmowe. Jedyne będziesz musiał zrobić,
+                    by z niego korzystać to rejestracja i podanie danych osobowych (imię i nazwisko, adres dostawy,
+                    adres e-mail oraz numer telefonu). Chcesz poznać nas bliżej? W stopce strony znajdziesz odnośniki
+                    prowadzące do naszych stron w mediach społecznościowych.
+                </p>
+            </div>
+            <div><h4 class="product-info__title product-desc product-desc__btm" data-lang="What will you gain with us?">
+                CO Z NAMI ZYSKASZ?</h4></div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-search"></i></span>
+                        <h4 class="product-info__about--title" data-lang="Accurate search">Precyzyjne wyszukiwanie</h4>
+                        <p data-lang="With multiple filtering criteria, you can refine your search results only to the
+                        parts you are interested in.">Dzięki wielu kryteriom filtrowania możesz zawęzić wyniki
+                            wyszukiwania jedynie do interesujących Cię części.</p>
                     </div>
                 </div>
-                <h2 class="introductionElement introduction-main-text-container">NOWOCZESNA WYSZUKIWARKA CZĘŚCI
-                    SAMOCHODOWYCH</h2>
-                <p class="introductionElement introduction-regular-text-container">SZYBKO. TANIO. INTUICYJNIE.</p>
-                <div class="introductionElement introduction-button-container">
-                    <a href="#enrollment">
-                        <div class="btn btn-default">
-                            <p>ZAPISZ SIĘ NA PREMIERĘ!</p>
-                        </div>
-                    </a>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-map-marker"></i></span>
+                        <h4 class="product-info__about--title" data-lang="Access map">Mapa dojazdu</h4>
+                        <p data-lang="You can always find out where the nearest workshops are and how to get to them.">
+                            Zawsze możesz sprawdzić, gdzie znajdują się najbliższe warsztaty i jak do nich dojechać.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-comments"></i></span>
+                        <h4 class="product-info__about--title"
+                            data-lang="Professional support by 24 hours per day">Ekspert 24h</h4>
+                        <p data-lang="We give you the opportunity of constant expert consultation - both by phone and by email.">
+                            Dajemy ci możliwość stałej konsultacji eksperckiej - zarówno telefonicznie jak i
+                            e-mail.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-shopping-cart"></i></span>
+                        <h4 class="product-info__about--title" data-lang="Shopping cart">Koszyk produktów</h4>
+                        <p data-lang="Your shopping in one place, under permanent control.">Twoje zakupy w jednym
+                            miejscu, pod stałą kontrolą.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-wrench"></i></span>
+                        <h4 class="product-info__about--title" data-lang="High quality">Wysoka jakość</h4>
+                        <p data-lang="We only offer parts from proven manufacturers. Our suppliers meet all quality standards.">
+                            Oferujemy jedynie części od sprawdzonych producentów. Nasi dostawcy spełniają wszystkie
+                            normy jakości.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="product-info__about">
+                        <span class="product-info__about--icon"><i class="fa fa-cogs"></i></span>
+                        <h4 class="product-info__about--title" data-lang="The widest choice">Największy wybór</h4>
+                        <p data-lang="Here you will find parts of all brands: new and used, original and high quality replacements.">
+                            U nas znajdziesz części wszystkich marek: nowe i używane, oryginane i wysokiej klasy
+                            zamienniki.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- END INTRODUCTION  -->
+    </section>
 
-        <!-- START FUNCTIONS -->
-        <div id="functions" class="main-container-item functions-container">
-            <div class="function icon1-container">
-                <img class="functionIcon" src="function-icons/icon1.png" alt="">
-            </div>
-            <div class="function icon2-container">
-                <img class="functionIcon" src="function-icons/icon2.png" alt="">
-            </div>
-            <div class="function icon3-container">
-                <img class="functionIcon" src="function-icons/icon3.png" alt="">
-            </div>
-            <div class="function icon4-container">
-                <img class="functionIcon" src="function-icons/icon4.png" alt="">
-            </div>
-            <div class="function icon5-container">
-                <img class="functionIcon" src="function-icons/icon5.png" alt="">
-            </div>
-            <div class="function icon6-container">
-                <img class="functionIcon" src="function-icons/icon6.png" alt="">
-            </div>
-            <div class="function icon7-container">
-                <img class="functionIcon" src="function-icons/icon7.png" alt="">
-            </div>
-            <div class="function icon8-container">
-                <img class="functionIcon" src="function-icons/icon8.png" alt="">
-            </div>
-            <p class="function functionText functionText1">Posiadamy części wszytkich marek.</p>
-            <p class="function functionText functionText2">Porównamy dla Ciebie ceny z wielu źródeł.</p>
-            <div class="function icon9-container">
-                <img class="functionIcon" src="function-icons/icon9.ico" alt="">
-            </div>
-            <div class="function icon10-container">
-                <img class="functionIcon" src="function-icons/icon10.png" alt="">
-            </div>
-            <div class="function icon11-container">
-                <img class="functionIcon" src="function-icons/icon11.svg" alt="">
-            </div>
-            <div class="function icon12-container">
-                <img class="functionIcon" src="function-icons/icon12.png" alt="">
-            </div>
+    <!--#enrollment-->
 
-            <p class="function functionText functionText3">Posiadamy części nowe i używane.</p>
-
-            <p class="function functionText functionText4">Z nami zaoczczędzisz czas i pieniądze.</p>
-
-            <div class="function icon13-container">
-                <img class="functionIcon" src="function-icons/icon13.png" alt="">
-            </div>
-
-            <div class="function icon14-container">
-                <img class="functionIcon" src="function-icons/icon14.png" alt="">
-            </div>
-
-
-            <div class="function icon15-container">
-                <img class="functionIcon" src="function-icons/icon15.png" alt="">
-            </div>
-
-            <div class="function icon16-container">
-                <img class="functionIcon" src="function-icons/icon16.png" alt="">
-            </div>
-
-            <div class="function icon17-container">
-                <img class="functionIcon" src="function-icons/icon4.png" alt="">
-            </div>
-            <div class="function icon18-container">
-                <img class="functionIcon" src="function-icons/icon3.png" alt="">
-            </div>
-            <div class="function icon19-container">
-                <img class="functionIcon" src="function-icons/icon2.png" alt="">
-            </div>
-            <div class="function icon20-container">
-                <img class="functionIcon" src="function-icons/icon1.png" alt="">
-            </div>
-
+    <section id="enrollment" class="container container--section main-container-item enrollment">
+        <div class="container container-center enrollment__content-wrapper">
+            <h2 class="text-center header-text-size _enrollment__h2-center" data-lang="Subscribe for premiere!">Zapisz
+                się na premierę!</h2>
+            <p class="text-justify normal-text-size _enrollment__text"
+               data-lang="If you fill out the form below, we will let you know by e-mail about the date of our search engine launch. The message will be sent once only.">
+                Jeśli wypełnisz poniższy formularz, poinformujemy
+                Cię mailem o dniu premiery naszej wyszukiwarki. Wiadmość zostanie wysłana tylko raz.</p>
+            <form id="enrollmentForm" method="post" class="enrollment__form">
+                <!--onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">-->
+                <div class="enrollment__inputs">
+                    <div class="form-group">
+                        <label for="inputName" data-lang="Name *">Imię i Nazwisko *</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko"
+                               required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email *</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhoneNumber" data-lang="Phone number *">Numer telefonu</label>
+                        <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
+                    </div>
+                </div>
+                <div class="text-justify checkbox">
+                    <label class="enrollment__checkbox-text"><input type="checkbox"><span
+                            data-lang="I would like to receive an email with confirmation of registration.">Chcę otrzymać wiadomość z potwierdzeniem rejestracji.</span></label>
+                </div>
+                <div class="text-justify checkbox">
+                    <label class="enrollment__checkbox-text"><input type="checkbox" required><span
+                            data-lang="I hereby agree to the processing of my personal data for registration to share information and to participate in promotional events. You have the right to access and correct your data. The data submission is voluntary, but it is necessary for the above mentioned purpose. Your data will not be shared with other entities or used for purposes other than the above.">Wyrażam zgodę na
+                        przetwarzanie moich danych osobowych w
+                        celu rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
+                        prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
+                        lecz niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
+                        celów innych niż wyżej wymienione.</span></label>
+                </div>
+                <input id="formSubmitBtn" type="submit" value="Wyślij" class="btn btn-default" data-lang="Send"/>
+            </form>
         </div>
+    </section>
 
-        <!--#product-info-->
-        <section id="product-info" class="main-container-item">
-            <div class="product-info">
-                <div class="product-text">
-                    <p>Witamy! Jesteśmy Władcy Kodu - twórcy wyszukiwarki części samochodowych AUTO PARTS i jedyny
-                        podmiot
-                        posiadający prawa do jej dystrybucji i reklamy. Planowana data premiery naszej aplikacji to
-                        październik 2017. Narzędzie będzie w pełni darmowe. Jedyne będziesz musiał zrobić, by z niego
-                        korzystać to rejestracja i podanie danych osobowych (imię i nazwisko, adres dostawy, adres
-                        e-mail
-                        oraz numer telefonu). Chcesz poznać nas bliżej? W stopce strony znajdziesz odnośniki prowadzące
-                        do naszych stron w mediach społecznościowych.</p></div>
-                <div class="product-info-title"><h4>CO Z NAMI ZYSKASZ?</h4></div>
+    <!--Team info-->
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-search"></i></span>
-                                <h4>Precyzyjne wyszukiwanie</h4>
-                                <p>Dzięki wielu kryteriom filtrowania możesz zawęzić wyniki wyszukiwania jedynie do
-                                    interesujących Cię części.</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-map-marker"></i></span>
-                                <h4>Mapa dojazdu</h4>
-                                <p>Zawsze możesz sprawdzić, gdzie znajdują się najbliższe warsztaty i jak do nich
-                                    dojechać.</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-comments"></i></span>
-                                <h4>Ekspert 24h</h4>
-                                <p>Dajemy ci możliwość stałej konsultacji eksperckiej - zarówno telefonicznie jak i
-                                    e-mail.</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-shopping-cart"></i></span>
-                                <h4>Koszyk produktów</h4>
-                                <p>Twoje zakupy w jednym miejscu, pod stałą kontrolą.</p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-wrench"></i></span>
-                                <h4>Wysoka jakość</h4>
-                                <p>Oferujemy jedynie części od sprawdzonych producentów. Nasi dostawcy spełniają
-                                    wszystkie
-                                    normy jakości. </p>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="product-info-box">
-                                <span><i class="fa fa-cogs"></i></span>
-                                <h4>Największy wybór</h4>
-                                <p>U nas znajdziesz części wszystkich marek: nowe i używane, oryginane i wysokiej klasy
-                                    zamienniki. </p>
-                            </div>
-                        </div>
+    <section id="team-info" class="container team-info container--section container-center main-container-item">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 person members slide-in-left">
+                <div class="person__img hover__effect">
+                    <img class="img-responsive img-circle" src="ola.jpg">
+                    <div class="second-side">
+                        <h2>Contact me</h2>
+                        <a href="#"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!--#enrollment-->
-
-        <section id="enrollment" class="main-container-item enrollment-container">
-            <div class="enrollment-content-wrapper">
-                <h2 class="h2-center">Zapisz się na premierę!</h2>
-                <p class="enrollment-text">Jeśli wypełnisz poniższy formularz, poinformujemy Cię mailem o dniu premiery
-                    naszej wyszukiwarki.
-                    Wiadmość
-                    zostanie wysłana tylko raz.</p>
-                <form method="post" class="enrollment-form"
-                      onsubmit="alert('Gratulacje! Zostałeś zapisany na premierę. Wiadomość o dacie premiery zostanie wysłana tylko raz.')">
-                    <div class="form-inputs-container">
-                        <div class="form-group">
-                            <label for="inputName">Imię i Nazwisko *</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Imię i Nazwisko"
-                                   required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail">Email *</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPhoneNumber">Numer telefonu</label>
-                            <input type="number" class="form-control" id="inputPhoneNumber" placeholder="+48000000000"/>
-                        </div>
-                    </div>
-                    <div class="checkbox">
-                        <label class="checkbox-text"><input type="checkbox">Chcę otrzymać wiadomość z potwierdzeniem
-                            rejestracji</label>
-                    </div>
-                    <div class="checkbox">
-                        <label class="checkbox-text"><input type="checkbox" required>Wyrażam zgodę na przetwarzanie
-                            moich danych osobowych w
-                            celu
-                            rejestracji dla udostępnienia informacji i wzięcia udziału w wydarzeniach promocyjnych. Masz
-                            prawo dostępu do treści swoich danych oraz ich poprawiania. Podanie danych jest dobrowolne,
-                            lecz
-                            niezbędne w/w celu. Twoje dane nie będą udostępnione innym podmiotom, ani wykorzystane do
-                            celów
-                            innych niż wyżej wymienione</label>
-                    </div>
-                    <input type="submit" value="Wyślij" class="btn btn-default"/>
-                </form>
-            </div>
-        </section>
-
-        <!--Team info-->
-
-        <section id="team-info" class="main-container-item">
-            <div class="team-info">
-                <div class="person">
-                    <div class="team-member-img">
-                        <img src="photo2.jpeg">
-                        <!--<img class="img-responsive img-circle img-thumbnail" src="photo2.jpeg">-->
-                    </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/ajemielity" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                    <div class="team-member-about">
-                        <h3 class="person-name">
-                            Aleksandra Jemielity
-                        </h3>
-                    </div>
-                    <p class="person-bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-
-                </div>
-
-
-                <div class="person">
-                    <div class="team-member-img">
-                        <img src="photo2.jpeg">
-                    </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/lucypow" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                    <div class="team-member-about">
-                        <h3 class="person-name">
-                            Lucyna Powałowska
-                        </h3>
-                    </div>
-                    <p class="person-bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-
-                </div>
-
-                <div class="person">
-                    <div class="team-member-img">
-                        <img src="photo1.jpg">
-                    </div>
-                    <div class="person-icon text-center">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/rafals7" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                    <div class="team-member-about">
-                        <h3 class="person-name">
-                            Rafał Sobiepan
-                        </h3>
-                    </div>
-                    <p class="person-bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-
-                </div>
-
-                <div class="person">
-                    <div class="team-member-img">
-                        <img src="photo1.jpg">
-                    </div>
-                    <div class="person-icon">
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/rabik1985" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                    <div class="team-member-about">
-                        <h3 class="person-name">
-                            Łukasz Radwan
-                        </h3>
-                    </div>
-                    <p class="person-bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact-us" class="site-footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>Władcy Kodu &copy; 2017</p>
-
-                <div class="footer-icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/infoshareacademy/jfdz5-wladcykodu" target="_blank"><i
+                <div>
+                    <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="person__icon" href="https://github.com/ajemielity" target="_blank"><i
                             class="fa fa-github"></i></a>
                 </div>
+
+                <div class="team-member-about">
+                    <h3 class="person__name">
+                        Aleksandra Jemielity
+                    </h3>
+                </div>
+                <ul class="person__bio">
+                    <li>Po 7 latach pracy w korporacji ubezpieczeniowej postanowiła zmienić swoje życie i zostać front-end
+                        developerem. </li>
+                    <li>Prywatnie właścicielka dwójki kotów i miłośniczka robienia na drutch.</li>
+                </ul>
             </div>
 
-            <div class="footer-right">
-                <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>Grunwaldzka Street</span> Gdansk, Poland</p>
+
+            <div class="col-md-6 col-lg-3 person members slide-in-left">
+                <div class="person__img hover__effect">
+                    <img class="img-responsive img-circle" src="photo2.jpeg">
+                    <div class="second-side">
+                        <h2>Contact me</h2>
+                        <a href="#"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
+                    </div>
                 </div>
                 <div>
-                    <i class="fa fa-phone"></i>
-                    <p>+48 777 77 77</p>
+                    <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="person__icon" href="https://github.com/lucypow" target="_blank"><i
+                            class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person__name">
+                        Lucyna Powałowska
+                    </h3>
+                </div>
+                    <ul class="person__bio">
+                        <li><span data-lang="graduated biotechnology and mechatronics engineering,">mgr inż. biotechnologii, inż. mechatroniki,</span></li>
+                        <li><span data-lang="working as design engineer, but her goal is to work as Junior Front-End Developer,">aktualnie pracuje w branży morskiej jako projektant konstrukcji stalowych,</span></li>
+                        <li><span data-lang="focused on building lightweight, responsive and semantic web applications with use of modern technologies.">nastawia się na budowanie lekkich, elastycznych i semantycznych aplikacji internetowych z wykorzystaniem nowoczesnych technologii.</span></li>
+                     </ul>
+            </div>
+
+            <div class="col-md-6 col-lg-3 person members slide-in-right">
+                <div class="person__img hover__effect">
+                    <img class="img-responsive img-circle" src="photo1.jpg">
+                    <div class="second-side">
+                        <h2>Contact me</h2>
+                        <a href="#"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
+                    </div>
                 </div>
                 <div>
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="mailto:support@wladcykodu.com">support@wladcykodu.com</a></p>
+                    <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="person__icon" href="https://github.com/rafals7" target="_blank"><i
+                            class="fa fa-github"></i></a>
                 </div>
+
+                <div class="team-member-about">
+                    <h3 class="person__name">
+                        Rafał Sobiepan
+                    </h3>
+                </div>
+                <ul class="person__bio">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-lg-3 person members slide-in-right">
+                <div class="person__img hover__effect">
+                    <img class="img-responsive img-circle" src="photo1.jpg">
+                    <div class="second-side">
+                        <h2>Contact me</h2>
+                        <a href="#"><i class="fa fa-envelope contact" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <a class="person__icon" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="person__icon" href="https://github.com/rabik1985" target="_blank"><i
+                            class="fa fa-github"></i></a>
+                </div>
+
+                <div class="team-member-about">
+                    <h3 class="person__name">
+                        Undefined Undefined
+                    </h3>
+                </div>
+                <ul class="person__bio">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,</li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+    </section>
+
+</main>
+
+<footer id="contact-us" class="container footer-container main-container-item">
+    <div class="row">
+        <div class="col-md-6 footer__left">
+            <p>Władcy Kodu &copy; 2017</p>
+
+            <div class="footer__icons">
+                <a class="footer__icons--link" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="footer__icons--link" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="footer__icons--link" href="https://github.com/infoshareacademy/jfdz5-wladcykodu"
+                   target="_blank"><i
+                        class="fa fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-6 footer__right">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p class="footer__right--item"><span>Grunwaldzka Street</span> Gdansk, Poland</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p class="footer__right--item">+48 777 77 77</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p class="footer__right--item"><a href="mailto:support@wladcykodu.com">support@wladcykodu.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- COOKIES INFO START -->
+<div id="cookies-info" class="message-container">
+    <h3 class="message-container__element" data-lang="We use cookies on this website.">Ta strona wykorzystuje pliki
+        cookie</h3>
+    <div class="message-container__element">
+        <p data-lang="We use cookies to ensure that we give you the best experience on our website.">Używamy informacji
+            zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z
+            naszego
+            serwisu.</p>
+        <p data-lang="If you agree to store information in cookie files, click &quot;I agree!&quot; button placed below.">
+            Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij przycisk "OK, zgoda!", dostępny
+            poniżej.</p>
+        <p data-lang="If you don't agree, you can change cookie settings in your browser at any time.">Jeśli nie
+            wyrażasz zgody, ustawienia dotyczące plików cookies możesz je zmienić w swojej przeglądarce.</p>
+    </div>
+    <input id="cookieAgreement" type="button" value="OK, zgoda!"
+           class="btn btn-default normal-text-size message-container__element" data-lang="I agree!"/>
 </div>
+<!-- COOKIES INFO END -->
+
+<!-- Form submit message -->
+<div id="submit-message" class="message-container message-container--top">
+    <h3 class="message-container__element" data-lang="Congratulations! You have been signed for premiere.">Gratulacje!
+        Zostałeś zapisany na premierę.</h3>
+
+    <div class="message-container__element">
+        <p data-lang="The release date message will be sent once only.">Wiadomość o dacie premiery zostanie wysłana
+            tylko raz.</p>
+        <p data-lang="If you want to play our game click &quot;Let's play!&quot; button placed below.">
+            Jeżeli chcesz zagrać w naszą grę, kliknij przycisk "Graj!" dostępny poniżej.</p>
+    </div>
+    <input id="gameStartBtn" type="button" value="Graj!"
+           class="btn btn-default normal-text-size message-container__element" data-lang="Let's play!"/>
+    <input id="submitMessageCloseBtn" type="button" value="Zamknij"
+           class="btn btn-default normal-text-size message-container__element" data-lang="Close"/>
+</div>
+<!-- Form submit message end -->
+
+<!-- Game board -->
+<div id="game-frame" class="game-frame">
+    <div class="escape-game-button-container">
+        <button class="escape-game-button">
+            <span class="escape-game-line line1"></span>
+            <span class="escape-game-line line2"></span>
+        </button>
+    </div>
+    <div id="game-board" class="game-board">
+        <div class="start-game-frame">
+            <h3 class="start-game-title higher-z-index">auto parts game</h3>
+            <img class="start-game-auto higher-z-index" src="game-images/start-game-auto.png"/>
+            <button class="btn btn-danger start-game-button higher-z-index" data-lang="Play!">Graj!</button>
+            <button class="btn btn-danger instruction-button higher-z-index" data-lang="Instruction">Instrukcja</button>
+        </div>
+    </div>
+</div>
+<!-- Game board end-->
+
+<!--Game instruction-->
+
+<div class="game-instruction" id="game-intruction">
+
+    <p class="welcome"><span
+            data-lang="Thank you for subscribing to the premiere. We have prepared for you our wonderful Auto Parts Game!">Dziękujemy za zapisanie się na premierę. Przygotowaliśmy dla Państwa wspaniałą grę Auto Parts!</span><img
+            src="parts_game/face-devil.svg" alt="instruction item" class="img-inline"></p>
+
+    <h4 class="instruction-object"
+        data-lang="The object of the game is to avoid destroying the car by Zombies and to get as many points as possible.">
+        Celem gry jest uniknięcie zniszczenia samochodu przez Zombi oraz zdobycie jak największej liczby punktów.</h4>
+    <h4 class="instruction-object" data-lang="Follow this instructions which will tell you how to win!">Zapoznaj się z
+        poniższymi instrukcjami, które wytłumaczą Ci jak zwyciężyć!</h4>
+
+    <div class="instruction-item">
+        <img src="parts_game/instructitem.svg" alt="instruction item" class="img-instruction">
+        <p class="instruction"><span data-lang="Avoid collisions with Zombies!">Unikaj kolizji z Zombi!</span><img
+                src="parts_game/zombie.svg" alt="zombie" class="img-inline"><span
+                data-lang="Use LEFT/RIGHT arrows keys of your keyboard to move the car.">! Używaj strzałek w prawo i w lewo na klawiaturze, aby poruszać samochodem.</span><img
+                src="parts_game/left.svg" alt="left arrow" class="arrow"><img src="parts_game/right.svg"
+                                                                              alt="right arrow" class="arrow"><span
+                data-lang="Remember! Each collision subtracts life and points..."> Pamiętaj! Każda kolizja powoduje utratę życia oraz punktów...</span>
+        </p>
+    </div>
+
+    <div class="instruction-item">
+        <img src="parts_game/instructitem.svg" alt="instruction item" class="img-instruction">
+        <p class="instruction"><span data-lang="Collect bonus points by grabbing special bonus items">Zbieraj punkty klikając w premiowe elementy</span><img
+                src="parts_game/part7.svg" alt="bonus part" class="img-inline"><span data-lang="with your mouse.">lewym przyciskiem myszy.</span><img
+                src="parts_game/black-mouse.svg" alt="mouse" class="img-instruction"></p>
+    </div>
+
+    <div class="instruction-item">
+        <img src="parts_game/instructitem.svg" alt="instruction item" class="img-instruction">
+        <p class="instruction"><span
+                data-lang="You can also earn extra life and extra points! Just click on special element">Możesz zdobyć dodatkowe życie i dodatkowe punkty! Wystarczy, że klikniesz w specjalny element</span><img
+                src="parts_game/addLife.svg" alt="heart" class="img-inline"><span
+                data-lang="which will appear on the screen and then answer a simple question. Don't worry, wrong answer will not result in a life subtract. Give it a try!">który pojawi się na ekranie, a następnie odpowiesz na proste pytanie. Nie martw się, błędna odpowiedź nie spowoduje utraty życia. Spróbuj!</span>
+        </p>
+    </div>
+
+    <div class="instruction-item">
+        <img src="parts_game/instructitem.svg" alt="instruction item" class="img-instruction">
+        <p class="instruction"><span data-lang="Avoid">Uważaj na specjalny element</span><img
+                src="parts_game/subtractLife.svg" alt="skull" class="img-inline"><span
+                data-lang=" ! You will lose one life!"> ! Kliknięcie w nią spowoduje, że stracisz jedno życie!</span>
+        </p>
+    </div>
+
+    <div class="instruction-item">
+        <img src="parts_game/instructitem.svg" alt="instruction item" class="img-instruction">
+        <p class="instruction"><span
+                data-lang="Game time is limited to 10 minutes.">Gra trwa maksymalnie 10 minut.</span><img
+                src="parts_game/hourglass.svg" alt="time" class="img-inline"><span
+                data-lang="After this time or when you lose all your life the game is over and you can check your position in the player ranking. If you are not satisfied with your position - keep trying! One more thing - along with the passing time, the game will speed up!">Po upłynięciu tego czasu lub gdy stracisz wszystkie życia gra się zakończy i będziesz mógł sprawdzić swoją pozycję w rankingu gracza. Jeśli nie jesteś zadowolony z wyniku - spróbuj jeszcze raz! Jeszcze jedno - wraz z upływem czasu, gra będzie przyspieszać!</span>
+        </p>
+    </div>
+
+    <h4 class="instruction-object"><span data-lang="Good luck!">Powodzenia!</span><img src="parts_game/goodLuck.svg"
+                                                                                       alt="instruction item"
+                                                                                       class="img-inline"></h4>
+    <button class="btn btn-danger start-game-button higher-z-index" data-lang="Play!">Zagraj!</button>
+</div>
+<!--Game instruction end-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="common.js"></script>
+<script src="cookies.js"></script>
+<script src="outer.js"></script>
+<script src="gototop.js"></script>
+<script src="translate.js"></script>
+<script src="submit.js"></script>
+<script src="board.js"></script>
+<script src="goodElements.js"></script>
+<script src="obstacles.js"></script>
+<script src="carMovement.js"></script>
+<script src="quiz.js"></script>
+<script src="timeout.js"></script>
+<script src="boom.js"></script>
 </body>
 </html>
