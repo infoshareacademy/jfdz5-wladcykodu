@@ -18,13 +18,12 @@ var bonus,
     readedValue,
     readedObject,
     allLogins,
-    showBoard;
+    showBoard,
     $gameEndBoard,
     $musicForGame,
     $welcomeMusic,
     $quizButtonSound = $('<embed src="music/buttonOkaySound.ogg" autostart="true" loop="false" width="0" height="0">'),
-    $endSound,
-    $gameboard = $('.game-board');
+    $endSound;
 
 /*show game board after click start-game-button*/
 showBoard = function showBoard() {
@@ -51,7 +50,8 @@ showBoard = function showBoard() {
             readedValue = localStorage.getItem('gameResult');
             readedObject = JSON.parse(readedValue);
         } else {
-            userLogin = $('.user-login').val();
+            temporaryUserLogin = $('.user-login').val();
+            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val : 'login';
             allLogins = [];
             actuallyUser = {
                 name: userLogin
