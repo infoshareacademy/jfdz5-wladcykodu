@@ -35,11 +35,13 @@ showBoard = function showBoard() {
         .append($('<h4>Have fun and beat the records!</h4>'))
         .append($('<input type="text" placeholder="login" class="user-login higher-z-index">'))
         .append($('<input type="button" value="Send" data-lang="Send" class="btn btn-danger send-login-button higher-z-index">'));
+    var $userLogin = $('.user-login');
+
     $('.send-login-button').click(function sendLoginAndStartGame() {
         if (localStorage.hasOwnProperty('gameResult')) {
-            temporaryUserLogin = $('.user-login').val();
+            temporaryUserLogin = $userLogin.val();
             console.log(temporaryUserLogin);
-            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val() : 'login';
+            userLogin = temporaryUserLogin.length > 0 ? $userLogin.val() : 'login';
             console.log(userLogin);
             readedValue = localStorage.getItem('gameResult');
             console.log(readedValue);
@@ -53,9 +55,9 @@ showBoard = function showBoard() {
             readedValue = localStorage.getItem('gameResult');
             readedObject = JSON.parse(readedValue);
         } else {
-            temporaryUserLogin = $('.user-login').val();
+            temporaryUserLogin = $userLogin.val();
             console.log(temporaryUserLogin);
-            userLogin = temporaryUserLogin.length > 0 ? $('.user-login').val() : 'login';
+            userLogin = temporaryUserLogin.length > 0 ? $userLogin.val() : 'login';
             console.log(userLogin);
             allLogins = [];
             console.log(allLogins);
@@ -101,29 +103,15 @@ showBoard = function showBoard() {
             next();
         });
 
-        // score - add and substract function
-        document.addEventListener("score", function (e) {
-            var scoreEl = document.getElementById('score');
-            score = parseInt(scoreEl.innerHTML);
-
-            if (e.detail.action === "add") {
-                scoreEl.innerHTML = score + e.detail.value;
-            } else if (e.detail.action === "subtract") {
-                if (score > 0) {
-                    scoreEl.innerHTML = score - e.detail.value;
-                }
-                score = parseInt(scoreEl.innerHTML);
-            }
-            if (score < 0) {
-                scoreEl.innerHTML = 0;
-            }
-            score = parseInt(scoreEl.innerHTML);
-        }, false);
+        // score - add or subtract points event
+        document.addEventListener("score", addOrSubtractScore, false);
 
         // setting obstacles
         startObstacles();
+
         // adding bonusItems - createBonus function
         startBonus();
+
         // added timer for game
         $(function ($) {
             timerDisplay = $('#timer');
@@ -145,6 +133,26 @@ $('.instruction-button').click(function showInstruction() {
     }).appendTo($gameboard);
 });
 
+
+function addOrSubtractScore(e) {
+    var scoreEl = document.getElementById('score');
+    score = parseInt(scoreEl.innerHTML);
+
+    if (e.detail.action === "add") {
+        console.log(e.detail.value, score);
+        scoreEl.innerHTML = score + e.detail.value;
+    } else if (e.detail.action === "subtract") {
+        if (score > 0) {
+            scoreEl.innerHTML = score - e.detail.value;
+        }
+        score = parseInt(scoreEl.innerHTML);
+    }
+    if (score < 0) {
+        scoreEl.innerHTML = 0;
+    }
+    score = parseInt(scoreEl.innerHTML);
+}
+
 /*end-game board & ranking*/
 function endGame() {
     readedValue = localStorage.getItem('gameResult');
@@ -159,11 +167,15 @@ function endGame() {
     $('.game-board').append('<div class="game-end-board"></div>');
     $gameEndBoard = $('.game-end-board');
 
+    // score - remove event for add or subtract points
+    document.removeEventListener("score", addOrSubtractScore, false);
+    currentTimer = undefined;
 
-    $('.game-end-board')
+    $gameEndBoard
         .append('<div>').html('<h4 class="thanks-for-games">End of the game! Thank you!</h4><h5 class="score-count">Your result is </h5>' + score)
         .append('<div class="ranking"><h5>Ranking</h5></div>')
         .append('<button class="btn btn-danger play-again-button higher-z-index">Play again!</button>');
+
     $musicForGame.remove();
     $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $gameEndBoard.append($endSound);
@@ -197,8 +209,9 @@ function endGame() {
 
 
 /*play again button*/
-$('body').on('click', '.play-again-button',showBoard);
-
+$('body').on('click', '.play-again-button', function() {
+    showBoard();
+});
 
 /*hide game feame*/
 $('.escape-game-button').click(function hideBoard() {
