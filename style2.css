@@ -465,6 +465,7 @@ h3.carousel-caption__element {
 }
 
 #time-out {
+    font-family: monospace, sans-serif;
     font-size: 1.7rem;
     padding-top: 3%;
     padding-bottom: 3%;
