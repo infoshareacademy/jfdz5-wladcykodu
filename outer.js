@@ -160,8 +160,7 @@ var x = setInterval(function () {
     var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var second = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("time-out").innerHTML = day + "d " + hour + "h "
-        + minute + "m " + second + "s ";
+    document.getElementById("time-out").innerHTML = day + "d " + hour + ($('.logo img[title="English"]').length >= 1 ? "g " : "h ") + minute + "m " + second + "s ";
 
     // when the count down is over
     if (distance < 0) {
