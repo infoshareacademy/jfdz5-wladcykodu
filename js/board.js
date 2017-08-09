@@ -139,7 +139,6 @@ function addOrSubtractScore(e) {
     score = parseInt(scoreEl.innerHTML);
 
     if (e.detail.action === "add") {
-        console.log(e.detail.value, score);
         scoreEl.innerHTML = score + e.detail.value;
     } else if (e.detail.action === "subtract") {
         if (score > 0) {

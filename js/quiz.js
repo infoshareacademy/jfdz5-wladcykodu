@@ -13,7 +13,7 @@ var countDownInterval,
 function quizLife() {
     //add event to selected item from array of bonusItems
     var $quiz = $('.bonus-life');
-    var $quizBonusSound = $('<embed src="../music/bonusLifeSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    var $quizBonusSound = $('<embed src="music/bonusLifeSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $quiz.on('click', function () {
 
         gameInProgress.append($quizBonusSound);
