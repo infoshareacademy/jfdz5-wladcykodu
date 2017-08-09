@@ -1,15 +1,15 @@
 var timerInterval;
 
 // create an array named bonusItemsClass that contains svg files
-var bonusItemsClass = [["parts_game/part1.svg", "bonus-img"],
-                      ["parts_game/part2.svg", "bonus-img"],
-                      ["parts_game/addLife.svg", "bonus-life"],
-                      ["parts_game/part3.svg", "bonus-img"],
-                      ["parts_game/part4.svg", "bonus-img"],
-                      ["parts_game/part5.svg", "bonus-img"],
-                      ["parts_game/part6.svg", "bonus-img"],
-                      ["parts_game/subtractLife.svg", "subtract-life"],
-                      ["parts_game/part7.svg", "bonus-img"]];
+var bonusItemsClass = [["images/parts_game/part1.svg", "bonus-img"],
+                      ["images/parts_game/part2.svg", "bonus-img"],
+                      ["images/parts_game/addLife.svg", "bonus-life"],
+                      ["images/parts_game/part3.svg", "bonus-img"],
+                      ["images/parts_game/part4.svg", "bonus-img"],
+                      ["images/parts_game/part5.svg", "bonus-img"],
+                      ["images/parts_game/part6.svg", "bonus-img"],
+                      ["images/parts_game/subtractLife.svg", "subtract-life"],
+                      ["images/parts_game/part7.svg", "bonus-img"]];
 
 var tmpArray = [];
 

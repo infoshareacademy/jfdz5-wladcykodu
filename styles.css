@@ -1028,7 +1028,7 @@ h3.carousel-caption__element {
     bottom: 0;
     right: 0;
     text-align: center;
-    background: url('game-images/grass-background.png');
+    background: url('images/game-images/grass-background.png');
     background-repeat: repeat;
 }
 
@@ -1708,7 +1708,7 @@ audio {
 /*****************/
 
 .board-field--obstacle {
-    background-image: url("parts_game/zombie.svg");
+    background-image: url("images/parts_game/zombie.svg");
     background-size: 100%;
 }
 
@@ -1727,7 +1727,7 @@ audio {
     left: 50%;
     transform: translateX(-50%);
     opacity: 0.5;
-    background-image: url("game-images/start-game-boom.svg");
+    background-image: url("images/game-images/start-game-boom.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

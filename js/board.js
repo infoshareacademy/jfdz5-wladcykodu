@@ -92,8 +92,8 @@ showBoard = function showBoard() {
             .append('<div class="road-dashed-line road-dashed-line-4">')
             .append('<div class="road-dashed-line road-dashed-line-5">')
             .append('<div class="road-dashed-line road-dashed-line-6">')
-            .append($('<img class="games-auto" src="car.svg">'));
-        gameInProgress.append($('<img class="games-auto" src="car.svg">'));
+            .append($('<img class="games-auto" src="images/parts_game/car.svg">'));
+        gameInProgress.append($('<img class="games-auto" src="images/parts_game/car.svg">'));
 
         //music for game - background theme and welcome message
         $welcomeMusic = $('<audio autoplay><source src="music/welcome.ogg" type="audio/ogg"/></audio>');
