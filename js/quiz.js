@@ -75,8 +75,8 @@ function quizForBonusLife() {
 
     $('.answer-box').on('click', function (e) {
         //if selected element is a good answer add bonus and points to score
-        var $goodAnswerSound = $('<embed src="../music/goodAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
-        var $wrongAnswerSound = $('<embed src="../music/wrongAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
+        var $goodAnswerSound = $('<embed src="music/goodAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
+        var $wrongAnswerSound = $('<embed src="music/wrongAnswerSound.ogg" autostart="true" loop="false" width="0" height="0">');
         if (parseInt(e.target.innerHTML) === guessObj.goodAnswer) {
             gameInProgress.append($goodAnswerSound);
             resultField.removeClass('hidden').addClass("correct fade-down-quiz");
