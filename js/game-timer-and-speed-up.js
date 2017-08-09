@@ -26,6 +26,7 @@ function gameTimer(duration) {
             endGame();
         }
         currentTimer = timer;
+
         //set information for user that game is speeding up
         function speedInfo() {
             if (currentTimer === 244 || currentTimer === 154 || currentTimer === 64) {
@@ -39,6 +40,7 @@ function gameTimer(duration) {
         }
         speedInfo();
 
+        //obstacles speeding up
         function speedObstacles() {
             var timeFactor  = [240, 150, 60];
             var speedFactor = [200, 100, 70];

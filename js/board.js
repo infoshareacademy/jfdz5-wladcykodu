@@ -22,7 +22,7 @@ var bonus,
     $gameEndBoard,
     $musicForGame,
     $welcomeMusic,
-    $quizButtonSound = $('<embed src="music/buttonOkaySound.ogg" autostart="true" loop="false" width="0" height="0">'),
+    $quizButtonSound = $('<embed src="../music/buttonOkaySound.ogg" autostart="true" loop="false" width="0" height="0">'),
     $endSound;
 
 /*show game board after click start-game-button*/
@@ -92,13 +92,13 @@ showBoard = function showBoard() {
             .append('<div class="road-dashed-line road-dashed-line-4">')
             .append('<div class="road-dashed-line road-dashed-line-5">')
             .append('<div class="road-dashed-line road-dashed-line-6">')
-            .append($('<img class="games-auto" src="car.svg">'));
-        gameInProgress.append($('<img class="games-auto" src="car.svg">'));
+            .append($('<img class="games-auto" src="../car.svg">'));
+        gameInProgress.append($('<img class="games-auto" src="../car.svg">'));
 
         //music for game - background theme and welcome message
-        $welcomeMusic = $('<audio autoplay><source src="music/welcome.ogg" type="audio/ogg"/></audio>');
+        $welcomeMusic = $('<audio autoplay><source src="../music/welcome.ogg" type="audio/ogg"/></audio>');
         gameInProgress.append($welcomeMusic).delay(3000).queue(function (next) {
-            $musicForGame = $('<audio autoplay loop><source src="music/theme.ogg" type="audio/ogg"/></audio>');
+            $musicForGame = $('<audio autoplay loop><source src="../music/theme.ogg" type="audio/ogg"/></audio>');
             $(this).append($musicForGame);
             next();
         });
@@ -177,7 +177,7 @@ function endGame() {
         .append('<button class="btn btn-danger play-again-button higher-z-index">Play again!</button>');
 
     $musicForGame.remove();
-    $endSound = $('<embed src="music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    $endSound = $('<embed src="../music/endGameSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $gameEndBoard.append($endSound);
 
     $('.ranking').append($('<table>').addClass('rank-table'));

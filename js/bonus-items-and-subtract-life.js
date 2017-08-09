@@ -71,7 +71,7 @@ function createBonus() {
 //subtract life when clicked on bonus item with class .subtract-life
 function subtractLife() {
     var $subtractLife = $('.subtract-life');
-    var $subtractLifeSound = $('<embed src="music/skullSound.ogg" autostart="true" loop="false" width="0" height="0">');
+    var $subtractLifeSound = $('<embed src="../music/skullSound.ogg" autostart="true" loop="false" width="0" height="0">');
     $subtractLife.on('click', function () {
         gameInProgress.append($subtractLifeSound);
         $(this).css('visibility', 'hidden');
@@ -89,13 +89,14 @@ function subtractLife() {
         clear();
         endGame();
     }
-        quitSub();
+        quitSubtractInfo();
     });
 
     grabBonusItem();
 }
+
 //exit the window with information about loss of life
-function quitSub() {
+function quitSubtractInfo() {
     $('.quiz-button').on('click', function () {
         gameInProgress.append($quizButtonSound);
         $('.subtract-life-box')
@@ -112,7 +113,7 @@ function quitSub() {
 function grabBonusItem() {
 //music for bonus
     $('.bonus-img').on('click', function () {
-        var $collectMusic = $('<embed src="music/collectSound.ogg" autostart="true" loop="false" width="0" height="0">');
+        var $collectMusic = $('<embed src="../music/collectSound.ogg" autostart="true" loop="false" width="0" height="0">');
         gameInProgress.append($collectMusic);
         $(this).css('visibility', 'hidden');
         document.dispatchEvent(new CustomEvent('score', {detail: {action: "add", value: 20}}));

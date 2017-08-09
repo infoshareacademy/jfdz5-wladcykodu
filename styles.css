@@ -344,7 +344,7 @@ nav.navbar--height--shrink .logo img {
 /**************************************************/
 
 .introduction__container {
-    background: url("dark.png") fixed;
+    background: url("images/dark.png") fixed;
     background-size: cover;
     display: flex;
     padding: 115px 0 0 0;
@@ -653,7 +653,7 @@ h3.carousel-caption__element {
     padding-top: 115px;
     color: white;
     background-color: black;
-    background: url("dark.png") fixed;
+    background: url("images/dark.png") fixed;
     background-size: cover;
     max-width: 1440px;
 }
