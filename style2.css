@@ -109,6 +109,10 @@ body {
     height: 1.5em;
 }
 
+.logo .language-toggle:hover {
+    cursor: pointer;
+}
+
 .logo {
     display: flex;
 }
@@ -465,6 +469,7 @@ h3.carousel-caption__element {
 }
 
 #time-out {
+    font-family: monospace, sans-serif;
     font-size: 1.7rem;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -839,18 +844,25 @@ h3.carousel-caption__element {
     transform: translate3d(0px, 0px, 0px);
 }
 
-/*@media screen and (max-width: 767px) {
-    .person {
-        min-width: 80%;
-    }
+.members.slide-from-down {
+    opacity: 0;
+    transition: all 800ms ease-out;
+    transform: translate3d(0px, 200px, 0px);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    !* rules on tablets only *!
-    .person {
-        min-width: 40%;
+.members.slide-from-down.slide-active {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+@media screen and (max-width: 768px) {
+
+    .members.slide-in-left,
+    .members.slide-in-right,
+    .members.slide-from-down {
+        transform: translate3d(-200px, 0px, 0px);
     }
-}*/
+}
 
 /*********************************************************/
 /******************** End of About Us ********************/
@@ -1220,7 +1232,6 @@ h3.carousel-caption__element {
     height: 573px;
     width: 4px;
     bottom: 1px;
-    trnsform: rotate(90deg);
 }
 
 .road-line.road-line-1 {
@@ -1237,7 +1248,6 @@ h3.carousel-caption__element {
     width: 2px;
     border-left: 2px dashed grey;
     bottom: 1px;
-    trnsform: rotate(90deg);
 }
 
 .road-dashed-line.road-dashed-line-1 {
@@ -1322,8 +1332,10 @@ h3.carousel-caption__element {
     font-size: 1.1em;
     padding: 0.5em 1.5em;
 }
-.btn:focus, .btn:active:focus, .btn.active:focus { outline: none; ! important; outline-style: none; }
 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: none;
+}
 
 /*****************/
 /* Good elements */
@@ -1569,7 +1581,7 @@ h3.carousel-caption__element {
 }
 
 audio {
-    display:none;
+    display: none;
 }
 
 /************************/
