@@ -150,6 +150,8 @@ function endGame() {
     readedValue = localStorage.getItem('gameResult');
     readedObject = JSON.parse(readedValue);
     var date = new Date;
+    var time = Date.now();
+    actuallyUser.time = time;
     actuallyUser.date = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
     actuallyUser.score = score;
     localStorage.setItem('gameResult', JSON.stringify(allLogins));
@@ -179,7 +181,11 @@ function endGame() {
     readedObject = JSON.parse(readedValue);
     allLogins = readedObject;
     allLogins.sort(function (log1, log2) {
-        return log2.score - log1.score;
+        if (log1.score !== log2.score){
+            return (log2.score - log1.score);
+        } else {
+            return (log2.time - log1.time);
+        }
     });
     allLogins.splice(10);
     function addToTable() {
